@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашнє завдання</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="main-header-menu w-100 bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+            <a class="navbar-brand" href="#">ІНФОРМАТИКА</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="index.html">Головна сторінка<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle header-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Планування і оцінки
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="plan.html">Планування тем</a>
+                            <a class="dropdown-item" href="marks.html">Оцінки</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle header-link" href="#" id="navbarDropdownTwo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Завдання
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownTwo">
+                            <a class="dropdown-item" href="control.html">Контрольна робота</a>
+                            <a class="dropdown-item" href="form_test.html">Тестування</a>
+                            <a class="dropdown-item" href="#">Домашнє завдання</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="row main-p-top">
+            <div class="p-2 col-md-8 col-lg-8 offset-md-1">
+                <h5>Домашнє завдання</h5>
+                <div class="accordion" id="accordionHome">
+                    <div class="card">
+                        <div class="card-header card-padding" id="headingOneHome">
+                            <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseOneHome" aria-expanded="true" aria-controls="collapseOne">
+                                Завдання для 11 класів
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseOneHome" class="collapse" aria-labelledby="headingOneHome" data-parent="#accordionHome">
+                            <div class="card-body">
+                                Повторити основи ООП. Створити 2 класи у Python
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header card-padding" id="headingTwoHome">
+                            <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseTwoHome" aria-expanded="false" aria-controls="collapseTwo">
+                                Завдання для 10 класів
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwoHome" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionHome">
+                            <div class="card-body">
+                                Програмування в середовищі Delphi 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header card-padding" id="headingThreeHome">
+                            <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseThreeHome" aria-expanded="false" aria-controls="collapseThree">
+                                Завдання для 9 класів
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThreeHome" class="collapse" aria-labelledby="headingThree" data-parent="#accordionHome">
+                            <div class="card-body">
+                                 Програмуємо на Pascal         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header card-padding" id="headingFourHome">
+                            <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseFourHome" aria-expanded="false" aria-controls="collapseFour">
+                                Завдання для 8 класів
+                            </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFourHome" class="collapse" aria-labelledby="headingFour" data-parent="#accordionHome">
+                            <div class="card-body">
+                                Робота з текстовим редактором Word,<br>
+                                табличним процесором Excel,<br>
+                                пакетом підготовки презентацій PowerPoint       
+                            </div>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+            
+            <aside class="p-2 col-md-8 col-lg-2 offset-md-1">  
+                <div>
+                    <h5>Підручники</h5>
+                    <br>
+                    <a class="btn btn-primary w-100 link-none" href="http://pidru4nik.com/publ/8_klas/informatika/informatika_pogliblene_vivchennja_8_klas_gurzhij_a_m_2016/228-1-0-2192" target='_blank' role="button">Підручник <br>для 8 класу</a>  
+                    <br><br>
+                    <a class="btn btn-primary w-100 link-none" href="http://pidru4nik.com/publ/9_klas/informatika/informatika_pogliblene_vivchennja_9_klas_rudenko_v_d_2017/134-1-0-2448" target='_blank' role="button">Підручник <br>для 9 класу</a>     
+                    <br><br>
+                    <a class="btn btn-primary w-100 link-none" href="http://pidru4nik.com/publ/10_klas/informatika/informatika_10_klas_rudenko_v_d_2018/156-1-0-2701" target='_blank' role="button">Підручник <br>для 10 класу</a>       
+                    <br><br>
+                    <a class="btn btn-primary w-100 link-none" href="http://interactive.ranok.com.ua/course/pdrychniki/nformatika-proflniyi-rven-pdrychnik-dlya-11-klasy-zakladv-zagalno-seredno-osvti-rydenko-v-d-rechich-n-v-potnko-v-o" target='_blank' role="button">Підручник<br> для 11 класу</a>         
+                </div>
+            </aside>
+        </div>
+    </main>
+    
+    <footer class="pt-4 pt-md-5 border-top bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md">
+                    <small class="d-block mb-3 text-muted">© 2020-2021</small>
+                    <h6>Контакти :</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="mailto://lilya.kos@gmail.com">e-mail: <br>lilya.kos@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h6>Головна сторінка</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="index.html">Новини</a></li>
+                        <li><a class="text-muted" href="index.html">Лекції і завдання</a></li>
+                        <li><a class="text-muted" href="index.html">Корисні блоги</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h6>Планування і оцінки</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="plan.html">Планування тем</a></li>
+                        <li><a class="text-muted" href="plan.html">Навчальні програми</a></li>
+                        <li><a class="text-muted" href="marks.html">Оцінки</a></li>
+                        <li><a class="text-muted" href="marks.html">Корисні посилання</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md">
+                    <h6>Завдання</h6>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="control.html">Контрольна робота</a></li>
+                        <li><a class="text-muted" href="control.html">Спеціальні підручники</a></li>
+                        <li><a class="text-muted" href="form_test.html">Тестування</a></li>
+                        <li><a class="text-muted" href="form_test.html">Контроль знань</a></li>
+                        <li><a class="text-muted" href="homework.html">Домашнє завдання</a></li>
+                        <li><a class="text-muted" href="homework.html">Підручники</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="bootstrap\jquery-3.5.1.slim.min.js"></script>
+<script src="bootstrap\bootstrap.bundle.min.js"></script>
+</body>
