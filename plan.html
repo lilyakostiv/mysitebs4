@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -9,27 +9,27 @@
 </head>
 
 <body>
-    <header class="main-header-menu w-100 bg-light fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-light container">
-            <a class="navbar-brand" href="#">ІНФОРМАТИКА</a>
+    <header class="main-header-menu w-100 fixed-top">
+        <nav class="navbar navbar-padding navbar-expand-lg navbar-light container">
+            <a class="navbar-brand header-info" href="#">ІНФОРМАТИКА</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href="index.html">Головна сторінка<span class="sr-only">(current)</span></a>
+                    <li class="nav-item active">
+                        <a class="nav-link header-link" href="index.html">Головна<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item dropdown active">
+                    <li class="nav-item dropdown navbar-level2">
                         <a class="nav-link dropdown-toggle header-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Планування і оцінки
+                            Навчання
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Планування тем</a>
                             <a class="dropdown-item" href="marks.html">Оцінки</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown navbar-level2">
                         <a class="nav-link dropdown-toggle header-link" href="#" id="navbarDropdownTwo" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Завдання
                         </a>
@@ -40,20 +40,20 @@
                         </div>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                <form class="form-inline my-2 my-lg-0 navbar-form-nowrap">
+                    <input class="form-control mr-sm-2 link-none" type="search" placeholder="Пошук" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0 link-none" type="submit" id="btn-search">Пошук</button>
                 </form>
             </div>
         </nav>
-    </header>
+    </header> 
     
     <main class="container">
         <section class="row main-p-top">
-            <div class="p-2 col-md-3 col-lg-3">
-            <nav id="navbar-submenu"class="navbar navbar-dark bg-dark nav-box">
-                <nav class="nav nav-pills flex-column">
-                    <a class="navbar-brand" href="#classes"><h5>Класи</h5></a> 
+            <div class="p-2 col-md-3 col-lg-2">
+            <h5>Класи</h5>
+            <nav id="navbar-submenu"class="navbar nav-box nav-scroll-padding">
+                <nav class="nav nav-pills flex-column"> 
                     <a class="nav-link height-submenu-link active" href="#item-1">8 клас</a>
                     <nav class="nav nav-pills flex-column">
                         <a class="nav-link ml-3 my-1 height-submenu-link" href="#item-1-1">1 семестр</a>
@@ -78,13 +78,13 @@
             </nav> 
             </div>     
              
-           <div class="p-2 col-md-6 col-lg-7">
-                <div data-spy="scroll" data-target="#navbar-submenu" data-offset="0" class="scroll-area-plan">
+           <div class="p-2 col-md-9 col-lg-8">
+                <div data-spy="scroll" data-target="#navbar-submenu" data-offset="0" class="scroll-area-plan change-font-black">
                     <h5>Планування тем</h5>
-                    <h5 id="item-1">8 клас</h5>
+                    <h6 id="item-1" class="text-center">8 клас</h6>
                         <h6 id="item-1-1">1 семестр (8 клас)</h6>
                         <p> 
-                            <table class="table table-dark">
+                            <table class="table table-design">
                                 <thead>
                                     <tr>
                                         <th scope="col">№</th>
@@ -106,7 +106,7 @@
                     
                         <h6 id="item-1-2">2 семестр (8 клас)</h6>
                         <p>
-                            <table class="table table-dark">
+                            <table class="table table-design">
                                 <thead>
                                     <tr>
                                         <th scope="col">№</th>
@@ -126,26 +126,26 @@
                             </table>
                         </p>
 
-                    <h5 id="item-2">9 клас</h5>
+                    <h6 id="item-2" class="text-center">9 клас</h6>
                         <h6 id="item-2-1">1 семестр (9 клас)</h6>
                         <p>
-                            <table class="table table-dark">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">№</th>
-                                        <th scope="col">Розділ інформатики</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Одновимірні та двовимірні масиви. Рядки</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Розгалуження та цикли <td>
-                                    </tr>
-                                </tbody>
+                            <table class="table table-design">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">№</th>
+                                            <th scope="col">Розділ інформатики</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Одновимірні та двовимірні масиви.Рядки</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Підпрограми </td>
+                                        </tr>
+                                    </tbody>
                             </table>
                         </p>
                         <h6 id="item-2-2">2 семестр (9 клас)</h6>
@@ -153,10 +153,10 @@
                             ...
                         </p>
                     
-                    <h5 id="item-3">10 клас</h5>
+                    <h6 id="item-3" class="text-center">10 клас</h6>
                         <h6 id="item-3-1">1 семестр (10 клас)</h6>
                         <p>
-                            <table class="table table-dark">
+                            <table class="table table-design">
                                 <thead>
                                     <tr>
                                         <th scope="col">№</th>
@@ -179,14 +179,14 @@
                         <p>
                             ...
                         </p>
-                    <h5 id="item-4">11 клас</h5>
+                    <h6 id="item-4" class="text-center">11 клас</h6>
                         <h6 id="item-4-1">1 семестр (11 клас)</h6>
                         <p>
                             ...
                         </p>
                         <h6 id="item-4-2">2 семестр (11 клас)</h6>
                         <p>
-                            <table class="table table-dark">
+                            <table class="table table-design">
                                 <thead>
                                     <tr>
                                         <th scope="col">№</th>
@@ -208,7 +208,7 @@
                 </div>
             </div>
 
-            <aside class="p-2 col-md-6 col-lg-2">  
+            <aside class="p-2 col-md-12 col-lg-2">  
                     <div>
                         <h5>Навчальні програми</h5>
                         <br>
@@ -222,42 +222,42 @@
         </section>
     </main>
     
-    <footer class="pt-4 pt-md-5 border-top bg-dark text-light">
+    <footer class="pt-4 pt-md-5 border-top">
         <div class="container">
             <div class="row">
                 <div class="col-6 col-md">
-                    <small class="d-block mb-3 text-muted">© 2020-2021</small>
+                    <small class="d-block mb-3">© 2020-2021</small>
                     <h6>Контакти :</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="mailto://lilya.kos@gmail.com">e-mail: <br>lilya.kos@gmail.com</a></li>
+                    <ul class="list-unstyled text-small footer-color">
+                        <li><a href="mailto://lilya.kos@gmail.com">e-mail: <br>lilya.kos@gmail.com</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
-                    <h6>Головна сторінка</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="index.html">Новини</a></li>
-                        <li><a class="text-muted" href="index.html">Лекції і завдання</a></li>
-                        <li><a class="text-muted" href="index.html">Корисні блоги</a></li>
+                    <h6>Головна</h6>
+                    <ul class="list-unstyled text-small footer-color">
+                        <li><a href="index.html">Новини</a></li>
+                        <li><a href="index.html">Лекції і завдання</a></li>
+                        <li><a href="index.html">Корисні блоги</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
-                    <h6>Планування і оцінки</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="plan.html">Планування тем</a></li>
-                        <li><a class="text-muted" href="plan.html">Навчальні програми</a></li>
-                        <li><a class="text-muted" href="marks.html">Оцінки</a></li>
-                        <li><a class="text-muted" href="marks.html">Корисні посилання</a></li>
+                    <h6>Навчання</h6>
+                    <ul class="list-unstyled text-small footer-color">
+                        <li><a href="plan.html">Планування тем</a></li>
+                        <li><a href="plan.html">Навчальні програми</a></li>
+                        <li><a href="marks.html">Оцінки</a></li>
+                        <li><a href="marks.html">Корисні посилання</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h6>Завдання</h6>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="control.html">Контрольна робота</a></li>
-                        <li><a class="text-muted" href="control.html">Спеціальні підручники</a></li>
-                        <li><a class="text-muted" href="form_test.html">Тестування</a></li>
-                        <li><a class="text-muted" href="form_test.html">Контроль знань</a></li>
-                        <li><a class="text-muted" href="homework.html">Домашнє завдання</a></li>
-                        <li><a class="text-muted" href="homework.html">Підручники</a></li>
+                    <ul class="list-unstyled text-small footer-color">
+                        <li><a href="control.html">Контрольна робота</a></li>
+                        <li><a href="control.html">Спеціальні підручники</a></li>
+                        <li><a href="form_test.html">Тестування</a></li>
+                        <li><a href="form_test.html">Контроль знань</a></li>
+                        <li><a href="homework.html">Домашнє завдання</a></li>
+                        <li><a href="homework.html">Підручники</a></li>
                     </ul>
                 </div>
             </div>

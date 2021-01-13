@@ -1,0 +1,57 @@
+    .header-link {
+        margin-left:5px;
+        margin-right: 5px;
+    }
+    .link-none {
+        text-decoration: none !important;
+        box-shadow: none !important;
+    }
+    .main-p-top {
+        padding-top: 60px !important;
+        padding-bottom: 10px !important;
+    }
+    aside div a {
+        height:60px;
+    }
+    .height-accord-li li a{
+        padding-left: 10px;
+    }
+    .accord-card-padding {
+        padding: 0;
+    }
+    .scroll-area-plan {
+        max-height:460px;
+        overflow: auto;
+    }
+    .scroll-area-accord {
+        max-height:500px;
+        overflow: auto;
+    }
+    .height-submenu-link,
+    .height-accord-li li {
+        line-height: 1rem !important;
+    }
+    h5 {
+        text-align: center;
+    }
+    ul.classes-mark-center li a {
+        text-align: center !important;
+    }
+    .nav-box {
+        box-sizing: border-box;
+        padding:10px;  
+        border-radius: .25rem;
+    }
+    .nav-scroll-padding {
+        padding-left: 10px;
+    }
+    .form-box {
+        box-sizing: border-box;
+        padding:10px;  
+        border-radius: .25rem;
+    }
+    .card-header button,
+    .card-body .height-accord-li li {
+        border-radius: .35rem;
+    }
+   

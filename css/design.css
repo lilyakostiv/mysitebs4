@@ -1,0 +1,161 @@
+.card-header button {
+    background: var(--accordion-heading-bg);
+    color: var(--accordion-heading-color);
+}
+.card-header button:hover {
+    color: var(--accordion-heading-color-hover);
+}
+.card-body .height-accord-li li {
+    background: var(--accordion-item-bg);
+}
+.card-body .height-accord-li li a {
+    color: var(--accordion-item-color);
+}
+.card-body .height-accord-li li:hover {
+    background: var(--accordion-item-bg-hover);
+}
+.card-body .height-accord-li li:active {
+    background: var(--accordion-item-bg-active);
+}
+
+aside div a {
+    background: var(--aside-link-bg);
+    color: var(--aside-link-color) !important;
+}
+aside div a:hover {
+    color: var(--aside-link-color-hover) !important;
+}
+
+body {
+    background: var(--body-bg);
+}
+main {
+    background:var(--main-bg); 
+}
+h5, h6 {
+    color: var(--main-font-color);
+}
+
+footer {
+    background: var(--footer-bg);  
+}
+.footer-color li a{
+    color: var(--footer-color);
+}
+footer h6 {
+    color: var(--footer-heads);
+}
+
+.navbar-padding {
+    padding: .3rem 1rem !important;
+}
+header {
+    background: var(--navbar-bg);
+}
+.header-info {
+    font-size: 22px;
+    color: var(--header-info-color);
+}
+.header-info:hover {
+    color: var(--header-info-color);
+}
+.header-link {
+    font-size: 18px;
+    color: var(--navbar-color) !important;
+}
+.header-link:hover {
+    color: var(--navbar-item-color-hover) !important;
+}
+.header-link:active {
+    color: var(--navbar-item-color-active) !important;
+}
+.active a {
+    color: var(--navbar-item-color-active) !important;
+}
+
+.navbar-form-nowrap {
+    flex-flow: nowrap;
+}
+
+.navbar-level2 div {
+    padding: 1px; 
+    border-radius: .25rem;
+    background: var(--navbar-item-level2-bg);
+}
+.navbar-level2 div a {
+    background-color: var(--navbar-item-level2-bg);
+}
+.navbar-level2 div a {
+    color: var(--navbar-item-level2-color);
+}
+.navbar-level2 div a:hover {
+    background-color: var(--navbar-item-level2-bg-hover);
+}
+.navbar-level2 div a:active {
+    background-color: var(--navbar-item-level2-bg-active);
+}
+
+#btn-search {
+    color: var(--btn-search-color);
+    border-color: var(--btn-search-border-color);
+}
+#btn-search:hover {
+    color: var(--btn-search-color-hover);
+    border-color: var(--btn-search-border-color-hover);
+    background-color: var(--btn-search-bg-hover);
+}
+body header nav div form input {
+    border-color: var(--btn-search-border-color-hover) !important;
+}
+
+.nav-box {
+    border: 1px solid var(--vertical-menu-border);
+    background: var(--vertical-menu-bg);
+}
+.nav-box li a,
+.nav-box nav a {
+    color: var(--vertical-menu-color);
+}
+.nav-box li a:hover,
+.nav-box nav a:hover {
+    color: var(--vertical-menu-color-hover);
+    background-color: var(--vertical-menu-bg-hover) !important;
+    border: 1px solid var(--vertical-menu-color-hover);
+}
+.nav-box li a:active,
+.nav-box nav a.active {
+    color: var(--vertical-menu-color-active) !important;
+    background-color: var(--vertical-menu-bg-active) !important;
+    border: 1px solid var(--vertical-menu-color-active);
+}
+.table-design {
+    border: 1px solid var(--table-border-color);
+    background: var(--table-bg);
+    color: var(--table-color);
+    width: 99.5%;
+}
+table.table-design thead tr th {
+    border-top: 1px solid var(--table-border-color) !important;
+}
+.form-box {
+    border: 1px solid var(--form-border-color);
+    background: var(--form-bg);
+}
+.btn-all {
+    background: var(--button-bg);
+    color: var(--button-color);
+    border: 1px solid var(--button-border-color);
+}
+.btn-all:hover {
+    background: var(--button-bg-hover);
+    color: var(--button-color-hover);
+}
+.btn-all:active {
+    background: var(--button-bg-active);
+    color: var(--button-color-active);
+}
+.change-font-black h6,
+.form-box h6 {
+    color:var(--font-color-black);
+}   
+ 
