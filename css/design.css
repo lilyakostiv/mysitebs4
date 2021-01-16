@@ -157,5 +157,9 @@ table.table-design thead tr th {
 .change-font-black h6,
 .form-box h6 {
     color:var(--font-color-black);
-}   
- 
+} 
+
+.slide-text-color h5,
+.slide-text-color p a {
+    color: var(--slide-text-color) !important;
+}
