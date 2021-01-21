@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оцінки</title>
+    <title>Подорожі</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -26,7 +26,9 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="plan.html">Планування тем</a>
-                            <a class="dropdown-item" href="#">Оцінки</a>
+                            <a class="dropdown-item" href="marks.html">Оцінки</a>
+                            <a class="dropdown-item" href="#">Подорожі</a>
+                            <a class="dropdown-item" href="travel_future.html">Майбутні подорожі</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown navbar-level2">
@@ -51,13 +53,13 @@
     <main class="container carousel-size">
         <section>
             <div id="carouselTravel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <ol class="carousel-indicators" id="indicators-area">
                     <li data-target="#carouselTravel" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselTravel" data-slide-to="1"></li>
                     <li data-target="#carouselTravel" data-slide-to="2"></li>
                     <li data-target="#carouselTravel" data-slide-to="3"></li>
                 </ol>
-                <div class="carousel-inner height-slide">
+                <div class="carousel-inner height-slide" id="slide-area">
                     <div class="carousel-item active">
                         <img src="img/1_pidkamin.jpg" class="d-block w-100" alt="Підкамінь">
                         <div class="carousel-caption d-none d-md-block slide-text-color">
@@ -97,6 +99,28 @@
                 </a>
             </div>
         </section>
+        <section style="margin-top: 5px; margin-bottom: 3px;">
+            <div class="row width-item-bottom-menu">
+                <div class="col-lg-3">
+                   <button class="btn link-none btn-all" data-change-gallery="addSlide">Додати фото Барселони</button>
+                </div>
+                <div class="col-lg-3">
+                    <select class="custom-select link-none" id="selectedTown">
+                        <option selected>Виберіть фото</option>
+                        <option value="0">Відень</option>
+                        <option value="1">Рим</option>
+                        <option value="2">Ніцца</option>
+                    </select>
+                </div>
+                <div class="col-lg-3">
+                    <button class="btn link-none btn-all" data-change-gallery="addSelectedSlide">Додати фото зі списку</button>
+                </div>
+                
+                <div class="col-lg-3">
+                    <button class="btn link-none btn-all" data-change-gallery="changeSlide">Змінити фото Відня</button>
+                </div>
+            </div>   
+        </section>
     </main>
     <footer class="pt-4 pt-md-5 border-top">
         <div class="container">
@@ -123,6 +147,8 @@
                         <li><a href="plan.html">Навчальні програми</a></li>
                         <li><a href="marks.html">Оцінки</a></li>
                         <li><a href="marks.html">Корисні посилання</a></li>
+                        <li><a href="travel.html">Подорожі</a></li>
+                        <li><a href="travel_future.html">Майбутні подорожі</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
@@ -141,6 +167,7 @@
     </footer>
 <script src="bootstrap\jquery-3.5.1.slim.min.js"></script>
 <script src="bootstrap\bootstrap.bundle.min.js"></script>
+<script src="js/travel.js"></script>
 <script>
         $('.carousel').carousel({
             interval: 1000

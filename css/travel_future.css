@@ -1,0 +1,32 @@
+.gallery-image {
+    max-height:  520px;
+    width: 100%;
+}
+.image-decscription h5,
+.image-decscription p a {
+   color: #e6f057 !important;
+}
+.design-btn {
+    width: 5%;
+    cursor: pointer;
+    background:#a3b3aa;
+    border: 3px solid #106363;
+}
+.size-icon {
+    width: 30px;
+    height: 30px;
+}
+.design-btn.left {
+    border-top-left-radius: 20px; 
+    border-bottom-left-radius: 20px;
+}
+.design-btn.right {
+    border-top-right-radius:20px;
+    border-bottom-right-radius: 20px;
+}
+#picture-area {
+    border-radius: 20px;
+}
+.carousel-size {
+    background: #b0f1e9;
+}

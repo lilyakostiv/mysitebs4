@@ -61,10 +61,15 @@
 
 	--button-bg-hover:  #6ae2e2;
 	--button-color-hover: #106363;
-	--button-bg-active: #60d6d6;
+	--button-bg-active: #44c7c7;
 	--button-color-active: #106363;
+	--button-color-disabled: #2b3131;
 	 
     --font-color-black:#4b4f52;
    
 	--slide-text-color: rgb(247, 242, 224);
-}
+
+	--select-travel-bg: #6ae2e2;
+	--select-travel-color:  #106363;
+	--select-travel-border: #106363;
+	--select-travel-bg-hover: #44c7c7;

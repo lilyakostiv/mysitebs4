@@ -1,0 +1,39 @@
+.carousel-size {
+    padding: 0px 0px 0px 0px;
+    margin-top: 53px;
+}
+#carouselTravel {
+    margin-top: 57px;
+}   
+.height-slide div img {
+    max-height:  520px;
+    width: 100%;
+}
+.size-slide {
+    max-height:  520px;
+    width: 100%;
+}
+.width-item-bottom-menu button,  
+.width-item-bottom-menu select {
+    width: 100%;
+}
+.width-item-bottom-menu select {
+    border-color: var(--select-travel-color);
+    color: var(--select-travel-color);
+    background: var(--select-travel-bg);
+}
+.width-item-bottom-menu select:hover {
+    border-color: var(--select-travel-color);
+}
+.width-item-bottom-menu select:active {
+    border-color: var(--select-travel-color);
+}
+
+.width-item-bottom-menu select option {
+    border-color: var(--select-travel-color);
+    color: var(--select-travel-color);
+    background: var(--select-travel-bg);
+}
+/* #slide-area div.carousel-item img {
+    overflow: hidden;
+} */

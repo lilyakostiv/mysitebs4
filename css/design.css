@@ -163,3 +163,7 @@ table.table-design thead tr th {
 .slide-text-color p a {
     color: var(--slide-text-color) !important;
 }
+
+.btn-all:disabled {
+    color: var(--button-color-disabled);
+}
