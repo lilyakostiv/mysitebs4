@@ -1,0 +1,766 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Двовимірні масиви</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Двовимірні масиви (матриці)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Двовимірний масив (ще називають матрицею) – це вектор
+векторів, тобто кожен елемент вектора є вектором.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Нехай маємо вектор <sub><img width=59 height=24
+src="5_pascal_matrix_files/image001.gif"></sub> і кожен елемент вектора також є
+вектором, тоді одержуємо матрицю:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+lang=EN-US style='font-size:12.0pt'><sub><img width=81 height=72
+src="5_pascal_matrix_files/image002.gif"></sub></span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>Розмірність цієї матриці 3</span><span
+lang=EN-US style='font-family:Symbol'>´</span><span lang=EN-US>4, тобто матриця
+містить 3 рядки і 4 стовпці.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Елементи матриці описують двома
+індексами. Елемент </span><span lang=EN-US><sub><img width=19 height=25
+src="5_pascal_matrix_files/image003.gif"></sub></span><span lang=RU> міститься на
+перетині  </span><i><span lang=EN-US>i</span></i><i><span lang=RU>-</span></i><span
+lang=RU>рядка і  </span><i><span lang=EN-US>j</span></i><i><span lang=RU>-</span></i><span
+lang=RU>стовпця, тобто перший індекс визначає рядок, а другий стовпець.(Наприклад,
+елемент </span><span lang=EN-US><sub><img width=23 height=24
+src="5_pascal_matrix_files/image004.gif"></sub></span><span lang=RU>міститься на
+перетині 2-ого рядка і 3-ого стовпця.) </span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Елементи, для яких </span><i><span
+lang=EN-US>i</span></i><i><span lang=RU>=</span><span lang=EN-US>j</span></i><span
+lang=RU>, називаються діагональними елементами матриці.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Аналогічно до одновимірного масиву,
+двовимірний масив містить всі елементи одного типу. Індекси по рядках і по
+стовпцях можуть бути різних типів. Індивідуальне ім'я одержує вся матриця.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Матриця в Паскалі описується так</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>А</span><span
+lang=EN-US style='font-size:12.0pt'>rray</span><span style='font-size:12.0pt'>
+[&lt;тип індекса&gt;] </span><span lang=EN-US style='font-size:12.0pt'>of</span><span
+lang=EN-US style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>  </span><span
+lang=EN-US style='font-size:12.0pt'>Array</span><span style='font-size:12.0pt'>
+[&lt;тип індекса&gt;] </span><span lang=EN-US style='font-size:12.0pt'>of</span><span
+style='font-size:12.0pt'> &lt;скалярний тип(тип компонент матриці)&gt;;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>або 
+А</span><span lang=EN-US style='font-size:12.0pt'>rray</span><span
+style='font-size:12.0pt'> [&lt;тип індекса&gt;,&lt;тип індекса&gt;] </span><span
+lang=EN-US style='font-size:12.0pt'>of</span><span style='font-size:12.0pt'>
+&lt;скалярний тип&gt;;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Отже</span><span style='font-size:12.0pt'>,</span><span lang=RU
+style='font-size:12.0pt'> матрицю з 10 рядків і 20 стовпців задаємо так:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Array [1..10] of array [1..20] of real;  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>або
+</span><span lang=EN-US style='font-size:12.0pt'>array</span><span lang=RU
+style='font-size:12.0pt'> [1..10,1..20] </span><span lang=EN-US
+style='font-size:12.0pt'>of</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>real</span><span lang=RU style='font-size:
+12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінні
+такого типу можна описувати двома способами</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>I </span></i><i><span style='font-size:12.0pt'>спосіб</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>:</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>var
+А:array [1..10,1..20] of real; </span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>II </span></i><i><span style='font-size:12.0pt'>спосіб</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>:</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>type
+matr=array [1..10,1..20] of real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                var</span><span lang=RU
+style='font-size:12.0pt'> А:</span><span lang=EN-US style='font-size:12.0pt'>matr</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>A</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+lang=RU style='font-size:12.0pt'>] - </span><span style='font-size:12.0pt'>елемент
+матриці, що знаходиться на перетині </span><span lang=EN-US style='font-size:
+12.0pt'>i</span><span lang=RU style='font-size:12.0pt'>-</span><span
+style='font-size:12.0pt'>рядка та </span><span lang=EN-US style='font-size:
+12.0pt'>j</span><span lang=RU style='font-size:12.0pt'>-стовпця.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Індекси
+можуть бути різного типу. Наприклад: </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var B:array[1..n,</span><span style='font-size:12.0pt'>’</span><span
+lang=EN-US style='font-size:12.0pt'>a’..’k’] of integer;</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><i>&nbsp;</i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>8.1.<i> </i></span></b><span
+lang=RU>Ввести матрицю розмірністю 3</span><span lang=EN-US style='font-family:
+Symbol'>´</span><span lang=RU>4 з дійсними елементами, просумувати всі елементи
+цієї матриці.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>8.2</span></b><b>.</b><i>
+</i>Ввести матрицю розмірністю 5<span lang=EN-US style='font-family:Symbol'>´</span>6
+з цілими елементами, знайти суму і кількість всіх додатних елементів матриці.</p>
+
+<p class=MsoBodyText style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.3</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Обчислити
+суму </span><span lang=RU style='font-size:12.0pt'>та кількість </span><span
+style='font-size:12.0pt'>елементів матриці А розміру </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:12.0pt;
+font-family:Symbol'>´</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>, які належать проміжку [c,d].</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.4.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю 4</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>3 з цілими елементами, знайти максимальний елемент
+матриці.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.5.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю 4</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>3 з дійсними елементами, знайти мінімальний елемент
+матриці і два його індекси.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.6.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+суму діагональних елементів матриці </span><span lang=EN-US style='font-size:
+12.0pt'>A</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>розмірності </span><span lang=EN-US style='font-size:
+12.0pt'>n</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з дійсними елементами. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести дві
+матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>і </span><span
+lang=EN-US style='font-size:12.0pt'>B</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>розмірністю n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з цілими елементами. Сформувати і вивести матрицю </span><span
+lang=EN-US style='font-size:12.0pt'>C</span><span lang=RU style='font-size:
+12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=RU style='font-size:12.0pt'>+</span><span lang=EN-US style='font-size:
+12.0pt'>B</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з цілими елементами. Порахувати
+кількість елементів матриці А, які є більші ніж число </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.9</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з цілими елементами. Всі
+елементи, що більші числа </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'> замінити на 5, а ті, що менші числа </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>
+замінити на 1. Вивести новоутворену матрицю.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.10</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+style='font-size:12.0pt'> розмірністю </span><span lang=EN-US style='font-size:
+12.0pt'>n</span><span lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з дійсними елементами. Всі
+елементи, що належать проміжку </span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>] </span><span style='font-size:12.0pt'>піднести
+до квадрату, а для решти обчислити їх модуль. Вивести новоутворену матрицю.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з дійсними елементами. Всі додатні елементи замінити
+на 1, а від</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>ємні - на -1.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з дійсними елементами. Всі додатні елементи замінити
+на максимальний елемент цієї матриці. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>і число </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>. </span><span
+style='font-size:12.0pt'>Всі елементи матриці, для яких </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>&gt;</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+style='font-size:12.0pt'>, замінити на </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=RU style='font-size:
+12.0pt'>. </span><span style='font-size:12.0pt'>Всі елементи матриці, для яких </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>&gt;</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+style='font-size:12.0pt'>, замінити на </span><span lang=EN-US
+style='font-size:12.0pt'>A</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>j</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+lang=RU style='font-size:12.0pt'>].</span><span lang=RU style='font-size:12.0pt'>
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>5</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з цілими елементами. Якщо </span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=12 height=23
+src="5_pascal_matrix_files/image005.gif"><br clear=ALL>
+<span style='font-size:12.0pt'><sub><img width=89 height=37
+src="5_pascal_matrix_files/image006.gif"></sub>                         То обчислити                        <sub><img
+width=65 height=37 src="5_pascal_matrix_files/image007.gif"></sub>       Інакше           <sub><img
+width=64 height=37 src="5_pascal_matrix_files/image008.gif"></sub></span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з дійсними елементами. Якщо</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='position:relative;
+z-index:4;left:-5px;top:0px;width:131px;height:25px'><img width=131 height=25
+src="5_pascal_matrix_files/image009.gif"></span><br clear=ALL>
+<span style='font-size:12.0pt'>Тоді обчислити </span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=81 height=25
+src="lectures/pascal/5_pascal_matrix_files/image010.gif"><br clear=ALL>
+<span style='font-size:12.0pt'>Інакше</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.17</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Заповнити
+матрицю таким чином</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt'>а)  1 1 1 1 1         б) 1 2 3
+4 5          </span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><span lang=RU
+style='font-size:12.0pt'>2 2 2 2 2             1 2 3 4 5          </span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify'><span lang=RU
+style='font-size:12.0pt'>3 3 3 3 3             1 2 3 4 5              </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span lang=RU
+style='font-size:12.0pt'>4 4 4 4 4             1 2 3 4 5              </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span lang=RU
+style='font-size:12.0pt'>5 5 5 5 5             1 2 3 4 5              </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>B</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання середнього рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з цілими елементами. Просумувати
+елементи матриці в кожному рядку окремо.</span><span style='font-size:12.0pt'> (Додатково</span><span
+lang=RU style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'>
+сформувати вектор сум по кожному рядку</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.1</span></b><b><span
+lang=RU style='font-size:12.0pt'>9</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з цілими елементами. Просумувати
+всі додатні елементи матриці в кожному рядку окремо.</span><span
+style='font-size:12.0pt'> (Додатково</span><span lang=RU style='font-size:12.0pt'>:</span><span
+style='font-size:12.0pt'> сформувати вектор сум по кожному рядку</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'> і вектор
+кількостей додатних елементів в рядку. Вивести у вигляді</span><span lang=RU
+style='font-size:12.0pt'>:</span><span lang=RU style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>I</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>– ий рядок </span><span lang=RU
+style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> сума –
+кількість. </span><span lang=RU style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>8.20</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=RU style='font-size:12.0pt'>4</span><span style='font-size:
+12.0pt;font-family:Symbol'>´</span><span lang=RU style='font-size:12.0pt'>6 </span><span
+style='font-size:12.0pt'>з дійсними елементами. Порахувати максимуми по рядках
+і вивести вектор максимумів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-GB
+style='font-size:12.0pt'>{</span><span style='font-size:12.0pt'>Ввести матрицю</span><span
+lang=EN-GB style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>for i:=1 to 4 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  begin </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>    max:=a[i,1];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>    for j:=2 to 6 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>      if max&lt;a[i,j] then max:=a[i,j];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>    b</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>]:=</span><span lang=EN-US style='font-size:12.0pt'>max</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>  </span><span lang=EN-US style='font-size:12.0pt'>end</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>{</span><span style='font-size:12.0pt'>Вивести вектор</span><span
+lang=RU style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><b><span
+lang=RU style='font-size:12.0pt'>8.</span></b><b><span style='font-size:12.0pt'>2</span></b><b><span
+lang=RU style='font-size:12.0pt'>1</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю 4</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>4 з цілими елементами.</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span
+style='font-size:12.0pt'>Визначити чи симетрична матриця відносно головної
+діагоналі (тобто чи всі а</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+lang=RU style='font-size:12.0pt'>]=</span><span lang=EN-US style='font-size:
+12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>j</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>i</span><span
+lang=RU style='font-size:12.0pt'>]).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю В розмірністю 4</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>4 з дійсними елементами. Знайти суму елементів
+матриці, які </span><span lang=RU style='font-size:12.0pt'>&lt;10 </span><span
+style='font-size:12.0pt'>і лежать вище головної діагоналі. </span></p>
+
+<p class=MsoBodyText><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>У матриці А
+розміром 5</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>7 знайти суму додатніх елементів в кожному рядку
+окремо і вивести цей вектор значень. У цьому векторі знайти елемент рівний
+введеному числу </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>; </span><span style='font-size:12.0pt'>якщо є
+такий елемент, то вивести </span><span lang=RU style='font-size:12.0pt'>&quot;так&quot;</span><span
+style='font-size:12.0pt'>, інакше вивести </span><span lang=RU
+style='font-size:12.0pt'>&quot;ні&quot;.</span><span lang=RU style='font-size:
+12.0pt'> <b><i> </i></b> </span></p>
+
+<p class=MsoBodyText><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>У матриці В
+розміром </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> знайти добуток
+від</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>ємних елементів в кожному рядку окремо і вивести цей
+вектор значень. У цьому векторі порахувати кількість елементів, які є більші
+ніж введене число </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>.</span><span lang=RU style='font-size:12.0pt'>
+<b><i> </i></b></span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>5</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Заповнити
+матрицю таким чином</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>  1   2   …  10</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>11 12   …  20</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>21 22   …  30</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>……………</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>91 92   … 100  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>I</span><span lang=RU style='font-size:12.0pt'>:=1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>For j:=1 to 10 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  A[I,j]:=j;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>For I:=2 to 10 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  For j:=1 to 10 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>    A</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>I</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+lang=RU style='font-size:12.0pt'>]:=</span><span lang=EN-US style='font-size:
+12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>I</span><span lang=RU style='font-size:
+12.0pt'>-1,</span><span lang=EN-US style='font-size:12.0pt'>j</span><span
+lang=RU style='font-size:12.0pt'>]+10;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Заповнити
+матрицю таким чином</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:21.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt'>1  2  3  …  10      б) 
+1 2 3 4 5 </span><span style='font-size:12.0pt'>   в) 1 2 3 4    г) 1 3 5    
+д) 1 3 5</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span
+lang=EN-US style='font-size:12.0pt'>      0  1  2  …    9</span><span
+style='font-size:12.0pt'>            2 3 4 5 6        3 4 5 6        2 4 6        
+3 5 7</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span
+lang=EN-US style='font-size:12.0pt'>    -1  0  1   …   8</span><span
+style='font-size:12.0pt'>             3 4 5 6 7        5 6 7 8        3 5 7        
+5 7 9            </span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span lang=RU
+style='font-size:12.0pt'>      …………….</span><span style='font-size:12.0pt'>             
+4 5 6 7 8                          4 6 8</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span lang=RU
+style='font-size:12.0pt'>    -8 -7 -6  …   1              5 6 7 8 9                         
+5 7 9</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><b><span
+style='font-size:12.0pt'>8.2</span></b><b><span lang=RU style='font-size:12.0pt'>7</span></b><b><span
+style='font-size:12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+style='font-size:12.0pt'>Ввести матрицю А розмірністю 4</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span style='font-size:
+12.0pt'>4 з цілими елементами.</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>а)</span></i><span style='font-size:12.0pt'>Порахувати
+кількість рядків, в яких всі елементи від</span><span lang=RU style='font-size:
+12.0pt'>'</span><span style='font-size:12.0pt'>ємні.</span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><i><span
+style='font-size:12.0pt'>б)</span></i><span style='font-size:12.0pt'>Порахувати
+кількість стовпців, у яких всі елементи додатні.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> цілих елементів. Сформувати матрицю так</span><span
+lang=RU style='font-size:12.0pt'>: </span><span style='font-size:12.0pt'>елементами
+кожного рядка матриці будуть відповідні елементи вектора. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.29.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з цілими
+елементами і вектор </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з
+цілих елементів. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)
+Всі непарні рядки матриці замінити вектором  </span><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>б)
+Всі  парні стовпці матриці замінити вектором </span><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>0</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з цілими
+елементами. Переставляючи її рядки та стовпці, добитись того, щоб найбільший
+елемент розміщувався у верхньому лівому куті. </span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>C</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання високого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>31</span></b><b><span style='font-size:
+12.0pt'>.</span></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=EN-US style='font-size:12.0pt'>Var A:array[1..6,1..9] of real;
+x:array[1..9] of real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=133 height=24
+src="5_pascal_matrix_files/image011.gif"><br clear=ALL>
+<span style='font-size:12.0pt'>Заповнити матрицю А за таким правилом</span><span
+lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Підказка
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=143 height=27
+src="5_pascal_matrix_files/image012.gif"><br clear=ALL>
+<span lang=EN-US style='font-size:12.0pt'>2)<sub><img width=73 height=24
+src="5_pascal_matrix_files/image013.gif"></sub></span></p>
+
+<p class=MsoNormal style='margin-left:3.0pt;text-align:justify'><span
+lang=EN-US style='font-size:12.0pt'>3)a[i,j]:=x[j]</span><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>i</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.32.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з дійсними
+елементами. У матриці поміняти місцями 1-ий і 2-ий рядки, 3-ій та 4-ий рядки і
+т.д.  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з цілими
+елементами. Одержати матрицю </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+style='font-size:12.0pt'> з матриці </span><span lang=EN-US style='font-size:
+12.0pt'>A</span><span style='font-size:12.0pt'> видаленням </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=RU style='font-size:
+12.0pt'>-</span><span style='font-size:12.0pt'>ого рядка і </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>-ого
+стовпця. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю А розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з цілими
+елементами. З матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+style='font-size:12.0pt'> одержати вектор </span><span lang=EN-US
+style='font-size:12.0pt'>B</span><span style='font-size:12.0pt'>, присвоївши
+його </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>-ому елементу значення </span><span lang=EN-US
+style='font-size:12.0pt'>true</span><span style='font-size:12.0pt'>, якщо
+виконана вказана нижче  умова, і значення </span><span lang=EN-US
+style='font-size:12.0pt'>false</span><span lang=EN-US style='font-size:12.0pt'>
+</span><span style='font-size:12.0pt'>інакше. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)
+Всі елементи </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>-ого стовпця матриці А нульові.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>б)
+Елементи </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>-</span><span style='font-size:12.0pt'>ого
+рядка матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+style='font-size:12.0pt'> впорядковані по зростанню.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>в)
+</span><span lang=EN-US style='font-size:12.0pt'>k</span><span lang=RU
+style='font-size:12.0pt'>-</span><span style='font-size:12.0pt'>ий рядок
+матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>симетричний.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.35.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Визначити </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>- кількість елементів матриці </span><span
+lang=EN-US style='font-size:12.0pt'>A</span><span style='font-size:12.0pt'>,
+які більші ніж сума решти елементів їх стовпців.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>6</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Визначити
+кількість різних елементів матриці </span><span lang=EN-US style='font-size:
+12.0pt'>C</span><span style='font-size:12.0pt'> (тобто всі елементи, що
+повторюються рахувати один раз).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>7</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Визначити,
+чи задана ціла квадратна матриця 9-ого порядку є магічним квадратом, тобто
+такою, в якої суми елементів по всіх рядках і стовпцях однакові. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>8.3</span></b><b><span
+lang=RU style='font-size:12.0pt'>8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з дійсними
+елементами. Впорядкувати її рядки по неспаданню</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>) їх перших
+елементів</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>б</span><span
+lang=RU style='font-size:12.0pt'>) </span><span style='font-size:12.0pt'>суми
+їх елементів</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>в</span><span
+lang=RU style='font-size:12.0pt'>) </span><span style='font-size:12.0pt'>їх
+найбільших елементів.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

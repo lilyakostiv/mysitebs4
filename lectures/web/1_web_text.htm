@@ -1,0 +1,642 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Робота з текстом у HTML</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.45pt 841.7pt;
+	margin:65.3pt 18.0pt 65.25pt 36.0pt;}
+div.Section1
+	{page:Section1;}
+@page Section2
+	{size:595.45pt 841.7pt;
+	margin:62.2pt 18.0pt 61.9pt 35.05pt;}
+div.Section2
+	{page:Section2;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style='text-justify-trim:punctuation; padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; '>
+
+<div class=Section1>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><b><span lang=EN-US style='font-size:11.0pt;color:black'>            </span></b><b><span
+style='font-size:14.0pt;color:black'>Оформлення тексту в </span></b><b><span
+lang=EN-US style='font-size:14.0pt;color:black'>HTML-</span></b><b><span
+style='font-size:14.0pt;color:black'>сторінці</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><b><span style='font-size:14.0pt;color:black'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><b><span style='font-size:14.0pt;color:black'>Мова </span></b><b><span
+lang=EN-US style='font-size:14.0pt;color:black'>HTML</span></b><b><span
+lang=EN-US style='font-size:11.0pt;color:black'> </span></b><span
+style='font-size:12.0pt;color:black'>(</span><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>Hyper</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>Text</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>Markup</span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt;color:black'>Language</span></i><span style='font-size:
+12.0pt;color:black'> –мова розмітки<span style='letter-spacing:.4pt'>
+гіпертекстових документів).</span></span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span lang=EN-US style='font-size:12.0pt;color:black'>Web</span><span
+style='font-size:12.0pt;color:black'>-сторінки можна створювати 2 способами: </span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span lang=RU style='font-size:12.0pt;color:black'>- </span><span
+style='font-size:12.0pt;color:black'>за допомогою мови </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>HTML</span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span lang=RU style='font-size:12.0pt;color:black'>-</span><span
+style='font-size:12.0pt;color:black'> методом конструювання (<span
+style='letter-spacing:.2pt'>без застосу­</span>вання кодів мови </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>HTML</span><span
+style='font-size:12.0pt;color:black'>). </span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span style='font-size:12.0pt;color:black;letter-spacing:
+.4pt'>          Для підготовки </span><span lang=EN-US style='font-size:12.0pt;
+color:black;letter-spacing:.4pt'>html</span><span style='font-size:12.0pt;
+color:black;letter-spacing:.4pt'>-файлу можна використати текстовий </span><span
+style='font-size:12.0pt;color:black'>редактор </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>NotePad</span><span lang=RU
+style='font-size:12.0pt;color:black'>. </span><span style='font-size:12.0pt;
+color:black'>Після написання </span><span lang=EN-US style='font-size:12.0pt;
+color:black'>html</span><span style='font-size:12.0pt;color:black'>-файл
+потрібно зберегти на диску з деякою назвою з розширенням назви </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>htm</span><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt;
+color:black'>чи </span><span lang=EN-US style='font-size:12.0pt;color:black'>html</span><span
+lang=RU style='font-size:12.0pt;color:black'>. </span><span style='font-size:
+12.0pt;color:black'>Програма мовою </span><span lang=EN-US style='font-size:
+12.0pt;color:black'>HTML</span><span lang=RU style='font-size:12.0pt;
+color:black'> (</span><span lang=EN-US style='font-size:12.0pt;color:black'>html</span><span
+style='font-size:12.0pt;color:black'>-<span style='letter-spacing:.1pt'>файл)
+має таку загальну структуру:</span></span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;margin-right:.25pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span lang=RU style='font-size:12.0pt;color:black;letter-spacing:
+-.35pt'>&lt;</span><span lang=EN-US style='font-size:12.0pt;color:black;
+letter-spacing:-.35pt'>HTML</span><span lang=RU style='font-size:12.0pt;
+color:black;letter-spacing:-.35pt'>&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.3pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black;letter-spacing:-.4pt'>&lt;HEAD&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.5pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>      &lt;TITLE&gt; </span><span
+style='font-size:12.0pt;color:black'>Назва </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>Web</span><span style='font-size:12.0pt;
+color:black'>-сторінки </span><span lang=EN-US style='font-size:12.0pt;
+color:black'>&lt;/TITLE&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.5pt;background:none'><span lang=RU
+style='font-size:12.0pt;color:black'>&lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>HEAD</span><span lang=RU style='font-size:
+12.0pt;color:black'>&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.3pt;line-height:11.3pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>BODY</span><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt;
+color:black'>параметри&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.3pt;line-height:11.3pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black'>     </span><span
+style='font-size:12.0pt;color:black'>&lt;!-- Коментар --&gt;</span></p>
+
+<p class=MsoNormal style='margin-left:17.05pt;line-height:11.3pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black;letter-spacing:.4pt'>    
+</span><span style='font-size:12.0pt;color:black;letter-spacing:.4pt'>Це моя
+перша </span><span lang=EN-US style='font-size:12.0pt;color:black;letter-spacing:
+.4pt'>Web</span><span style='font-size:12.0pt;color:black;letter-spacing:.4pt'>-сторінка.
+</span></p>
+
+<p class=MsoNormal style='margin-left:1.2pt;line-height:11.5pt;background:none'><span
+lang=RU style='font-size:12.0pt;color:black'>     &lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>BODY</span><span lang=RU style='font-size:
+12.0pt;color:black'>&gt; </span></p>
+
+<p class=MsoNormal style='margin-left:1.2pt;line-height:11.5pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>  </span><span lang=RU
+style='font-size:12.0pt;color:black'>&lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>HTML</span><span lang=RU style='font-size:
+12.0pt;color:black'>&gt;</span></p>
+
+<p class=MsoNormal style='margin-top:5.75pt;margin-right:.5pt;margin-bottom:
+0cm;margin-left:.95pt;margin-bottom:.0001pt;text-align:justify;line-height:
+12.7pt;background:none'><b><span style='font-size:12.0pt;color:black'>Команди
+мови </span></b><b><span lang=EN-US style='font-size:12.0pt;color:black'>HTML</span></b><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span><span style='font-size:
+12.0pt;color:black'>назива­<span style='letter-spacing:.3pt'>ються <i>тегами. </i>Теги
+бувають одинарними і парними. Більшість </span><span style='letter-spacing:
+.35pt'>тегів є парними (наприклад, тег означення </span></span><span
+lang=EN-US style='font-size:12.0pt;color:black;letter-spacing:.35pt'>HTML</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.35pt'>-файлу: </span><span
+style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>HTML</span><span style='font-size:12.0pt;
+color:black'>&gt; ... &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>HTML</span><span style='font-size:12.0pt;color:black'>&gt;).</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.25pt;margin-bottom:0cm;
+margin-left:.5pt;margin-bottom:.0001pt;text-align:justify;line-height:12.7pt;
+background:none'><span style='font-size:12.0pt;color:black;letter-spacing:
+.65pt'>Парні теги позначають початок і кінець ділянки дії </span><span
+style='font-size:12.0pt;color:black;letter-spacing:.15pt'>відповідної команди.
+Теги записують у кутових дужках. Тег, що </span><span style='font-size:12.0pt;
+color:black;letter-spacing:.35pt'>закриває ділянку дії, має косу риску. </span><span
+style='font-size:12.0pt;color:black;letter-spacing:.25pt'>Тег може містити
+параметри, </span><span style='font-size:12.0pt;color:black;letter-spacing:
+.5pt'>які записуються через пропуск у першому тезі (наприклад, </span><span
+lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>BODY</span><span lang=EN-US
+style='font-size:12.0pt;color:black'> </span><span lang=EN-US style='font-size:
+12.0pt;color:black'>TEXT</span><span lang=RU style='font-size:12.0pt;
+color:black'>=&quot;</span><span lang=EN-US style='font-size:12.0pt;color:black'>red</span><span
+lang=RU style='font-size:12.0pt;color:black'>&quot;&gt;. </span><span
+style='font-size:12.0pt;color:black'>Назви <span style='letter-spacing:.25pt'>тегів
+можна писати як великими буквами, так і малими.</span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.95pt;margin-bottom:0cm;
+margin-left:.25pt;margin-bottom:.0001pt;text-align:justify;text-indent:17.3pt;
+line-height:12.7pt;background:none'><span style='font-size:12.0pt;color:black'>      У
+середині пари тегів </span><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>HEAD</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt;...&lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>HEAD</span><span lang=RU style='font-size:
+12.0pt;color:black'>&gt; </span><span style='font-size:12.0pt;color:black'>описують
+заголо­<span style='letter-spacing:.1pt'>вок документа. Основною частиною
+заголовка документа є заго­</span><span style='letter-spacing:.5pt'>ловок </span></span><span
+lang=EN-US style='font-size:12.0pt;color:black;letter-spacing:.5pt'>Windows</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.5pt'>-вікна, який пишуть у
+середині пари тегів </span><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>TITLE</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt;</span><span style='font-size:12.0pt;
+color:black'>... &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>TITLE</span><span style='font-size:12.0pt;color:black'>&gt;.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.7pt;margin-bottom:0cm;
+margin-left:.25pt;margin-bottom:.0001pt;text-align:justify;text-indent:17.05pt;
+line-height:12.7pt;background:none'><span style='font-size:12.0pt;color:black'>      У
+середині пари тегів &lt;</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>BODY</span><span style='font-size:12.0pt;color:black'>
+параметри&gt;...&lt;/В</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>ODY</span><span style='font-size:12.0pt;color:black'>&gt; запи­<span
+style='letter-spacing:.35pt'>сують те, що має відображатися у вікні </span><span
+style='letter-spacing:.55pt'>браузера. Щоб на екрані відобразити </span>текст</span><span
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt;
+color:black'>потрібно тільки <span style='letter-spacing:.5pt'>набрати цей
+текст. Для кращого вигляду тексту застосовуються</span><span style='letter-spacing:
+.3pt'> теги форматування. </span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.7pt;margin-bottom:0cm;
+margin-left:.25pt;margin-bottom:.0001pt;text-align:justify;text-indent:17.05pt;
+line-height:12.7pt;background:none'><span lang=EN-US style='font-size:12.0pt;
+color:black;letter-spacing:.3pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:17.3pt;line-height:12.7pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>      </span><span
+style='font-size:12.0pt;color:black'>Розглянемо основні <b>параметри тега </b></span><b><span
+lang=EN-US style='font-size:12.0pt;color:black'>BODY</span></b><span lang=RU
+style='font-size:12.0pt;color:black'>:</span></p>
+
+<p class=MsoNormal style='margin-right:.7pt;text-align:justify;text-indent:
+17.5pt;line-height:12.7pt;background:none'><span lang=EN-US style='font-size:
+12.0pt;color:black'>BACKGROUND</span><span lang=EN-US style='font-size:12.0pt;
+color:black'> </span><span style='font-size:12.0pt;color:black'>= &quot;шлях до
+графічного файлу&quot;— задає <span style='letter-spacing:.5pt'>картинку для
+тла;</span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.5pt;margin-bottom:0cm;
+margin-left:.25pt;margin-bottom:.0001pt;text-align:justify;text-indent:17.3pt;
+line-height:12.7pt;background:none'><span lang=EN-US style='font-size:12.0pt;
+color:black'>BGCOLOR</span><span lang=RU style='font-size:12.0pt;color:black'>
+= &quot;</span><span lang=EN-US style='font-size:12.0pt;color:black'>white</span><span
+lang=RU style='font-size:12.0pt;color:black'>&quot; </span><span
+style='font-size:12.0pt;color:black'>— задає білий колір тла, якщо не <span
+style='letter-spacing:.3pt'>використовується тло-картинка;</span></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:.5pt;margin-bottom:0cm;
+margin-left:.25pt;margin-bottom:.0001pt;text-align:justify;text-indent:17.05pt;
+line-height:12.7pt;background:none'><span lang=EN-US style='font-size:12.0pt;
+color:black'>TEXT</span><span lang=RU style='font-size:12.0pt;color:black'> =
+&quot;</span><span lang=EN-US style='font-size:12.0pt;color:black'>black</span><span
+lang=RU style='font-size:12.0pt;color:black'>&quot; </span><span
+style='font-size:12.0pt;color:black'>— задає чорний колір тексту на <span
+style='letter-spacing:.2pt'>сторінці.</span></span></p>
+
+<p class=MsoNormal style='margin-top:.25pt;text-indent:17.25pt;line-height:
+12.7pt;background:none'><span style='font-size:12.0pt;color:black'>Тег &lt;!--
+текст --&gt; позначає коментар. Текст у середині тега не буде виводитись <span
+style='letter-spacing:.35pt'>на екран. </span><span style='letter-spacing:.75pt'>Коментар
+можна писати також у середині парного тега </span></span><span lang=RU
+style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>COMMENT</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt; </span><span style='font-size:12.0pt;
+color:black'>коментар </span><span lang=RU style='font-size:12.0pt;color:black'>&lt;/</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>COMMENT</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt;.</span></p>
+
+<p class=MsoNormal style='margin-top:6.7pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:2.9pt;margin-bottom:.0001pt;line-height:12.7pt;background:none'><span
+style='font-size:12.0pt;color:black;letter-spacing:.45pt'>         Для <b>форматування
+тексту</b> використовуються такі теги</span><span lang=RU style='font-size:
+12.0pt;color:black;letter-spacing:.45pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;Р&gt;  </span><span
+lang=RU style='font-size:12.0pt;color:black'>-</span><span style='font-size:
+12.0pt;color:black'> початок нового абзацу (п<span style='letter-spacing:.4pt'>ерше
+речення абзацу вирівняне до лівого краю) </span></span></p>
+
+<p class=MsoNormal style='margin-left:17.0pt;line-height:12.95pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black;letter-spacing:.4pt'>     Т</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.25pt'>ег &lt;Р&gt; може
+використовуватися як парний: </span><span lang=RU style='font-size:12.0pt;
+color:black;letter-spacing:.25pt'>&lt;</span><span lang=EN-US style='font-size:
+12.0pt;color:black;letter-spacing:.25pt'>P</span><span lang=RU
+style='font-size:12.0pt;color:black;letter-spacing:.25pt'>&gt; текст</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.6pt'> &lt;/Р&gt; </span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:12.7pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>BR</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt; </span><span style='font-size:12.0pt;
+color:black'>- перехід на новий рядок </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>HR</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt; -</span><span style='font-size:12.0pt;
+color:black'> буде проведена горизонтальна лінія</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;В&gt; текст &lt;/В&gt;   
+— <b>товстий </b>шрифт тексту</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>I</span><span style='font-size:12.0pt;
+color:black'>&gt; текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>I</span><span style='font-size:12.0pt;color:black'>&gt;    —
+шрифт-<i>курсив</i></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>U</span><span style='font-size:12.0pt;
+color:black'>&gt; текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>U</span><span style='font-size:12.0pt;color:black'>&gt;    — <u>підкреслений</u>
+текст</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>SUB</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt; </span><span style='font-size:12.0pt;
+color:black'>текст </span><span lang=RU style='font-size:12.0pt;color:black'>&lt;/</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>SUB</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt; -</span><span style='font-size:12.0pt;
+color:black'> нижній індекс</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>SUP</span><span style='font-size:12.0pt;
+color:black'>&gt; текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>SUP</span><span style='font-size:12.0pt;color:black'>&gt; -
+верхній індекс</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>BIG</span><span style='font-size:12.0pt;
+color:black'>&gt; текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>BIG</span><span style='font-size:12.0pt;color:black'>&gt; </span><span
+lang=RU style='font-size:12.0pt;color:black'>-</span><span style='font-size:
+12.0pt;color:black'> великий </span><span lang=RU style='font-size:12.0pt;
+color:black'>шрифт</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>SMALL</span><span style='font-size:12.0pt;
+color:black'>&gt; текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>SMALL</span><span style='font-size:12.0pt;color:black'>&gt; </span><span
+lang=RU style='font-size:12.0pt;color:black'>-</span><span lang=RU
+style='font-size:12.0pt;color:black'> </span><span lang=RU style='font-size:
+12.0pt;color:black'>малий</span><span lang=RU style='font-size:12.0pt;
+color:black'> </span><span lang=RU style='font-size:12.0pt;color:black'>шрифт</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;ЕМ&gt; текст &lt;/ЕМ&gt;
+— ви</span><span lang=RU style='font-size:12.0pt;color:black'>ділення</span><span
+style='font-size:12.0pt;color:black'> курсивом (так як тег</span><span lang=RU
+style='font-size:12.0pt;color:black'> &lt;</span><span style='font-size:12.0pt;
+color:black'>І</span><span lang=RU style='font-size:12.0pt;color:black'>&gt;</span><span
+style='font-size:12.0pt;color:black'>)</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:80.65pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;line-height:12.7pt;background:
+none'><span style='font-size:12.0pt;color:black'>&lt;В&gt; &lt;І&gt; текст
+&lt;/І</span><span lang=RU style='font-size:12.0pt;color:black'>&gt;&lt;</span><span
+style='font-size:12.0pt;color:black'>/В&gt; — <b><i>товстий курсив</i></b></span><b><i><span
+style='font-size:12.0pt;color:black'> </span></i></b><span lang=RU
+style='font-size:12.0pt;color:black'>(</span><span style='font-size:12.0pt;
+color:black;letter-spacing:.45pt'>застос</span><span lang=RU style='font-size:
+12.0pt;color:black;letter-spacing:.45pt'>овується</span><span lang=RU
+style='font-size:12.0pt;color:black;letter-spacing:.45pt'> </span><b><i><span
+style='font-size:12.0pt;color:black;letter-spacing:.45pt'>принцип вкладення
+тегів</span></i></b><span style='font-size:12.0pt;color:black;letter-spacing:
+.45pt'>).</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:12.95pt;background:
+none'><span lang=RU style='font-size:12.0pt;color:black;letter-spacing:.6pt'>      Окремим
+</span><span style='font-size:12.0pt;color:black;letter-spacing:.2pt'>типом
+абзацу є заголовок. Є шість видів заголовків,</span><span lang=RU
+style='font-size:12.0pt;color:black;letter-spacing:.2pt'> як</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.2pt'>і відрізняються
+розмірами символів.</span><span style='font-size:12.0pt;color:black;letter-spacing:
+.1pt'>       </span><span style='font-size:12.0pt;color:black;letter-spacing:
+.4pt'>&lt;Н1&gt;Заголовок</span><span lang=RU style='font-size:12.0pt;
+color:black;letter-spacing:.4pt'> &lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black;letter-spacing:.4pt'>H</span><span lang=RU
+style='font-size:12.0pt;color:black;letter-spacing:.4pt'>1&gt;</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.4pt'> - найбільшого розміру
+символу ,</span></p>
+
+<p class=MsoNormal style='margin-top:2.65pt;margin-right:2.8pt;margin-bottom:
+0cm;margin-left:16.3pt;margin-bottom:.0001pt;text-align:justify;line-height:
+16.3pt;background:none'><span style='font-size:12.0pt;color:black;letter-spacing:
+.4pt'>Заголовки &lt;Н2&gt;,</span><span style='font-size:12.0pt;color:black;
+letter-spacing:.45pt'>&lt;НЗ&gt;,&lt;Н4&gt;</span><span style='font-size:12.0pt;
+color:black'>,</span><span style='font-size:12.0pt;color:black'> <span lang=RU
+style='letter-spacing:.45pt'>&lt;</span></span><span style='font-size:12.0pt;
+color:black;letter-spacing:.45pt'>Н5&gt;,</span><span lang=RU style='font-size:
+12.0pt;color:black;letter-spacing:.45pt'>&lt;</span><span style='font-size:
+12.0pt;color:black;letter-spacing:.45pt'>Н</span><span lang=RU
+style='font-size:12.0pt;color:black;letter-spacing:.45pt'>6</span><span
+style='font-size:12.0pt;color:black;letter-spacing:.45pt'>&gt;</span><span
+lang=RU style='font-size:12.0pt;color:black;letter-spacing:.45pt'> - щоразу
+менших розмірів.</span></p>
+
+<p class=MsoNormal style='margin-top:2.65pt;margin-right:2.8pt;margin-bottom:
+0cm;margin-left:14.2pt;margin-bottom:.0001pt;text-align:justify;line-height:
+16.3pt;background:none'><a name="_GoBack"></a><span style='font-size:12.0pt;
+color:black'>       Заголовок по замовчуванню вирівнюється до лівого краю вік­<span
+style='letter-spacing:.05pt'>на. Якщо вирівнювання заголовка чи іншого елемента
+на сторін­</span><span style='letter-spacing:.1pt'>ці потрібно вказати, то
+використовують теги вирівнювання:</span></span></p>
+
+<p class=MsoNormal style='margin-top:5.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.05pt;margin-bottom:.0001pt;line-height:12.5pt;background:none'><span
+style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>CENTER</span><span style='font-size:12.0pt;
+color:black'>&gt; елемент &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>CENTER</span><span style='font-size:12.0pt;color:black'>&gt; —
+вирівнювання до центру </span></p>
+
+<p class=MsoNormal style='margin-top:5.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.05pt;margin-bottom:.0001pt;line-height:12.5pt;background:none'><span
+style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>LEFT</span><span style='font-size:12.0pt;
+color:black'>&gt; елемент &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>LEFT</span><span style='font-size:12.0pt;color:black'>&gt; —
+вирівнювання до лівого краю </span></p>
+
+<p class=MsoNormal style='margin-top:5.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:17.05pt;margin-bottom:.0001pt;background:none'><span
+style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>RIGHT</span><span style='font-size:12.0pt;
+color:black'>&gt; елемент &lt;/</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>RIGHT</span><span style='font-size:12.0pt;color:black'>&gt; —
+вирівнювання до правого краю</span></p>
+
+<p class=MsoNormal style='margin-top:2.9pt'><span style='font-size:12.0pt;
+font-family:Arial'>&nbsp;</span></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman"'><br clear=all
+style='page-break-before:auto'>
+</span>
+
+<div class=Section2>
+
+<p class=MsoNormal style='margin-left:17.05pt;background:none'><b><span
+style='font-size:12.0pt;color:black'>Параметри шрифта </span></b><b><span
+lang=EN-US style='font-size:12.0pt;color:black'>FONT</span></b></p>
+
+<p class=MsoNormal style='background:none'><span style='font-size:12.0pt;
+color:black'> Щоб задати <span style='letter-spacing:.7pt'>назву конкретного
+шрифта, його розмір і колір, використовують </span>парний тег </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>FONT</span><span
+style='font-size:12.0pt;color:black'> з параметрами </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>FACE</span><span style='font-size:12.0pt;
+color:black'>, </span><span lang=EN-US style='font-size:12.0pt;color:black'>SIZE</span><span
+style='font-size:12.0pt;color:black'> та </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>COLOR</span><span style='font-size:12.0pt;
+color:black'>, наприклад,</span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;background:none'><span lang=EN-US
+style='font-size:12.0pt;color:black'>&lt;FONT FACE </span><span
+style='font-size:12.0pt;color:black'>= </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>&quot;Decor, Arbat &quot; SIZE </span><span
+style='font-size:12.0pt;color:black'>= +2</span><span lang=EN-US
+style='font-size:12.0pt;color:black'> COLOR</span><span style='font-size:12.0pt;
+color:black'> = &quot;</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>red</span><span style='font-size:12.0pt;color:black'>&quot;&gt;
+текст &lt;/</span><span lang=EN-US style='font-size:12.0pt;color:black'>FONT</span><span
+style='font-size:12.0pt;color:black'>&gt; </span></p>
+
+<p class=MsoNormal style='margin-top:6.5pt;background:none'><span lang=EN-GB
+style='font-size:12.0pt;color:black'>            </span><span lang=RU
+style='font-size:12.0pt;color:black'>Якщо</span><span lang=RU style='font-size:
+12.0pt;color:black'> </span><span lang=RU style='font-size:12.0pt;color:black'>на</span><span
+lang=RU style='font-size:12.0pt;color:black'> </span><span style='font-size:
+12.0pt;color:black'>комп'ютері встановлено шрифт </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>Decor</span><span style='font-size:12.0pt;
+color:black'>, то він</span><span style='font-size:12.0pt;color:black'> </span><span
+lang=RU style='font-size:12.0pt;color:black'>буде</span><span lang=RU
+style='font-size:12.0pt;color:black'> </span><span style='font-size:12.0pt;
+color:black'>використаний<span style='letter-spacing:.7pt'> до цього тексту, в
+іншому разі браузер застосує </span>шрифт </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>Arbat</span><span style='font-size:12.0pt;
+color:black'>, інакше </span><span lang=EN-GB style='font-size:12.0pt;
+color:black'>-</span><span style='font-size:12.0pt;color:black'> деякий свій
+стандартний шрифт, наприклад, </span><span lang=EN-US style='font-size:12.0pt;
+color:black'>Times</span><span lang=EN-US style='font-size:12.0pt;color:black'>
+</span><span lang=EN-US style='font-size:12.0pt;color:black'>New</span><span
+lang=EN-US style='font-size:12.0pt;color:black'> </span><span lang=EN-US
+style='font-size:12.0pt;color:black'>Roman</span><span style='font-size:12.0pt;
+color:black'>.</span></p>
+
+<p class=MsoNormal style='margin-left:.25pt;line-height:12.5pt;background:none'><span
+style='font-size:12.0pt;color:black'>            Розміри символів шрифту можуть
+бути від 1 до 7. Розмір З вважається стандартним, він відповідає приблизно 10
+пунктам. Розмір 7 є найбільшим. Число 2 як значення параметра </span><span
+lang=EN-US style='font-size:12.0pt;color:black'>SIZE</span><span
+style='font-size:12.0pt;color:black'> означає другий поточний розмір шрифта,
+число +2 означає, що <span style='letter-spacing:.7pt'>розмір шрифта має бути
+на дві одиниці більший, ніж поточний, число </span>-2 означатиме на дві одиниці
+менший, ніж поточний.</span></p>
+
+<p class=MsoNormal style='margin-left:.25pt;line-height:12.5pt;background:none'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:18.25pt;text-indent:3.05pt;background:
+none'><span style='font-size:12.0pt;color:black;letter-spacing:-.05pt'>Колір
+тексту буде червоний. Основні кольори мають такі назви:</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>black</span><span
+style='font-size:12.0pt;color:black'>   - чорний</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>navy</span><span
+style='font-size:12.0pt;color:black'>    - темно-синій</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>silver</span><span
+style='font-size:12.0pt;color:black'>   - сірий</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>blue</span><span
+style='font-size:12.0pt;color:black'>     - синій</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>maroon</span><span
+style='font-size:12.0pt;color:black'> - малиновий</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>purple</span><span
+style='font-size:12.0pt;color:black'>  - бузковий</span></p>
+
+<p class=MsoNormal style='margin-top:.5pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:14.2pt;margin-bottom:.0001pt;line-height:10.8pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>red</span><span
+style='font-size:12.0pt;color:black'>       - червоний</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black;letter-spacing:-.05pt'>fuchsia</span><span
+style='font-size:12.0pt;color:black;letter-spacing:-.05pt'> - рожевий</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>green</span><span
+style='font-size:12.0pt;color:black'>    - зелений</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>teal</span><span
+style='font-size:12.0pt;color:black'>       - бірюзовий</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>lime</span><span
+style='font-size:12.0pt;color:black'>      - яскраво-зелений</span></p>
+
+<p class=MsoNormal style='margin-top:.25pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:14.2pt;margin-bottom:.0001pt;line-height:10.8pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>aqua</span><span
+style='font-size:12.0pt;color:black'>     - блакитний</span></p>
+
+<p class=MsoNormal style='margin-top:.25pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:14.2pt;margin-bottom:.0001pt;line-height:10.8pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>olive</span><span
+style='font-size:12.0pt;color:black'>     - темно-зелений</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;line-height:10.8pt;background:
+none'><span lang=EN-US style='font-size:12.0pt;color:black'>gray</span><span
+style='font-size:12.0pt;color:black'>      - темно-сірий</span></p>
+
+<p class=MsoNormal style='margin-top:.25pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:14.2pt;margin-bottom:.0001pt;line-height:10.8pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>yellow</span><span
+style='font-size:12.0pt;color:black'>  - жовтий</span></p>
+
+<p class=MsoNormal style='margin-top:.25pt;margin-right:0cm;margin-bottom:0cm;
+margin-left:14.2pt;margin-bottom:.0001pt;line-height:10.8pt;background:none'><span
+lang=EN-US style='font-size:12.0pt;color:black'>white</span><span
+style='font-size:12.0pt;color:black'>    - білий</span></p>
+
+<p class=MsoNormal style='margin-top:2.4pt;margin-right:.5pt;margin-bottom:
+0cm;margin-left:0cm;margin-bottom:.0001pt;text-align:justify;line-height:12.5pt;
+background:none'><span style='font-size:12.0pt;color:black'>            Різних
+можливих відтінків цих кольорів є 16 млн. Відтінки <span style='letter-spacing:
+.4pt'>задають спеціальними шістнадцятковими кодами, як це при­</span><span
+style='letter-spacing:.25pt'>йнято в графічних редакторах, наприклад, чорний
+колір </span>має код #000000, червоний </span><span lang=RU style='font-size:
+12.0pt;color:black'>#</span><span lang=EN-US style='font-size:12.0pt;
+color:black'>ff</span><span lang=RU style='font-size:12.0pt;color:black'>0000</span><span
+style='font-size:12.0pt;color:black'>.</span></p>
+
+<p class=MsoNormal style='margin-top:1.45pt;text-align:justify;text-indent:
+17.3pt;line-height:12.25pt;background:none'><span lang=RU style='font-size:
+12.0pt;color:black'>      Мнемо-коди: &amp;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>guot</span><span lang=RU style='font-size:
+12.0pt;color:black'>;</span><span style='font-size:12.0pt;color:black'> (або
+числовий код </span><span lang=RU style='font-size:12.0pt;color:black'>&amp;#34;)
+–</span><span style='font-size:12.0pt;color:black'>відобразить на екрані лапки,
+</span><span lang=RU style='font-size:12.0pt;color:black'>&amp;</span><span
+lang=EN-US style='font-size:12.0pt;color:black'>nbsp</span><span lang=RU
+style='font-size:12.0pt;color:black'>; - </span><span style='font-size:12.0pt;
+color:black'>пропуск. Коди інших спеціальних символів (наприклад, </span><span
+lang=RU style='font-size:12.0pt;color:black'>&amp;,&gt;,&lt;,…) можна знайти у
+дов</span><span style='font-size:12.0pt;color:black'>і</span><span lang=RU
+style='font-size:12.0pt;color:black'>дниках.</span><span style='font-size:12.0pt;
+color:black'> </span></p>
+
+<p class=MsoNormal style='margin-top:1.45pt;text-align:justify;text-indent:
+17.3pt;line-height:12.25pt;background:none'><span style='font-size:12.0pt;
+color:black;letter-spacing:.05pt'>      Адреси прийнято </span><span
+style='font-size:12.0pt;color:black'>записувати в парному тезі </span><span
+lang=RU style='font-size:12.0pt;color:black'>&lt;</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>ADDRESS</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt;...&lt;/</span><span lang=EN-US
+style='font-size:12.0pt;color:black'>ADDRESS</span><span lang=RU
+style='font-size:12.0pt;color:black'>&gt;.</span></p>
+
+</div>
+
+</body>
+
+</html>

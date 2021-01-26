@@ -1,0 +1,497 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Одновимірні масиви</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Одновимірні масиви (вектори)</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Масив – це впорядкований набір деяких значень
+фіксованої кількості. Ці значення – це компоненти масиву.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Компоненти масиву є пронумеровані, причому
+індивідуальне ім’я одержує тільки весь набір.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Нехай впорядкованому набору з </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'> дійсних
+компонент дамо ім'я </span><i><span lang=EN-US style='font-size:12.0pt'>V</span></i><span
+style='font-size:12.0pt'>. Для вказання якоїсь компоненти з цього набору в
+якості її імені використовують ім'я набору і номер (індекс) цієї компоненти в
+цьому наборі. ( </span><span lang=EN-US style='font-size:12.0pt'><sub><img
+width=16 height=19 src="4_pascal_vector_files/image001.gif"></sub></span><span
+style='font-size:12.0pt'> – масив,  <sub><img width=59 height=24
+src="4_pascal_vector_files/image002.gif"></sub>, ...,<sub><img width=19 height=24
+src="4_pascal_vector_files/image003.gif"></sub> - компоненти масиву ). Всі компоненти
+масиву повинні бути одного типу. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Масив служить для збереження послідовності чисел.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Лінійний масив ще називають одномірним масивом або числовим
+вектором.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Вектор
+в Паскалі описується так</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Array</span><span lang=RU style='font-size:12.0pt'>
+[&lt;тип індекса&gt;] </span><span lang=EN-US style='font-size:12.0pt'>of</span><span
+lang=RU style='font-size:12.0pt'> &lt;скалярний тип(тип компонент вектора)&gt;;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Змінні
+такого типу можна описувати двома способами</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>I </span></i><i><span style='font-size:12.0pt'>спосіб</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>: </span></i><span lang=EN-US
+style='font-size:12.0pt'>var B:array [1..10] of real; </span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>II </span></i><i><span style='font-size:12.0pt'>спосіб</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>: </span></i><span lang=EN-US
+style='font-size:12.0pt'>type vect=array [1..10] of real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>                var</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=RU style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:
+12.0pt'>vect</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>B</span><span lang=RU style='font-size:12.0pt'>[</span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=RU style='font-size:
+12.0pt'>] - </span><span style='font-size:12.0pt'>елемент вектора</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.1</span></b><b><span style='font-size:12.0pt'>. </span></b><span
+style='font-size:12.0pt'>Ввести вектор з 10 цілих елементів. Знайти суму всіх
+елементів вектора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.2.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор з 12 дійсних елементів. Порахувати суму та кількість додатніх елементів
+вектора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.3</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> дійсних елементів. Порахувати суму додатніх та
+добуток від</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>ємних елементів вектора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.4</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектор з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> цілих елементів. Знайти максимальний елемент вектора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.5</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектор з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> дійсних елементів. Знайти мінімальний елемент вектора
+і його порядковий номер.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.6.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектор з </span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'> цілих елементів. Порахувати кількість елементів
+вектора, які рівні числу </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.7.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість елементів </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>:</span><span lang=EN-US style='font-size:
+12.0pt'>char</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=RU style='font-size:12.0pt'>( </span><span style='font-size:12.0pt'>символа
+</span><span lang=RU style='font-size:12.0pt'>‘</span><span lang=EN-US
+style='font-size:12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>’) </span><span
+style='font-size:12.0pt'>в масиві.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.8</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>дійсних елементів. Сформувати
+вектор С=А+В (тобто <sub><img width=73 height=24
+src="4_pascal_vector_files/image004.gif"></sub>).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.9.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектор з 8 цілих елементів. Всі додатні елементи замінити на 1, а всі недодатні
+замінити на -1. Вивести утворений вектор.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.10.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектори з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>цілих
+елементів. Порахувати суму додатніх та суму від’ємних елементів масиву. Всі
+додатні елементи замінити на суму додатніх, а всі від’ємні  - на суму від</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>ємних.
+Вивести новоутворений вектор.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.11</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=RU style='font-size:12.0pt'>чисел</span><span
+style='font-size:12.0pt'>. Знайти суму та кількість чисел, відмінних від
+останнього.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.12</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів. Знайти середнє
+арифметичне всіх додатніх елементів вектора.  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.13.</span></b><i><span style='font-size:12.0pt'>  </span></i><span
+style='font-size:12.0pt'>Ввести </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> чисел. Знайти середнє арифметичне всіх чисел,
+відмінних (більших) від першого та останнього чисел.<i>  </i></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>7.14.</span></b><i><span style='font-size:12.0pt'>  </span></i><span
+style='font-size:12.0pt'>Сформувати вектор, елементи якого є квадратами
+натуральних чисел. (1, 4, 9, 16, 25, ...)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.15.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Порахувати
+кількість й </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'> присвоїти
+номер першого входження числа </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=RU style='font-size:
+12.0pt'>( </span><span style='font-size:12.0pt'>символа </span><span lang=RU
+style='font-size:12.0pt'>‘</span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>’) </span><span style='font-size:12.0pt'>в
+масив, або нуль, якщо число </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>не
+зустрічається в масиві.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень В</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання середнього рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.16.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Поміняти
+місцями максимальний та мінімальний елементи вектора B.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.17.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор </span><span lang=EN-US style='font-size:12.0pt'>V</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>дійсних елементів. Якщо всі
+елементи вектора додатні, то обчислити <sub><img width=43 height=45
+src="4_pascal_vector_files/image005.gif"></sub>, інакше знайти </span><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=56 height=24
+src="4_pascal_vector_files/image006.gif"></sub></span><span lang=RU style='font-size:
+12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.18.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор </span><span lang=EN-US style='font-size:12.0pt'>V</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>дійсних елементів. Якщо всі
+елементи вектора від</span><span lang=RU style='font-size:12.0pt'>'</span><span
+style='font-size:12.0pt'>ємні, то обчислити <sub><img width=108 height=45
+src="4_pascal_vector_files/image007.gif"></sub>, інакше знайти </span><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=145 height=24
+src="4_pascal_vector_files/image008.gif"></sub></span><span lang=RU style='font-size:
+12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.19.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів. Перевірити чи
+вони однакові. (Двома способами, третій-не розглядаючи всі елементи вектора).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.20.</span></b><span
+style='font-size:12.0pt'> Ввести вектор </span><span lang=EN-US
+style='font-size:12.0pt'>D</span><span lang=RU style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> Перевірити, чи цей вектор читається однаково зліва
+направо і навпаки. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.21.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів. Вивести
+спочатку всі додатні елементи вектора, а потім  - всі від’ємні, зберігаючи
+вихідне взаємне розташування як серед додатних, так і серед решти елементів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.22.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+текст з 20 літер. Надрукувати спочатку всі цифри, що входять в нього, а потім
+решта літер, зберігаючи при цьому взаємне розміщення літер в кожній з цих груп.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.23.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів, причому
+елементи кожного з векторів впорядкованя по зростанню. Об</span><span lang=RU
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>єднати елементи
+цих векторів в один вектор </span><span lang=EN-US style='font-size:12.0pt'>Z</span><span
+style='font-size:12.0pt'> так, щоб вони знову були впорядковані по зростанню. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.24.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+вектор, елементи якого є числами Фібоначчі. ( 1, 2, 3, 5, 8, 13, ...)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.25.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Сформувати
+вектор, елементи якого є степенями двійки.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.26.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих (трицифрових) елементів.
+Елементи цього масиву вивести  у зворотньому порядку. (По 6 чисел в рядку).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.27.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів. Елементи
+вектора циклічно зсунути на одну позицію вліво (вправо).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.28.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор С</span><span style='font-size:12.0pt'> </span><span style='font-size:
+12.0pt'>з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>цілих
+елементів. Елементи вектора циклічно зсунути на дві позиції вліво (вправо).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.29.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+чотирицифрове число </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>, у масив </span><span lang=EN-US style='font-size:
+12.0pt'>D</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>записати усі цифри числа </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.30.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Змінній </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>
+присвоїти значення </span><span lang=EN-US style='font-size:12.0pt'>true</span><span
+style='font-size:12.0pt'>, якщо елементи масиву впорядковані по зростанню
+(строго по зростанню), і значення </span><span lang=EN-US style='font-size:
+12.0pt'>false</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень С</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання вищого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.31.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Ввести
+вектор С</span><span style='font-size:12.0pt'> </span><span style='font-size:
+12.0pt'>з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>цілих
+елементів. Елементи вектора циклічно зсунути на </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>позицій вліво (вправо).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.32.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Змінній </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>
+присвоїти значення </span><span lang=EN-US style='font-size:12.0pt'>true</span><span
+style='font-size:12.0pt'>, якщо в масиві немає нульових елементів і при цьому
+додатні елементи чергуються з від’ємними, і значення </span><span lang=EN-US
+style='font-size:12.0pt'>false</span><span lang=EN-US style='font-size:12.0pt'>
+</span><span style='font-size:12.0pt'>інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.33.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Змінній </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'> присвоїти номер першого
+входження числа </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=RU style='font-size:
+12.0pt'>( </span><span style='font-size:12.0pt'>символа </span><span lang=RU
+style='font-size:12.0pt'>‘</span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>’) </span><span style='font-size:12.0pt'>в
+масив, або нуль, якщо число </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>не
+зустрічається в масиві.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.34.</span></b><i><span
+style='font-size:12.0pt'>  </span></i><span style='font-size:12.0pt'>Задано
+текст з 40 літер. Визначити, чи він симетричний, тобто чи читається однаково
+зліва направо і справа наліво.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.35.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектор з</span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>елементів. Знайти найбільший спільний дільник
+елементів цього вектора.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.36.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+послідовність з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> цілих чисел. Знайти суму чисел цієї послідовності,
+які розташовані між максимальним і мінімальним числами (в суму включити і два
+ці числа).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.37.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Змінній </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>
+присвоїти значення </span><span lang=EN-US style='font-size:12.0pt'>true</span><span
+style='font-size:12.0pt'> і </span><span lang=EN-US style='font-size:12.0pt'>false</span><span
+style='font-size:12.0pt'> в залежності від того, чи є серед елементів масиву
+хоча б одне число Фібоначчі.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.38.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Змінній </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>присвоїти значення </span><span
+lang=EN-US style='font-size:12.0pt'>true</span><span style='font-size:12.0pt'>
+і </span><span lang=EN-US style='font-size:12.0pt'>false</span><span
+style='font-size:12.0pt'> в залежності від того, чи є серед елементів масиву не
+менше двох степенів двійки.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.39.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести дві
+послідовності з </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'> цілих чисел. Знайти найменше серед чисел першої
+послідовності, яке не входить в другу послідовність. (Вважаємо, що хоча б одне
+таке число є). </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:18.0pt'><b><i><span
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:18.0pt'><b><i><span
+style='font-size:12.0pt'>Опис алгоритму сортування лінійного масиву</span></i></b><b><i><span
+lang=RU style='font-size:12.0pt'>(</span></i></b><b><i><span style='font-size:
+12.0pt'>наприклад, по зростанню) </span></i></b><b><span style='font-size:12.0pt'>за</span></b><span
+style='font-size:12.0pt'> <b><i>допомогою вибору</i></b> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:18.0pt'><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Нехай маємо
+масив</span><span lang=RU style='font-size:12.0pt'> 5 </span><span
+style='font-size:12.0pt'>1</span><span lang=RU style='font-size:12.0pt'> 6 </span><span
+style='font-size:12.0pt'>4</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>2. Знаходимо максимальний елемент і міняємо його
+місцями з останнім елементом, тоді одержимо масив 5 1 2 4 6. Потім шукаємо
+максимальний елемент між всіма елементами масиву крім останнього і міняємо його
+місцями з передостаннім елементом масиву, одержимо масив 4 1 2 5 6. І так далі
+продовжуємо, поки не одержимо впорядкований масив  </span><span lang=RU
+style='font-size:12.0pt'>    1 2 4 5 6</span><span style='font-size:12.0pt'>. (
+Можна шукати не максимум, а мінімум і ставити його на перше місце і так далі.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>program r1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>const n=6;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>var a:array[1..n] of real;   max,p:real;c,i,m_i:
+integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>begin {</span><span style='font-size:12.0pt'>Ввести
+масив</span><span lang=EN-US style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  for c:=n downto 1 do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>    begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>      max:=a[1];m_i:=1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>      for i:=1 to c do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>        if max&lt;a[i] then begin max:=a[i];   m_i:=I;
+end;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>       p:=a[m_i];  a[m_i]:=a[c]; a[c]:=p</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>     end</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>    {</span><span style='font-size:12.0pt'>Вивести вже впорядкований
+масив</span><span lang=RU style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>end</span><span lang=RU style='font-size:12.0pt'>.   </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>7.40.</span></b><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Просортувати
+масив по квадратах його елементів.</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

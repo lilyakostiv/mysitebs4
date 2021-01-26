@@ -23,10 +23,7 @@
         max-height:460px;
         overflow: auto;
     }
-    .scroll-area-accord {
-        max-height:500px;
-        overflow: auto;
-    }
+    
     .height-submenu-link,
     .height-accord-li li {
         line-height: 1rem !important;
@@ -55,4 +52,10 @@
         border-radius: .35rem;
     }
 
-    
+    .table-plan-number {
+        width:20%;
+    }
+    .table-plan-theme {
+        width:80%;
+    }
+

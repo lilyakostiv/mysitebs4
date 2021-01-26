@@ -57,18 +57,18 @@ function displayPlanningSelectedClass(arrayElement, targetSelector){
         innerBody: `<table class="table table-design">
             <thead>
                 <tr>
-                    <th scope="col">№</th>
-                    <th scope="col">Розділ інформатики</th>
+                    <th scope="col" class="table-plan-number">№</th>
+                    <th scope="col" class="table-plan-theme">Розділ інформатики</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>${arrayElement.arrayThemes[0]}</td>
+                    <th scope="row" class="table-plan-number">1</th>
+                    <td class="table-plan-theme">${arrayElement.arrayThemes[0]}</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>${arrayElement.arrayThemes[1]}</td>
+                    <th scope="row" class="table-plan-number">2</th>
+                    <td class="table-plan-theme">${arrayElement.arrayThemes[1]}</td>
                 </tr>
             </tbody>
         </table>`
@@ -79,18 +79,18 @@ function displayPlanningSelectedClass(arrayElement, targetSelector){
         innerBody: `<table class="table table-design">
             <thead>
                 <tr>
-                    <th scope="col">№</th>
-                    <th scope="col">Розділ інформатики</th>
+                    <th scope="col" class="table-plan-number">№</th>
+                    <th scope="col" class="table-plan-theme">Розділ інформатики</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">3</th>
-                    <td>${arrayElement.arrayThemes[2]}</td>
+                    <th scope="row" class="table-plan-number">3</th>
+                    <td class="table-plan-theme">${arrayElement.arrayThemes[2]}</td>
                 </tr>
                 <tr>
-                    <th scope="row">4</th>
-                    <td>${arrayElement.arrayThemes[3]}</td>
+                    <th scope="row" class="table-plan-number">4</th>
+                    <td class="table-plan-theme">${arrayElement.arrayThemes[3]}</td>
                 </tr>
             </tbody>
         </table>`

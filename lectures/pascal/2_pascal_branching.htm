@@ -1,0 +1,754 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Розгалуження</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt'>Умовний оператор </span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>            </span><span style='font-size:
+12.0pt'>У програмі оператори виконуються послідовно. Проте часто доводиться
+змінювати послідовний порядок виконання дій. У Паскалі, як і в інших мовах
+програмування, є кілька можливостей реалізації вибору. Для вибору однієї з двох
+альтернатив переважно використовують умовні оператори </span><b><span
+lang=EN-US style='font-size:12.0pt'>if</span></b><span style='font-size:12.0pt'>,</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>а для вибору з
+декількох можливих варіантів - оператор <b>case</b>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Розглянемо умовні оператори. Є два види таких
+операторів - повний та скорочений. Повний оператор можна зобразити такою
+схемою:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>            </span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=EN-US
+style='font-size:12.0pt'>If</span></i></b><i><span lang=RU style='font-size:
+12.0pt'> &lt;</span></i><i><span style='font-size:12.0pt'>умова</span></i><i><span
+lang=RU style='font-size:12.0pt'>&gt; </span></i><b><i><span lang=EN-US
+style='font-size:12.0pt'>then</span></i></b><i><span lang=RU style='font-size:
+12.0pt'> &lt;оператор 1&gt; </span></i><b><i><span lang=EN-US style='font-size:
+12.0pt'>else</span></i></b><i><span lang=RU style='font-size:12.0pt'>
+&lt;оператор 2&gt;;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><span style='font-size:12.0pt'>В
+якості </span><i><span lang=RU style='font-size:12.0pt'>&lt;</span></i><i><span
+style='font-size:12.0pt'>умов</span></i><i><span lang=RU style='font-size:12.0pt'>и&gt;
+</span></i><span style='font-size:12.0pt'> використовується логічний вираз, </span><i><span
+lang=RU style='font-size:12.0pt'>&lt;</span></i><i><span style='font-size:12.0pt'>оператор1&gt;</span></i><span
+style='font-size:12.0pt'> та <i>&lt;оператор2&gt;</i> - довільні оператори мови
+Паскаль. </span><span style='font-size:12.0pt'>Якщо цей логічний вираз істинний,
+то виконується </span><span style='font-size:12.0pt'> <i><span lang=RU>&lt;оператор
+1&gt; </span></i><span lang=RU>, а якщо хибний - виконуєтся <i>&lt;оператор
+2&gt;</i>. </span></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt'>Якщо замість <i>&lt;оператора 1&gt;  </i></span><span
+style='font-size:12.0pt'>або </span><i><span lang=RU style='font-size:12.0pt'>&lt;оператора
+2&gt; </span></i><span lang=RU style='font-size:12.0pt'>потрібно виконати
+більше ніж один оператор, тоді використовується складений оператор :</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=EN-US
+style='font-size:12.0pt'>begin</span></i></b><span lang=RU style='font-size:
+12.0pt'> &lt;<i>оператор 1</i>&gt;;&lt;<i>оператор 2</i>&gt;;…;&lt;<i>оператор n</i>&gt;
+</span><b><i><span lang=EN-US style='font-size:12.0pt'>end</span></i></b><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span lang=RU
+style='font-size:12.0pt'>Скорочений запис оператора розгалуження має вигляд:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=EN-US
+style='font-size:12.0pt'>If</span></i></b><i><span lang=RU style='font-size:
+12.0pt'> &lt;</span></i><i><span style='font-size:12.0pt'>умова</span></i><i><span
+lang=RU style='font-size:12.0pt'>&gt; </span></i><b><i><span lang=EN-US
+style='font-size:12.0pt'>then</span></i></b><i><span lang=RU style='font-size:
+12.0pt'> &lt;оператор 1&gt;;</span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень А</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання простого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.1.</span></b><span
+style='font-size:12.0pt'> Логічній змінній </span><span lang=EN-US
+style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'> присвоїти
+значення </span><span lang=EN-US style='font-size:12.0pt'>true</span><span
+style='font-size:12.0pt'>, якщо цілі числа </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>і </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>(або
+x, y, z) рівні, і значення </span><span lang=EN-US style='font-size:12.0pt'>false</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.2.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Логічній
+змінній </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'> присвоїти значення </span><span lang=EN-US
+style='font-size:12.0pt'>true</span><span style='font-size:12.0pt'>,якщо дійсне
+число d є додатнє, і значення </span><span lang=EN-US style='font-size:12.0pt'>false</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>інакше.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.3.</span></b><span lang=RU style='font-size:12.0pt'>
+</span><i><span lang=EN-US style='font-size:12.0pt'>a</span></i><span lang=RU
+style='font-size:12.0pt'>)<i> </i></span><span style='font-size:12.0pt'>Знайти
+максимальне з двох цілих чисел </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>.   </span><i><span
+lang=EN-US style='font-size:12.0pt'>If a&gt;b then max:=a else max:=b;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-GB
+style='font-size:12.0pt'>    </span></i><span lang=EN-GB style='font-size:12.0pt'>   </span><i><span
+lang=EN-US style='font-size:12.0pt'>b</span></i><i><span lang=RU
+style='font-size:12.0pt'>)</span></i><span lang=RU style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Скласти програму для знаходження більшого з трьох
+дійсних чисел.</span></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>program</span></i></b><i><span
+style='font-size:12.0pt'> pr;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>var</span></i></b><i><span
+style='font-size:12.0pt'> a, b, c, max: real;    </span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>begin
+</span></i></b><i><span style='font-size:12.0pt'>{ знаходження більшого з трьох
+чисел}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('введіть
+значення трьох дійсних чисел a, b, c');</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>read
+(a,b,c);</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>max:=
+a;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>if
+</span></i></b><i><span style='font-size:12.0pt'>b&gt; max <b>then </b>max:= b;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>if</span></i></b><i><span
+style='font-size:12.0pt'> c&gt; max <b>then</b> max:= c;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('Більшим
+з чисел ',a, b, c,' є значення ', max)</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>У наведеному прикладі двічі трапляється скорочений
+умовний оператор.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>                        </span><span style='font-size:12.0pt'>Можна
+використати і такий алгоритм</span><span lang=RU style='font-size:12.0pt'>: </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>            </span><i><span lang=EN-US style='font-size:12.0pt'>If</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>a</span></i><i><span lang=EN-GB style='font-size:12.0pt'>&gt;</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>b</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>then</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>if</span></i><i><span lang=EN-US style='font-size:
+12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>a</span></i><i><span
+lang=EN-GB style='font-size:12.0pt'>&gt;</span></i><i><span lang=EN-US
+style='font-size:12.0pt'>c</span></i><i><span lang=EN-US style='font-size:12.0pt'>
+</span></i><i><span lang=EN-US style='font-size:12.0pt'>then</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>d</span></i><i><span lang=EN-GB style='font-size:12.0pt'>:=</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>a</span></i><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-GB
+style='font-size:12.0pt'>                                        </span></i><i><span
+lang=EN-US style='font-size:12.0pt'>else d:=c </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>                      else if b&gt;c then d:=b </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>                                    </span></i><i><span
+lang=EN-GB style='font-size:12.0pt'>   </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>else</span></i><i><span lang=EN-US style='font-size:
+12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>d</span></i><i><span
+lang=RU style='font-size:12.0pt'>:=</span></i><i><span lang=EN-US
+style='font-size:12.0pt'>c</span></i><i><span lang=RU style='font-size:12.0pt'>;</span></i></p>
+
+<p class=MsoNormal><b><span lang=RU style='font-size:12.0pt'>3.4.</span></b><i><span
+lang=RU style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Обчислити
+значення y за формулою <sub><img width=293 height=51
+src="2_pascal_branching_files/image001.gif"></sub></span></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>program</span></i></b><i><span
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>exam1</span></i><i><span
+style='font-size:12.0pt'>;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>var</span></i></b><i><span
+style='font-size:12.0pt'> x,y: real;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>begin</span></i></b><b><i><span
+style='font-size:12.0pt'>  </span></i></b><i><span style='font-size:12.0pt'>{приклад
+використання повного умовного оператора}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('введіть
+значення x');</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>read(x);</span></i></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>        if</span></i></b><i><span
+style='font-size:12.0pt'> (x&gt;0)<b>and</b>(x&lt;2) <b>then</b> y :=
+sqr(cos(x)) {обчислення за першою формулою}</span></i></p>
+
+<p class=MsoNormal style='margin-left:72.0pt'><b><i><span style='font-size:
+12.0pt'>           else </span></i></b><i><span style='font-size:12.0pt'>y :=
+1-sin(sqr(x)); {обчислення за другою формулою}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('при
+x =', x, ' y = ', y)</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><span style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'> Після службових слів <b>then </b>та <b>else </b>повинні
+стояти по одному оператору. Якщо ж алгоритм вимагає кількох, то треба
+використати складений оператор.</span></p>
+
+<br clear=ALL>
+<b><span style='font-size:12.0pt'>3</span></b><b><span lang=RU
+style='font-size:12.0pt'>.5.</span></b><span style='font-size:12.0pt'> Ввести
+дійсне  число</span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>. Обчислити</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=197 height=75 src="2_pascal_branching_files/image002.gif">
+</sub></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=297 height=53
+src="2_pascal_branching_files/image003.gif"></sub></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=EN-US
+style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=339 height=59
+src="2_pascal_branching_files/image004.gif"></sub></span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.6.</span></b><span
+style='font-size:12.0pt'> Ввести ціле </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span style='font-size:12.0pt'>. Якщо </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>&gt;2, тоді
+обчислити </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>=2∙</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'><sub><img
+width=44 height=21 src="2_pascal_branching_files/image005.gif"></sub></span><span
+style='font-size:12.0pt'>, інакше обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>= 3∙</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>, <sub><img
+width=45 height=24 src="2_pascal_branching_files/image006.gif"></sub>. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.7.</span></b><span
+style='font-size:12.0pt'> Ввести ціле </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span style='font-size:12.0pt'>. Якщо </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>≥0, тоді
+обчислити </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'><sub><img
+width=51 height=24 src="2_pascal_branching_files/image007.gif"></sub></span><span
+style='font-size:12.0pt'>, інакше обчислити <sub><img width=72 height=24
+src="2_pascal_branching_files/image008.gif"></sub>, </span><span lang=EN-US
+style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>= </span><span
+lang=EN-US style='font-size:12.0pt'>sin</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.8.</span></b><span
+style='font-size:12.0pt'> Ввести дійсне </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>. Якщо </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>&gt;5,
+тоді обчислити <sub><img width=45 height=24 src="2_pascal_branching_files/image009.gif"></sub>,
+інакше обчислити  <sub><img width=60 height=21 src="2_pascal_branching_files/image010.gif"></sub>,
+</span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+style='font-size:12.0pt'>= </span><span lang=EN-US style='font-size:12.0pt'>tg</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.9.</span></b><span
+style='font-size:12.0pt'> Ввести ціле t. Якщо </span><span lang=EN-US
+style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>&gt;-3 і </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span style='font-size:12.0pt'>&lt;3,
+тоді обчислити </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>=2∙</span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'><sub><img
+width=40 height=21 src="2_pascal_branching_files/image011.gif"></sub></span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.10.</span></b><span
+style='font-size:12.0pt'> Ввести дійсне y. Якщо </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'> не лежить на
+проміжку [</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>], тоді обчислити </span><span lang=EN-US
+style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>sin</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>tg</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>y</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'>
+
+<br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>3.11.</span></b><i><span lang=RU
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести
+дійсне х. Якщо х</span><span lang=EN-US style='font-size:12.0pt;font-family:
+Symbol'>£</span><span lang=RU style='font-size:12.0pt'>-2, то </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=RU style='font-size:
+12.0pt'>=2</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>z</span><span lang=RU style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'><sub><img width=19 height=21
+src="2_pascal_branching_files/image013.gif"></sub></span><span lang=RU style='font-size:
+12.0pt'>; </span><span style='font-size:12.0pt'>якщо -2</span><span lang=RU
+style='font-size:12.0pt'>&lt;</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>£</span><span lang=RU
+style='font-size:12.0pt'>2</span><span style='font-size:12.0pt'>, то </span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU style='font-size:
+12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>sin</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span lang=RU style='font-size:
+12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>+</span><span lang=EN-US style='font-size:
+12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>; </span><span
+style='font-size:12.0pt'>якщо x&gt;2, то </span></p>
+<table cellpadding=0 cellspacing=0 style="border:0">
+ <tr>
+  <td width=48 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=100 height=21 src="2_pascal_branching_files/image012.gif"></td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.12.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести </span><span
+style='font-size:12.0pt'>ціле число</span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>t</span><span lang=RU style='font-size:
+12.0pt'>. Якщо </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+lang=RU style='font-size:12.0pt'>&lt;0, то </span><span style='font-size:12.0pt'>обчислити
+</span><span lang=EN-US style='font-size:12.0pt'>s</span><span lang=RU
+style='font-size:12.0pt'>=</span><span lang=EN-US style='font-size:12.0pt'>tg</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>t</span><span lang=RU style='font-size:12.0pt'>; </span><span
+style='font-size:12.0pt'>якщо </span><span lang=EN-US style='font-size:12.0pt'>t</span><span
+lang=RU style='font-size:12.0pt'> належить  </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.13.</span></b><span lang=RU style='font-size:12.0pt'>
+Змінній k присвоїти номер </span><span style='font-size:12.0pt'>чверті координатної
+площини, в  якій знаходиться точка з координатами (x,y), яка не лежить на осях. 
+</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.14.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>По номеру </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=RU style='font-size:
+12.0pt'> (</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>&gt;0) деякого року</span><span
+style='font-size:12.0pt'> визначити номер його століття (врахувати, що,
+наприклад, початком ХХ століття був 1901 рік, а не 1900).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.15.</span></b><span
+style='font-size:12.0pt'> Нехай функції </span><span lang=RU style='font-size:
+12.0pt'>sin</span><span style='font-size:12.0pt'> та </span><span lang=RU
+style='font-size:12.0pt'>cos</span><span style='font-size:12.0pt'> можна
+застосовувати тільки до аргументів з відрізку [0,</span><span lang=RU
+style='font-size:12.0pt'>π</span><span style='font-size:12.0pt'>/2], обчислити </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>= </span><span
+lang=EN-US style='font-size:12.0pt'>sin</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'> та </span><span lang=EN-US style='font-size:12.0pt'>cos</span><span
+style='font-size:12.0pt'> 2</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'> для довільного </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.16.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести ціле
+трицифрове число. Визначити, чи сума його цифр – парна.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>B</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання середнього рівня)</span></i></b></p>
+
+<br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>3.17.</span></b><span
+style='font-size:12.0pt'> Обчислити значення за формулами:</span></p>
+
+<p class=MsoNormal style='text-align:justify'>
+
+<table cellpadding=0 cellspacing=0 style="border:0">
+ <tr>
+  <td width=12 height=0></td>
+  <td width=201></td>
+  <td width=51></td>
+  <td width=256></td>
+ </tr>
+ <tr>
+  <td height=120></td>
+  <td align=left valign=top><img width=201 height=120
+  src="2_pascal_branching_files/image014.gif"></td>
+  <td></td>
+  <td rowspan=2 align=left valign=top><img width=256 height=123
+  src="2_pascal_branching_files/image015.gif"></td>
+ </tr>
+ <tr>
+  <td height=3></td>
+ </tr>
+</table>
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>  </span><span style='font-size:12.0pt'><sub><img width=205 height=101
+src="2_pascal_branching_files/image016.gif"></sub></span></p>
+
+<br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>3.18.</span></b><i><span lang=RU
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> Задано
+дійсне число </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>. Для функції f(x), заданої графічно, обчислити f(a).</span></p>
+
+<p class=MsoNormal>
+
+<table cellpadding=0 cellspacing=0 style="border:0">
+ <tr>
+  <td width=43 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=317 height=168 src="2_pascal_branching_files/image017.jpg" style="background:none;"></td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.</span></b><b><span
+lang=RU style='font-size:12.0pt'>19.</span></b><i><span lang=RU
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Задано
+дійсні числа </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>y</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>z</span><span lang=RU style='font-size:
+12.0pt'>. </span><span style='font-size:12.0pt'>Обчислити max(x+y+z, xyz).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>20.</span></b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Обчислити </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'><sub><img
+width=183 height=48 src="2_pascal_branching_files/image018.gif"></sub></span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>If x&gt;0 then if y&gt;0 then z:=x</span></i><i><span
+lang=EN-US style='font-size:12.0pt;font-family:Symbol'>´</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>y else z:=x;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>21</span></b><b><span style='font-size:
+12.0pt'>.</span></b><span style='font-size:12.0pt'> Ввести цілі </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>та </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>. Якщо </span><i><span
+lang=EN-US style='font-size:12.0pt'>y</span></i><i><span lang=EN-US
+style='font-size:12.0pt;font-family:Symbol'>³</span></i><i><span
+style='font-size:12.0pt'>0,</span></i><i><span lang=EN-US style='font-size:
+12.0pt'>x</span></i><i><span lang=EN-US style='font-size:12.0pt;font-family:
+Symbol'>³</span></i><i><span style='font-size:12.0pt'>0, </span></i><span
+style='font-size:12.0pt'>тоді обчислити<i> </i></span><i><span lang=EN-US
+style='font-size:12.0pt'>z</span></i><i><span style='font-size:12.0pt'>=</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>xy</span></i><i><span style='font-size:
+12.0pt'>, <sub><img width=45 height=24 src="2_pascal_branching_files/image019.gif"></sub>,
+</span></i><i><span lang=EN-US style='font-size:12.0pt'>l</span></i><i><span
+style='font-size:12.0pt'>=</span></i><i><span lang=EN-US style='font-size:12.0pt'>true</span></i><i><span
+style='font-size:12.0pt'>; якщо </span></i><i><span lang=EN-US
+style='font-size:12.0pt'>y</span></i><i><span lang=EN-US style='font-size:12.0pt;
+font-family:Symbol'>³</span></i><i><span style='font-size:12.0pt'>0,</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>x</span></i><i><span style='font-size:12.0pt'>&lt;0</span></i><span
+style='font-size:12.0pt'>, тоді<i> </i>обчислити <sub><img width=81 height=27
+src="2_pascal_branching_files/image020.gif"></sub>,</span><i><span lang=EN-US
+style='font-size:12.0pt'>l</span></i><i><span style='font-size:12.0pt'>=</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>false</span></i><span style='font-size:
+12.0pt'>, інакше x=1,y=1<i>.</i></span></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>If y</span></i><i><span lang=EN-US style='font-size:
+12.0pt;font-family:Symbol'>³</span></i><i><span lang=EN-US style='font-size:
+12.0pt'>0 then if x</span></i><i><span lang=EN-US style='font-size:12.0pt;
+font-family:Symbol'>³</span></i><i><span lang=EN-US style='font-size:12.0pt'>0
+then begin z:=x</span></i><i><span lang=EN-US style='font-size:12.0pt;
+font-family:Symbol'>´</span></i><i><span lang=EN-US style='font-size:12.0pt'>y;k:=sqr(y);l;=true
+end </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>                             else …</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US
+style='font-size:12.0pt'>          else …</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>22.</span></b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i><span lang=EN-US style='font-size:12.0pt'>Ввести
+цілі числа a,b,c. </span><span style='font-size:12.0pt'>Якщо </span><span
+lang=EN-US style='font-size:12.0pt'>a&gt;5,b&gt;5,c&gt;5, </span><span
+style='font-size:12.0pt'>тоді присвоїти </span><span lang=EN-US
+style='font-size:12.0pt'>y=10; </span><span style='font-size:12.0pt'>якщо </span><span
+lang=EN-US style='font-size:12.0pt'>a&lt;5,b&lt;5,c&lt;5, </span><span
+style='font-size:12.0pt'>тоді</span><span style='font-size:12.0pt'> <span
+lang=EN-US>y=-10; </span></span><span style='font-size:12.0pt'>інакше </span><span
+lang=EN-US style='font-size:12.0pt'>y=1.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.</span></b><b><span
+lang=RU style='font-size:12.0pt'>23</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести три
+дійсні числа. Піднести до квадрату ті, значення яких від’</span><span lang=RU
+style='font-size:12.0pt'>ємні.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.24.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Якщо
+квадратне рівняння з коефіцієнтами </span><span lang=EN-US style='font-size:
+12.0pt'>a</span><span style='font-size:12.0pt'>,</span><span lang=EN-US
+style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'> (</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>≠0)
+має дійсні корені, логічній змінній t присвоїти значення true, а змінним х1 та
+х2 – корені, інакше змінній t присвоїти false.</span></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>program</span></i></b><i><span
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>exampl</span></i><i><span
+style='font-size:12.0pt'>;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>var</span></i></b><i><span
+style='font-size:12.0pt'> a, b, c, d, x1,x2: real;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>     
+t: boolean;</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>begin
+</span></i></b><i><span style='font-size:12.0pt'>{ розв'язування квадратного
+рівняння}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('введіть
+значення коеф. квадратного рівняння a <sub><img width=25 height=19
+src="2_pascal_branching_files/image021.gif"></sub>, b, c');</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>read
+(a,b,c);</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>d
+:= sqr(b) - 4*a*c; {обчислення дискримінанта}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>{перевірка
+дискримінанта та обчислення коренів}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>if</span></i></b><i><span
+style='font-size:12.0pt'> d&lt;0 <b>then</b> t := false { дійсних коренів
+немає}</span></i></p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b><i><span style='font-size:
+12.0pt'>         else</span></i></b><i><span style='font-size:12.0pt'>  <b>begin</b></span></i><b><i><span
+style='font-size:12.0pt'> </span></i></b><i><span style='font-size:12.0pt'>{
+складений оператор для обчислення коренів та  виведення їх </span></i><i><span
+lang=RU style='font-size:12.0pt'>                               </span></i><i><span
+style='font-size:12.0pt'>значень і присвоєння значення змінній t}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>x1
+:= (-b+ sqrt(d))/(2*a); </span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>x2
+:= (-b-sqrt(d))/(2*a); </span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('x1=',x1,'x2=',x2);</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>t
+:= true</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>                  
+end</span></i></b><i><span style='font-size:12.0pt'>; {кінець умовного
+оператора}</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><i><span style='font-size:12.0pt'>writeln('t=',t)</span></i></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><b><i><span style='font-size:12.0pt'>end.</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Виконавши цю програму на комп'ютері</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>бачимо, що у
+випадку відсутності у квадратного рівняння коренів, на чистий екран буде
+виведено лише значення t=false. Якщо  рівняння має дійсні корені, то спочатку
+будуть виведені значення цих коренів, а пізніше значення t=true.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>У наведеній програмі оператор виведення
+writeln('t=',t) виконується незалежно від значення умови в умовному операторі.</span></p>
+
+<p class=MsoNormal><b><span lang=RU style='font-size:12.0pt'>3.25.</span></b><i><span
+lang=RU style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Перерозподілити
+значення змінних x та y так, щоб в x&nbsp;виявилось більше з цих значень, а в y
+– менше.</span></p>
+
+<p class=MsoNormal><b><span lang=RU style='font-size:12.0pt'>3.26.</span></b><i><span
+lang=RU style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:
+12.0pt'>Задане два дійсні числа </span><span style='font-size:12.0pt'>x, y (x≠</span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=RU style='font-size:
+12.0pt'>). Менше з цих чисел замінити їх півсумою, а більше – подвоєним
+добутком.</span></p>
+
+<p class=MsoNormal><b><span lang=RU style='font-size:12.0pt'>3.27.</span></b><i><span
+lang=RU style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'><sub><img width=171 height=48
+src="2_pascal_branching_files/image022.gif"></sub></span></p>
+
+<p class=MsoNormal><b><span lang=RU style='font-size:12.0pt'>3.28.</span></b><i><span
+lang=RU style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Обчислити</span></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'><sub><img width=237
+height=47 src="2_pascal_branching_files/image023.gif"></sub></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.29</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> Задано три
+дійсні числа a, b, c. Надрукувати 0, якщо за трьома сторонами  a, b, c не можна
+побудувати трикутник. У протилежному випадку надрукувати 3, якщо трикутник
+рівносторонній, 2 – якщо рівнобедрений, 1 – довільний інший. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'>C</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'> </span></i></b><b><i><span lang=RU style='font-size:
+12.0pt'>(завдання високого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.30.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'> Ввести
+дійсні числа a, b, c, x, y. З’ясувати, чи пройде цеглина зі сторонами </span><span
+lang=RU style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>, </span><span
+lang=RU style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>, </span><span
+lang=RU style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'> у
+прямокутний отвір зі сторонами </span><span lang=RU style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'> та </span><span lang=RU style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>. Просовувати цеглину можна лише так, щоб кожне з її
+ребер було паралельне або перпендикулярне до кожної зі сторін отвору.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>3.31.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>З чотирьох
+цілих чисел одне відмінне  від трьох інших, рівних між собою. Визначити
+порядковий номер цього числа. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.32</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести три
+цілі числа, вивести їх по зрост</span><span lang=RU style='font-size:12.0pt'>анню.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.33.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Значення змінних </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=RU style='font-size:12.0pt'>поміняти </span><span style='font-size:12.0pt'>місцями
+так, щоб одержати a≥</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>≥</span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.34.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести три дійсні
+числа. Вивести їх в такому порядку, щоб їх квадрати утворювали зростаючу
+послідовність.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.35.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести число x.
+Надрукувати в порядку зростання числа <sub><img width=19 height=21
+src="2_pascal_branching_files/image024.gif"></sub>, 1+</span><span lang=RU
+style='font-size:12.0pt'>|</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>| </span><span lang=EN-US style='font-size:
+12.0pt'>i</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=RU style='font-size:12.0pt'><sub><img width=59 height=24
+src="2_pascal_branching_files/image025.gif"></sub></span><span style='font-size:12.0pt'>.</span><i><span
+style='font-size:12.0pt'> </span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>3.36.</span></b><i><span lang=RU style='font-size:
+12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести числа </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>i</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'> (</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>≠0). </span><span style='font-size:12.0pt'>Знайти
+дійсні корені рівняння <sub><img width=117 height=21
+src="2_pascal_branching_files/image026.gif"></sub>Якщо коренів немає, то повідомити про
+це.</span></p>
+
+</div>
+
+</body>
+
+</html>

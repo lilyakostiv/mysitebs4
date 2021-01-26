@@ -1,0 +1,612 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Вступ у Pascal</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:Arial;}
+h4
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	font-size:11.0pt;
+	font-family:Arial;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyText2, li.MsoBodyText2, div.MsoBodyText2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	font-size:14.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:14.15pt;
+	line-height:200%;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+ /* Page Definitions */
+ @page Section1
+	{size:595.3pt 841.9pt;
+	margin:35.95pt 42.5pt 42.5pt 45.0pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:14.0pt'>  Основні
+поняття мови Паскаль</span></b></p>
+
+<p class=MsoNormal style='text-indent:27.0pt'><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'>Для реалізації
+програм на комп’ютерах створено середовища, які дають змогу вводити тексти
+програм у пам’ять, змінювати їх у разі потреби, компілювати (перевірка на
+помилки тексту програми і побудова внутрішнього коду) та виконувати. </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'>   Готовий до
+виконання код програми можна розмістити в оперативній пам'яті і зразу  виконати
+або зберігати його у вигляді окремого файла у зовнішній пам’яті і виконувати
+кілька разів без попередньої компіляції.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'>   Кожну
+формальну  мову  визначає   три   складові частини: <b>алфавіт</b>,  <b>синтаксис</b>
+та <b>семантика</b>. </p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>Алфавіт</i></b>
+- це сукупність символів,  з яких будують всі  конструкції  мови. До алфавіту
+мови Паскаль входять латинські та українські букви, арабські цифри та
+спеціальні знаки, наприк­лад, знаки арифметичних операцій, операцій відношення,
+дуж­ки і т.п.  </p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>Синтаксис</i></b>
+задає правила побудови  всіх  конструкцій мови, а <b><i>семантика</i></b>
+визначає правила пояснення цих конструкцій. </p>
+
+<p class=MsoNormal style='margin-left:7.1pt;text-align:justify;text-indent:
+-7.1pt'>            До базових  понять  мови  належить  поняття  <b><i>імені </i></b> (назви).
+Імена використовують  для  називання різних програмних об'єктів - змінних, 
+типів, процедур,  функцій,  файлів. <b>Як імена використовують</b>   <b>ідентифікатори</b>. 
+<b><i>Ідентифікатор</i></b>  -  це послідовність латинських букв та цифр,  яка
+починається з бук­ви. Наприклад, A, Alpha, x, y237. Символ підкреслення може
+бути використано як латинську букву. Тобто такі послідовності як  _1 або f_2 є
+правильними ідентифікаторами. Немає різниці між великими та малими буквами.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>                           Окремі
+англійські  слова  використовують  для  побудови мовних конструкцій  і їх
+називають <b>зарезервованими</b> або <b>службо­вими</b>. </p>
+
+<p class=MsoNormal style='text-align:justify'>            Дії, які треба
+виконати у  програмі  над  початковими даними для  одержання результату, 
+задають за допомогою <b>опера­торів </b>(наприклад, оператор вводу, виводу,
+присвоєння). </p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'> Для пояснень
+у програмі  застосовують коментарі. Як коментар  можна  використовувати
+довільну послідовність символів, взяту у фігурні дужки { }.  Коментар у
+програмі  за­писують для користувача, тому компілятор його ігнорує.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b>Завдання</b></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Визначити,
+які з наведених послідовностей символів є іменами:</p>
+
+<p class=MsoNormal>            а) A1 ; б) 1A ;         в) A+1 ;          г) <sub><img
+width=13 height=15 src="1_pascal_introduction_files/image001.gif"></sub> ;       ґ) ля ;             д)
+X123 ;        е) Summa .</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Побудувати,
+якщо це можливо,  п'ять різних імен:</p>
+
+<p class=MsoNormal>            а) використовуючи лише маленьку латинську букву
+a ;</p>
+
+<p class=MsoNormal>            б) використовуючи лише цифру 5 .</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>          </span><b><span
+style='font-size:14.0pt'>Структура програми</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt'>          </span>Програма
+у  Паскалі  має чітко визначену структуру.  Вона складається з кількох 
+розділів,  порядок  розташування  яких  є фіксованим. Окремі розділи можуть
+бути відсутні.  Обов'язко­вим є лише розділ, в якому описано алгоритм розв’язку
+задачі, тобто порядок дій для перетворен­ня вхідних даних у результати - <b><i>розділ
+операторів</i></b>.  Цей розділ починається службовим словом <b>begin</b> ,  а
+закінчується службовим словом <b>end</b>.  Кінцем  програми  є символ &quot;<b>.</b>&quot;
+.  Тобто,  у найп­ростішому випадку програма має вигляд</p>
+
+<p class=MsoNormal style='text-align:justify'>            <b>begin</b></p>
+
+<p class=MsoNormal style='text-align:justify'>                      &lt;послідовність
+операторів&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <b>end.</b></p>
+
+<p class=MsoNormal style='text-align:justify'>Очевидно, що у розділ операторів 
+можуть  входити  комен­тарі.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Прийня­то починати
+програму заголовком, у якому після службового сло­ва <b>program</b> записують
+назву програми. Наприклад, <b>program</b> Exampl1;</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:36.0pt'>Рідко буває
+ситуація, коли в операторах програми відсутні змінні величини. Навіть 
+найпростіші програми передбачають використання таких величин.  Всі змінні, 
+використовувані у паскаль-прог­рамі, треба описати.  Описи  змінних 
+розташовують у <b><i>розділі змінних</i></b>,  який починають службовим словом <b>var</b>
+. Якщо є змінні, то паскаль-програма матиме вигляд: </p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b><i>program</i></b><i> Exampl2;</i></p>
+
+<p class=MsoNormal>            <b><i>var </i></b>   &lt;описи змінних&gt;;</p>
+
+<p class=MsoNormal>            <b><i>begin</i></b></p>
+
+<p class=MsoNormal>                      &lt;послідовність операторів&gt;</p>
+
+<p class=MsoNormal>            <b><i>end.</i></b></p>
+
+<p class=MsoNormal><b><i>&nbsp;</i></b></p>
+
+<p class=MsoNormal style='text-align:justify'>Загальна структура програми має
+вигляд:</p>
+
+<p class=MsoNormal style='margin-left:36.0pt'><b><i>program</i></b><i>
+Exampl2;                    </i>&lt;заголовок програми&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <span lang=EN-US>label</span>  
+&lt;список міток&gt;;                    &lt;розділ міток&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <span lang=EN-US>const</span>
+&lt;список констант&gt;;               &lt;розділ констант&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <span lang=EN-US>type</span>   &lt;список
+типів&gt;;                     &lt;розділ типів&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <span lang=EN-US>var</span>
+&lt;список змінних&gt;;                    &lt;розділ змінних&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'>            <span lang=EN-US>procedure</span>
+..., <span lang=EN-US>function</span> ...                <span lang=EN-US>   </span>&lt;розділ
+процедур та функцій&gt;</p>
+
+<p class=MsoNormal style='margin-bottom:24.0pt;text-align:justify'>            <span
+lang=EN-US>begin</span><span lang=RU>  ...  </span><span lang=EN-US>end</span><span
+lang=RU>.                                    </span>&lt;розділ операторів&gt;</p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:14.0pt'>          <b>Виведення
+інформації на екран</b></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify'>Для <b><i>виведення</i></b>
+інформації на екран використовують опера­тор <b>write</b> або <b>writeln</b>.
+Всі параметри, значення яких треба вивести на екран, розташовують у круглих
+дужках.  Елементами  списку  виведення  можуть  бути сталі та змінні величини, 
+а також  вирази. Сталі величини виводять у такому вигляді,  як вони записані в
+операторі виведення.  Найчастіше для  оформлення  результатів  використовують
+рядкові сталі величини.  Рядкова стала величина (рядкова константа чи просто
+рядок) - це послідовність довільних символів, взята в апострофи. Наприклад,</p>
+
+<p class=MsoNormal style='text-align:justify'>'Привіт!'       'S='</p>
+
+<p class=MsoNormal style='text-align:justify'>            Якщо в рядок входить
+символ апостроф, то цей символ треба записати двічі. Наприклад,</p>
+
+<p class=MsoNormal style='text-align:justify'>            'Розв''язок = '</p>
+
+<p class=MsoNormal style='text-align:justify'>            Треба пам'ятати  про 
+те,  що  пропуск  - це також символ, який не має графічного зображення, але
+допомагає керува­ти розміщенням інформації при виведенні.</p>
+
+<p class=MsoBodyText2><span style='font-size:12.0pt'>            Розглянемо
+приклад цілої програми, до складу якої входять лише оператори виведення.</span></p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>program</i></b><i>
+Examwrite1;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            <b>begin</b></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:14.0pt'>                 </span>write( 
+'Добрий день, друже!' ) ;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>                      write(
+'Радий працювати з тобою. ')</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span style='font-size:14.0pt'>          </span><b>end.</b></i></p>
+
+<p class=MsoHeading7 style='margin-bottom:0cm;margin-bottom:.0001pt'>У
+результаті виконання  цієї програми на екран буде виведено такий текст:</p>
+
+<p class=MsoBodyText2><i><span style='font-size:12.0pt'>Добрий день,
+друже!Радий працювати з тобою.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'>            Отже, незважаючи на
+те,  що рядкові константи  розташовані в різних операторах, виведення буде
+виконано в один рядок,  починаючи з місця, де знаходиться курсор.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Якщо деяку 
+інформацію треба виводити з різних рядків або пропускати рядки при виведенні, 
+то використовують оператор виведення <i>writeln</i>.  За цим оператором на
+екрані розміститься  список виведення і після цього курсор буде переведено на
+наступний рядок.  Тобто  за програмою</p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>program</i></b><i>
+Examwrite2;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            <b>begin</b></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>                      writeln</i>(<i>'Добрий
+день, друже!</i>') ;</p>
+
+<p class=MsoNormal style='margin-left:36.0pt;text-align:justify'>          <i>writeln</i>(<i>'Радий
+працювати з тобою.</i>')</p>
+
+<p class=MsoNormal style='text-align:justify'><i>           <b>end.</b></i></p>
+
+<p class=MsoNormal style='text-align:justify'>на екран буде виведено такий
+текст</p>
+
+<p class=MsoNormal style='text-align:justify'><i>            Добрий день,
+друже!</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            Радий працювати з
+тобою</i>.</p>
+
+<p class=MsoNormal style='text-align:justify'>А за програмою</p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>program </i></b><i>Examwrite3;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            <b>begin</b></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>                      writeln('Добрий
+день, друже!') ;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>                      writeln;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>                      writeln('Радий
+працювати з тобою.')</i></p>
+
+<p class=MsoNormal style='text-align:justify'>            <b><i>end.</i></b></p>
+
+<p class=MsoBodyText2><span style='font-size:12.0pt'>результат виведення
+відрізнятиметься від попереднього лише тим, що між рядками з текстом
+знаходитиметься порожній рядок</span></p>
+
+<p class=MsoHeading7 style='margin-top:0cm'><i>            Добрий день, друже!</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            Радий працювати з
+тобою.</i></p>
+
+<p class=MsoNormal style='text-align:justify'>            З цього прикладу
+видно, що оператор <i>writeln </i> без параметрів можна використовувати для
+пропуску рядків.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Отже, керувати
+розміщенням інформації по рядках можна використовуючи оператори  <i>write</i>
+чи <i>writeln</i>.  Треба пам'ятати,  що за оператором <i>writeln</i>
+виконуються такі ж дії,  як за  оператором <i>write</i>, з  тією  різницею, 
+що  після  його виконання курсор пе­реміщається на початок наступного рядка.</p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US>            </span><b>Завдання</b></p>
+
+<p class=MsoNormal style='text-align:justify'>3. Скласти програму для виведення
+на екран  такого  пові­домлення</p>
+
+<p class=MsoNormal style='text-align:justify'>            Добрий день, друже!</p>
+
+<p class=MsoNormal style='text-align:justify'>            Я твій комп'ютер.</p>
+
+<p class=MsoNormal style='text-align:justify'>4. Скласти програму для виведення
+на екран  такого  пові­домлення</p>
+
+<p class=MsoNormal style='text-align:justify'>            Привіт!</p>
+
+<p class=MsoNormal style='text-align:justify'>&nbsp;</p>
+
+<p class=MsoNormal style='text-align:justify'>            Дуже радий</p>
+
+<p class=MsoNormal style='text-align:justify'>            познайомитись з
+тобою.</p>
+
+<p class=MsoNormal><span lang=RU>5</span>. Намалювати на екрані таке зображення</p>
+
+<p class=MsoNormal>            *********</p>
+
+<p class=MsoNormal>            *              *</p>
+
+<p class=MsoNormal>            *              *</p>
+
+<p class=MsoNormal>            *********</p>
+
+<p class=MsoNormal><span lang=EN-US>6</span>. Намалювати на екрані таке
+зображення</p>
+
+<p class=MsoNormal>                               #</p>
+
+<p class=MsoNormal>                             ##</p>
+
+<p class=MsoNormal>                           # #</p>
+
+<p class=MsoNormal>                        #   #</p>
+
+<p class=MsoNormal>                      #     #</p>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'>                    #####</p>
+
+<p class=MsoNormal><span lang=EN-US>7</span>. Намалювати на екрані таке
+зображення</p>
+
+<p class=MsoNormal>                   $$$$$$$$</p>
+
+<p class=MsoNormal>                      @@@</p>
+
+<p class=MsoNormal>                           &amp;</p>
+
+<p class=MsoNormal>                           ***</p>
+
+<p class=MsoNormal>                   $$$$$$$$</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span lang=RU>8</span>. Намалювати на екрані таку ялинку</p>
+
+<p class=MsoNormal>                                      *</p>
+
+<p class=MsoNormal style='margin-left:111.0pt'>* *</p>
+
+<p class=MsoNormal>                                 ******</p>
+
+<p class=MsoNormal>                                    ***</p>
+
+<p class=MsoNormal>                               ********</p>
+
+<p class=MsoNormal>                                     **</p>
+
+<p class=MsoNormal>                                     **</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>          Змінні у 
+Паскалі</span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'>Величини, які зустрічаються у
+програмі, можуть бути сталими або змінними. Всі змінні треба описати, 
+зазначивши якого вони типу. Тип величини визначає, які значення вона може
+приймати. Тип сталих величин визначаємо з їхнього вигляду.</p>
+
+<p class=MsoNormal style='text-align:justify'>            У Паскалі визначено
+чотири стандартні скалярні типи:</p>
+
+<p class=MsoNormal style='text-align:justify'><b><i> integer </i></b>–
+цілочисловий;</p>
+
+<p class=MsoNormal style='text-align:justify'><b><i> real</i></b> – дійсний;</p>
+
+<p class=MsoNormal style='text-align:justify'><b><i> char </i></b>– символьний;</p>
+
+<p class=MsoNormal style='text-align:justify'><b> <i>boolean</i></b><i> </i>-
+логічний.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Величини типу integer
+- це  цілі числа з діапазону [-32768; 32767]. Цілі числа зображаються
+послідовністю цифр, можливо зі знаком,  наприклад,  46, +25, -100. Стандартна
+система числення для зображення всіх чисел - десяткова.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Дійсні числа
+використовують частіше, ніж цілі. Особливість зображення цих чисел полягає у
+тому, що <b><i>для відділення дробової частини від цілої використовують крапку</i></b>.
+Їх можна зображати у двох основних формах:</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>з фіксованою крапкою;</p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>з плаваючою крапкою.</p>
+
+<p class=MsoNormal style='text-align:justify'>Перша форма подібна до звичайного
+математичного запису числа з роздільником крапкою. Наприклад,  3.14 , -0.15 , +
+78.0 . Варто зазначити, що  обидві частини числа  обов'язкові.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Другу форму
+використовують для зображення нормалізованих чисел. Довільне  дійсне число може
+бути зображене у вигляді</p>
+
+<p class=MsoNormal align=center style='text-align:center'>X=<sub><img width=84
+height=27 src="1_pascal_introduction_files/image002.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>Наприклад, 518=<sub><img
+width=12 height=23 src="1_pascal_introduction_files/image003.gif"></sub><sub><img
+width=65 height=21 src="1_pascal_introduction_files/image004.gif"></sub> ==<sub><img
+width=12 height=23 src="1_pascal_introduction_files/image003.gif"></sub><sub><img
+width=73 height=21 src="1_pascal_introduction_files/image005.gif"></sub></p>
+
+<p class=MsoNormal style='text-align:justify'>            До складу  такого
+зображення числа  входить мантиса <sub><img width=40 height=27
+src="1_pascal_introduction_files/image006.gif"></sub>, основа 10      та порядок    <sub><img
+width=41 height=31 src="1_pascal_introduction_files/image007.gif"></sub>. <sub><img
+width=12 height=23 src="1_pascal_introduction_files/image003.gif"></sub>Якщо для мантиси
+виконується умова  1 &lt;=   <sub><img width=44 height=29
+src="1_pascal_introduction_files/image008.gif"></sub> &lt; 10 , то така форма називавється
+<b><i>стандартною</i></b>. </p>
+
+<p class=MsoNormal style='text-align:justify'>            У Паскалі для позначення
+основи використовують латинську букву Е (велика або маленька). Наприклад,
+5.18E2 . Цей запис означає дійсне число 518.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Представлення з
+плаваючою крапкою зручно використовувати для дуже великих або дуже малих чисел,
+наприклад,  250000 = 2.5E5 , 0.001 = 1E-3.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Окремі символи є
+елементами символьного типу. Константа цього типу - це довільний символ, взятий
+в апострофи, наприклад, '+' , 'a', '8'.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Елементи логічного
+типу приймають значення true (істинне) або false (хибне). </p>
+
+<p class=MsoNormal style='text-align:justify'>            Змінні описують у
+розділі змінних, який починається службовим словом  <b>var </b>і передує
+розділу операторів. Для кожної змінної, крім назви, треба зазначити її тип.
+Наприклад,</p>
+
+<p class=MsoNormal style='text-align:justify'><b>var  </b>i:  integer;  x:
+real;  ch: char;  b: boolean;</p>
+
+<p class=MsoNormal style='text-align:justify'>            Якщо у програмі
+трапляється кілька змінних одного типу, то їхні назви можна записати через
+кому, зазначивши тип лише раз, наприклад,</p>
+
+<p class=MsoNormal style='text-align:justify'><b>var  </b>i,j,k:  integer; 
+x1,x2: real; ch: char; b,d: boolean;  </p>
+
+<p class=MsoNormal style='text-align:justify'>            Є два способи надання
+значень змінним: використовуючи <b><i>оператор введення</i></b> <b><i>read</i></b>
+або <b><i>оператор присвоєння</i></b>.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Оператори введення та
+виведення як параметри використовують імена змінних. За одним оператором можна
+вводити значення кількох змінних, наприклад, read(x1,x2). Під час виконання
+цього оператора комп'ютер зупиняється і очікує введення значень з клавіатури.
+Введення кожного елемента можна закінчувати натисканням клавіші Enter. Якщо
+вводити кілька значень, то між ними повинен бути хоча б один пропуск, а в кінці
+натиснути клавішу Enter.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Якщо передбачено
+вводити значення змінних символьного типу, то ці елементи повинні бути першими
+у списку введення.</p>
+
+<p class=MsoNormal style='text-align:justify'>Значення логічних змінних не
+можна вводити. Їх можна лише присвоїти змінній.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Надати значення
+змінній можна також за допомогою оператора присвоєння, у лівій частині якого
+записана змінна, а у правій - відповідне значення. Наприклад, x:= 2.5 ; y:=
+1E3; k:=34; c:='$'.</p>
+
+<p class=MsoNormal style='text-align:justify'>            Приклад програми, у
+якій значення змінним будуть надаватись двома способами (введенням і
+присвоєнням) та буде реалізовано виведення змінних:</p>
+
+<p class=MsoNormal style='text-align:justify'><b><i>program </i></b><i>ExamRead1;</i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i>var </i></b><i>a,b:integer;</i><i>
+x,y</i><i><span lang=EN-US>,z</span>:real; </i><i><span lang=EN-US>c,d:char;
+f:boolean;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i>begin</i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            writeln('Введіть ціле
+число');  read(</i><i><span lang=EN-US>a</span>);</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i>            writeln('Введіть
+символ та дійсне число');</i><i> read(с</i><i><span lang=RU>,</span></i><i><span
+lang=EN-US>x</span>);</i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>            b:=25;
+y:=34.65;z:=54E3; d:='+'; f:=true;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>            </span>writeln('
+</i><i><span lang=EN-US>a</span>= '</i><i><span lang=EN-US>,a</span>,' </i><i><span
+lang=EN-US>b</span>= '</i><i><span lang=EN-US>,b</span>)</i><i><span
+lang=EN-US>;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>            </span>writeln('
+x= ',x,' y= ',y,'  </i><i><span lang=EN-US>z</span>= ',</i><i><span lang=EN-US>z</span>)</i><i><span
+lang=EN-US>;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>            </span>writeln('
+</i><i><span lang=EN-US>c</span>= ',</i><i><span lang=EN-US>c</span>,'</i><i><span
+lang=EN-US>d</span>= ',</i><i><span lang=EN-US>d</span>)</i><i><span
+lang=EN-US>;</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><i><span lang=EN-US>            </span>writeln('</i><i><span
+lang=EN-US>f</span>x= ',</i><i><span lang=EN-US>f</span>)</i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i>end.</i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i>&nbsp;</i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b>            Завдання</b></p>
+
+<p class=MsoNormal style='text-align:justify'>9.  Скласти програму, яка дає
+змогу ввести п'ять числових значень одним оператором введення, а потім п'ятьма
+операторами введення і вивести перші значення у рядок, а інші у стовпчик.</p>
+
+<p class=MsoNormal style='text-align:justify'>10. Скласти програму, в якій
+надати значення за допомогою присвоєння чотирьом змінним різних типів і вивести
+першу змінну в одному рядку, далі вивести порожній рядок, наступні три змінні
+вивести у третьому рядку.</p>
+
+</div>
+
+</body>
+
+</html>

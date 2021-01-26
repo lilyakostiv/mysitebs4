@@ -1,0 +1,1085 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Вступ у бази даних</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+h1
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+h2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:42.55pt;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:53.45pt;
+	margin-bottom:.0001pt;
+	text-indent:3.25pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent2, li.MsoBodyTextIndent2, div.MsoBodyTextIndent2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:35.45pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent3, li.MsoBodyTextIndent3, div.MsoBodyTextIndent3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:42.55pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:35.95pt 42.55pt 1.0cm 42.55pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal style='margin-left:1.0cm'><b><i><span lang=RU
+style='font-size:14.0pt'>Завдання 1</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:1.0cm'><b><i><span style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify;punctuation-wrap:simple;
+text-autospace:none;vertical-align:baseline'><span lang=RU style='font-size:
+12.0pt'>Створити базу даних з назвою </span><b><i><span lang=EN-US
+style='font-size:12.0pt'>Pupils</span></i></b><span lang=RU style='font-size:
+12.0pt'>. </span></p>
+
+<p class=MsoNormal style='text-align:justify;punctuation-wrap:simple;
+text-autospace:none;vertical-align:baseline'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify;punctuation-wrap:simple;
+text-autospace:none;vertical-align:baseline'><span style='font-size:12.0pt'>У
+цій базі задати дві таблиці : </span><b><i><span lang=EN-US style='font-size:
+12.0pt'>List</span></i></b><span style='font-size:12.0pt'> і </span><b><i><span
+lang=EN-US style='font-size:12.0pt'>Classes</span></i></b><b><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i></b><span style='font-size:
+12.0pt'>(за допомогою конструктора).</span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'>Cтруктура таблиці</span></u><u><span lang=RU
+style='font-size:12.0pt'> </span></u><b><i><u><span lang=EN-US
+style='font-size:12.0pt'>List </span></u></i></b><u><span lang=RU
+style='font-size:12.0pt'>:</span></u></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 4.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Ім’я поля</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Тип поля</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Розмір поля</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Номер (<span
+  lang=EN-US>Number</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Лічильник</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>&nbsp;</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Прізвище,ім<span
+  lang=EN-US>'</span>я (<span lang=EN-US>Name</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Текстове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>2</span><span lang=RU
+  style='font-size:12.0pt'>5</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Клас (<span
+  lang=EN-US>Class)</span></h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Текстове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>10</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Факультет (<span
+  lang=EN-US>Faculty</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Текстове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=RU style='font-size:12.0pt'>20</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Дата народження (<span
+  lang=EN-US>Birthday)</span></h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=RU style='font-size:12.0pt'>Дата/час</span></p>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Короткий формат дати</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Оцінка з інформатики (<span
+  lang=EN-US>Mark)</span></h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Числове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Байт</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Участь в олімпіадах (<span
+  lang=EN-US>Olimpiada)</span></h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Логічне</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Поле <b><i>Номер</i></b> встановити ключовим.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:49.65pt'><span
+lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'>Таблиця</span></u><u><span lang=RU
+style='font-size:12.0pt'> </span></u><b><i><u><span lang=EN-US
+style='font-size:12.0pt'>List</span></u></i></b><u><span lang=EN-US
+style='font-size:12.0pt'> </span></u><u><span lang=EN-US style='font-size:12.0pt'>:</span></u><u><span
+lang=EN-US style='font-size:12.0pt'> </span></u></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Задати
+10 записів про учнів.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:49.65pt'><u><span
+lang=RU style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=655
+ style='width:491.4pt;border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 4.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 style='text-indent:0cm'>Номер</h2>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Прізвище</span></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Клас</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Факультет</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Дата</span><span lang=RU style='font-size:12.0pt'> </span><span
+  lang=RU style='font-size:12.0pt'>народ</span><span style='font-size:12.0pt'>ження</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Оцінка з інформатики</span></p>
+  </td>
+  <td width=96 valign=top style='width:72.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Участь в олімпіадах</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>1</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Антонів</span><span style='font-size:12.0pt'> Олег</span></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>11-А</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Фізичний</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>13.04.</span><span style='font-size:12.0pt'>97</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>1</span><span style='font-size:12.0pt'>1</span></p>
+  </td>
+  <td width=96 valign=top style='width:72.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>так</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>2</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Сех
+  Богдан</span></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>11-Б</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Математичний</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>24.02.</span><span style='font-size:12.0pt'>98</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>9</span></p>
+  </td>
+  <td width=96 valign=top style='width:72.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>так</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=67 valign=top style='width:50.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>3</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Каськун</span><span style='font-size:12.0pt'> Ігор</span></p>
+  </td>
+  <td width=48 valign=top style='width:36.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>11-А</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Хімічний</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>2.12.</span><span style='font-size:12.0pt'>96</span></p>
+  </td>
+  <td width=108 valign=top style='width:81.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>10</span></p>
+  </td>
+  <td width=96 valign=top style='width:72.0pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>ні</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:49.65pt'><span
+lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=EN-US style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'>Cтруктура таблиці</span></u><u><span lang=RU
+style='font-size:12.0pt'> </span></u><b><i><u><span lang=EN-US
+style='font-size:12.0pt'>Classes </span></u></i></b><u><span lang=RU
+style='font-size:12.0pt'>:</span></u></p>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 4.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+  12.0pt'>Ім’я поля</span></p>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Тип поля</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 4.5pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Розмір поля</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Клас (<span
+  lang=EN-US>Class</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Текстове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>10</h2>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Кількість учнів (<span
+  lang=EN-US>Count</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Числове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Ціле</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Кімната (<span
+  lang=EN-US>Classroom)</span></h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Числове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span style='font-size:12.0pt'>Байт</span></p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=259 valign=top style='width:194.4pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Класний керівник (<span
+  lang=EN-US>Teacher</span>)</h2>
+  </td>
+  <td width=120 valign=top style='width:90.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <h2 align=left style='text-align:left;text-indent:0cm'>Текстове</h2>
+  </td>
+  <td width=192 valign=top style='width:144.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=RU style='font-size:12.0pt'>20</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:46.35pt;text-align:justify'><u><span
+lang=RU style='font-size:12.0pt'><span style='text-decoration:none'>&nbsp;</span></span></u></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>Поле </span><b><i><span style='font-size:12.0pt'>Клас</span></i></b><span
+lang=RU style='font-size:12.0pt'> встановити ключовим.</span><span
+style='font-size:12.0pt'> Задати дані для кожного класу.</span></p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b>&nbsp;</b></p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-indent:0cm'><b>Зв</b><b><span
+lang=RU>'</span>язати таблиці</b> (використати піктограму <b><i>Схема даних</i></b>
+на панелі інструментів) по полю <b><i>Клас</i></b>.</p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b>&nbsp;</b></p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b>&nbsp;</b></p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b>&nbsp;</b></p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b>Поняття бази даних (БД) і системи управління базою
+даних (СУБД)</b></p>
+
+<p class=MsoBodyTextIndent align=center style='margin-left:0cm;text-align:center;
+text-indent:35.45pt'><b><span lang=RU>&nbsp;</span></b></p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'>Процес розв<span lang=RU>’</span>язування будь-якої задачі
+на ЕОМ є обробкою даних за заданим алгоритмом. Даними можуть бути<span lang=RU>:
+</span>числа, літери, слова, прізвища,…</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'>Довгий час для розв<span lang=RU>’</span>язування кожної
+задачі використовувалась своя сукупність даних. Скільки розв<span lang=RU>’</span>язувалось
+задач, стільки використовувалось і сукупностей даних. Сукупність даних, що
+використовувалась в одній програмі, не могла використовуватись в іншій.</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'>Такий метод представлення даних мав певні недоліки, такі
+як надмірність і дублювання даних. Ці обставини були основною причиною появи в
+кінці 60-х років <u>баз даних</u>.</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'><b>База даних</b> – це єдине, централізоване сховище даних
+певної предметної області (під предметною областю тут розуміють, наприклад,
+школу, підприємство,…), до якої мають доступ багато програм.</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'>Кожна програма має доступ до конкретних даних бази даних
+за допомогою спеціальних програм, які одержали назву <b>систем управління
+базами даних</b>.</p>
+
+<p class=MsoBodyTextIndent style='margin-left:0cm;text-align:justify;
+text-indent:35.45pt'>&nbsp;</p>
+
+<p class=MsoBodyTextIndent style='margin-left:14.2pt;text-align:justify;
+text-indent:1.0cm'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'>
+
+<table cellpadding=0 cellspacing=0 align=left>
+ <tr>
+  <td width=42 height=3></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=486 height=159 src="1_access_database_files/image001.gif"></td>
+ </tr>
+</table>
+
+<span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<br clear=ALL>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+1.0cm'><b><span style='font-size:14.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-left:14.2pt;text-align:justify;text-indent:
+21.8pt'><span style='font-size:12.0pt'>Прикладами баз даних є</span><span
+lang=RU style='font-size:12.0pt'>: </span><span style='font-size:12.0pt'>бібіліотечні
+каталоги, записна книжка, класні журнали,…</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Отже, в базах даних дані розробляються і зберігаються
+як єдине ціле в інтересах розв’язування всіх задач предметної області. Кожна
+програма вибирає із бази лише ті дані, які потрібні тільки для даної задачі.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><b><span
+style='font-size:12.0pt'>Система управління базою даних</span></b><span
+style='font-size:12.0pt'> – це спеціальний пакет (набір) програм, що забезпечує
+створення, супроводження і використання баз даних багатьма користувачами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Створення бази даних починається із визначення
+переліку, змісту і типу даних, що використовуються. Під типом даних розуміють
+числові, текстові дані,… Для кожного елемента даних необхідно вказати його
+довжину. СУБД має забезпечити введення в комп</span><span lang=RU
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>ютер
+підготовчих даних, тоюто імен полів, їх типів і величин.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'> Далі СУБД забезпечує введення даних у БД, при цьому
+одночасно із введенням даних здійснюється перевірка їх правильності – перевірка
+даних за типом. Якщо тип даних, що вводяться, не відповідає заданому, то буде
+виведене відповідне повідомлення.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>СУБД розв</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>язує задачі редагування даних. Редагування містить
+такі основні операції</span><span lang=RU style='font-size:12.0pt'>: </span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>видалення застарілих записів</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>заміну одних записів іншими</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>зміну окремих даних у записах</span><span
+lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>вставку у певні місця нових
+записів</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>доповнення новими записами</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>додавання нових полів, зміна їх
+імен та інші.</span></p>
+
+<p class=MsoBodyTextIndent2>Якщо база даних доступна одночасно для кількох
+користувачів, то СУБД має забезпечити, щоб вони не заважали один одному.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Будь-яка СУБД повинна забезпечувати виконання найбільш
+використовуваних видів обробки даних. Наприклад, вона має виконувати сортування
+даних в алфавітному порядку,  підрахунок суми чисел стовпчика, пошук потрібного
+запису та інше.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+style='font-size:12.0pt'>Система управління базами даних</span></b><b><span
+style='font-size:12.0pt'> </span></b><b><span lang=EN-US style='font-size:12.0pt'>Access</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+lang=EN-US style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Система управління базами даних </span><span
+lang=EN-US style='font-size:12.0pt'>Access</span><span lang=EN-US
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>входить до
+складу пакета </span><span lang=EN-US style='font-size:12.0pt'>Microsoft</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>Office</span><span lang=RU style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> Після завантаження на екрані з</span><span lang=RU
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>являється вікно
+системи, на передньому плані якого знаходиться вікно створення чи відкриття
+бази даних.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Це вікно з</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>явиться тільки на початку завантаження системи.
+Працюючи із системою, доведеться неодноразово відкривати чи створювати нові
+бази даних. Ці операції можна здійснювати за допомогою пункту меню <u>Файл</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>СУБД </span><span lang=EN-US style='font-size:12.0pt'>Access</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>може
+обробляти кілька таблиць в одній базі даних. Це є зручно, бо редагування даних
+в одному місці бази призводить до автоматичного їх редагування в іншому місці.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У системі </span><span lang=EN-US style='font-size:
+12.0pt'>Access</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>є різні способи управління даними: система меню,
+панелі інструментів, вказівник миші та інші. Клавішею миші клацають для
+виділення об’єкта, при подвійному клацанні виконується яка-небудь дія.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+style='font-size:12.0pt'>Типи і властивості полів</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+lang=EN-US style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У системі </span><span lang=EN-US style='font-size:
+12.0pt'>Access</span><span style='font-size:12.0pt'> рядок таблиці
+ототожнюється з терміном <i>запис</i>, а колонка – з терміном <i>поле</i>.
+Кожне поле має ім</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>я, тип і властивості. При створенні структури таблиці
+обов</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>язково вказують імена і типи полів. Властивост полів
+можуть прийматись по замовчуванню. Одне або кілька полів необхідно визначити як
+ключові. Ключове поле має бути унікальним, тобто воно повинно однозначно
+визначати (ідентифікувати) записи.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>В </span><span lang=EN-US style='font-size:12.0pt'>Access</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>використовують
+такі типи полів</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US style='font-size:12.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>текстове поле</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>числове поле</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>поле <i>дата</i></span><i><span
+lang=EN-US style='font-size:12.0pt'>/</span></i><i><span style='font-size:12.0pt'>час</span></i><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>логічне поле</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>поле типу лічильник</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>поле типу </span><span lang=EN-US
+style='font-size:12.0pt'>Memo;</span></p>
+
+<p class=MsoNormal style='margin-left:53.45pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>поле об</span><span lang=EN-US
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>єкта </span><span
+lang=EN-US style='font-size:12.0pt'>OLE.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У <b>текстовому </b>полі можуть записуватись літери,
+цифри та інші символи. Текстові поля мають такі властивості</span><span
+lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>1). </span><span style='font-size:12.0pt'>Розмір
+поля. (Має  межі від 1 до 255 символів.)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>2). Умова на значення. (Дозволяє створювати фільтр,
+який забезпечує введення у дане поле тільки тих значень, які відповідають
+заданій умові.)</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>3). Обов</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>язкове поле. (Набуває двох значень</span><span
+lang=RU style='font-size:12.0pt'>:</span><span lang=RU style='font-size:12.0pt'>
+</span><i><span style='font-size:12.0pt'>так </span></i><span style='font-size:
+12.0pt'>або<i> ні</i>. <i>Так</i> означає, що у дане поле обов</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>язково
+мають бути введені дані, які відповідають раніше визначеним властивостям.)</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>4). Порожні рядки. (Набувають двох значень</span><span
+lang=RU style='font-size:12.0pt'>: </span><i><span style='font-size:12.0pt'>так
+</span></i><span style='font-size:12.0pt'>або <i>ні</i>. <i>Так</i> означає, що
+порожні рядки дозволені. Порожній рядок – це рядок, який має пропуски.)</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>5). Індексоване поле. (Набуває двох значень</span><span
+lang=RU style='font-size:12.0pt'>: </span><i><span style='font-size:12.0pt'>так
+</span></i><span style='font-size:12.0pt'>або <i>ні</i>. <i>Так</i> означає, що
+поле індексоване).</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>6). Формат поля.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>7). Маска вводу.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>8). Підпис.</span></p>
+
+<p class=MsoNormal style='margin-left:35.45pt;text-align:justify'><span
+style='font-size:12.0pt'>9). Значення по замовчуванню.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У <b>числове </b>поле можутьзаписуватись цілі числа і
+числа з плаваючою крапкою. Числові поля мають властивості майже такі самі, як і
+текстові поля.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Розглянемо властивість <u>Розмір поля</u>. Вона може
+набирати таких значень</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>1)</span><span style='font-size:12.0pt'>. Байт
+– цілі числа у межах від 0 до 255.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>2). Ціле – цілі числа від –32768 до 32767.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>3). Довге ціле.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>4). З плаваючою крапкою.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Поле<b> <i>Дата</i></b></span><b><i><span lang=RU
+style='font-size:12.0pt'>/</span></i></b><b><i><span style='font-size:12.0pt'>Час</span></i></b><span
+style='font-size:12.0pt'>. Багато з властивостей цього поля такі самі, як і
+текстового поля. </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Властивість <u>Формат поля </u> може набирати таких
+значень</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>1). Повний формат дати (12.05.99 15</span><span
+lang=RU style='font-size:12.0pt'>:20:43)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>2).</span><span style='font-size:12.0pt'>
+Довгий  формат дати (12 травня 1999р.)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>3). Середній формат дати (12 трав. 99р.)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>4). Короткий формат дати (12.05.99)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>5).Довгий формат часу (15</span><span lang=RU
+style='font-size:12.0pt'>:20:43)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>6). </span><span style='font-size:12.0pt'>Середній
+формат часу (03</span><span lang=RU style='font-size:12.0pt'>:20:</span><span
+lang=EN-US style='font-size:12.0pt'>PM</span><span lang=RU style='font-size:
+12.0pt'>)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>7). </span><span style='font-size:12.0pt'>Короткий
+формат часу (15</span><span lang=RU style='font-size:12.0pt'>:20)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У <b>логічному</b> полі може записуватись одне з двох
+значень</span><span lang=RU style='font-size:12.0pt'>: </span><i><span
+style='font-size:12.0pt'>так </span></i><span style='font-size:12.0pt'>або <i>ні</i>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Поле типу <b>лічильник </b>– це лічильник записів,
+який часто використовують як ключове поле.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Поле типу </span><b><span lang=EN-US style='font-size:
+12.0pt'>Memo</span></b><span lang=RU style='font-size:12.0pt'> – </span><span
+style='font-size:12.0pt'>це довге поле. У ньому може вміщуватись текст або
+комбінація тексту і чисел, яка містить 64 тис. символів.      </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Поле <b>об</b></span><b><span lang=RU
+style='font-size:12.0pt'>’</span></b><b><span style='font-size:12.0pt'>єкта </span></b><b><span
+lang=EN-US style='font-size:12.0pt'>OLE</span></b><span style='font-size:12.0pt'>
+вміщує не інформацію про об</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>єкт, а посилання на ім</span><span lang=RU
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>я об</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>єкта.
+Як ім</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>я об</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>єкта може бути </span><span lang=EN-US
+style='font-size:12.0pt'>Word</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>Excel</span><span lang=RU style='font-size:
+12.0pt'>, </span><span style='font-size:12.0pt'>засобами яких можна створити об</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>єкти
+для вставки їх в</span><span style='font-size:12.0pt'> </span><span lang=EN-US
+style='font-size:12.0pt'>Access</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+style='font-size:12.0pt'>Створення бази даних</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;text-indent:35.45pt'><b><span
+lang=EN-US style='font-size:12.0pt'>&nbsp;</span></b></p>
+
+<p class=MsoBodyTextIndent2>На початковому етапі роботи з базами даних процес
+їх створення доцільно починати з побудови на папері структури таблиць.</p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Для створення нової бази даних потрібно запустити
+систему </span><span lang=EN-US style='font-size:12.0pt'>Access</span><span
+style='font-size:12.0pt'> і у вікні запрошення встановити перемикач у положення
+<u>Новая база даних</u>, тоді натиснути кнопку </span><span lang=EN-US
+style='font-size:12.0pt'>OK</span><span lang=RU style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> У результаті на екрані з</span><span lang=RU
+style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>являється вікно
+<u>Файл новой бази даних</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>Створення нової бази даних можна починати і через меню
+<u>Файл</u>. Для цього потрібно відкрити це меню і вибрати команду <u>Создать</u>,
+потім натиснути кнопку </span><span lang=EN-US style='font-size:12.0pt'>OK</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:12.0pt'>У вікні <u>Файл новой бази даних</u> необхідно набрати
+ім</span><span lang=RU style='font-size:12.0pt'>’</span><span style='font-size:
+12.0pt'>я файла і натиснути кнопку <u>Создать</u>. Після цього відкривається
+вікно <u>База даних</u>, слід натиснути кнопку <u>Создать</u>. Одержуємо вікно <u>Новая
+таблица</u>, у якому перераховані такі способи створення таблиць</span><span
+lang=RU style='font-size:12.0pt'>:</span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US style='font-size:12.0pt'>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>режим таблици</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>конструктор</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>мастер таблиц</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>импорт таблиц</span><span
+lang=EN-US style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='margin-left:60.55pt;text-align:justify;text-indent:
+-18.0pt'><span lang=EN-US>-<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+style='font-size:12.0pt'>вязь с таблицами.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>Найзручнішим є спосіб, який називають <u>конструктор</u></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>У вікні <u>Новая таблица</u> вибираємо опцію <u>конструктор</u>
+і тиснемо кнопку </span><span lang=EN-US style='font-size:12.0pt'>OK</span><span
+style='font-size:12.0pt'>. З</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>явиться вікно <u>Таблица1</u>, у якому задаємо назви
+полів і типи даних. Після заповнення цієї таблиці необхідно виділити ключове
+поле. Для цього клавішами переміщення курсора вказівку перемістити у відповідне
+поле і клацнути мишею по ключу на панелі інструментів. При цьому поряд з іменем
+цього поля з</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>явиться зображення ключа.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>У лівому верхньому куті вікна таблиці поряд з написом <u>Таблица1</u>
+є світлий прямокутник. Це значок таблиці. При фіксації курсора миші на ньому з</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>являється
+контексне меню, у якому слід виконати команду <u>Закрить</u>. Тоді з</span><span
+lang=RU style='font-size:12.0pt'>’</span><span style='font-size:12.0pt'>явиться 
+запит</span><span lang=RU style='font-size:12.0pt'>: </span><span
+style='font-size:12.0pt'>чи зберегти структуру таблиці</span><span lang=RU
+style='font-size:12.0pt'>?</span><span style='font-size:12.0pt'> Потрібно
+натиснути кнопку <i>Да</i>. У наступному вікні із запитом про необхідність 
+збереження таблиці задамо ім</span><span lang=RU style='font-size:12.0pt'>’</span><span
+style='font-size:12.0pt'>я таблиці і натиснемо кнопку </span><span lang=EN-US
+style='font-size:12.0pt'>OK</span><span style='font-size:12.0pt'>. Одержуємо
+вікно <u>База даних</u>, де вмикаємо перемикач <u>Открить</u> і тиснемо кнопку <u>ОК</u>.
+При цьому відкривається таблиця, у яку вводимо дані. Щоб закрити таблицю,
+ставимо курсор миші на значок таблиці, тоді з’являється контексне меню, у якому
+вибираємо команду <u>Закрить</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>На екрані знаходиться вікно <u>База даних</u>.
+Вмикаючи перемикач <u>Открить</u>, можемо вносити зміни в таблицю</span><span
+lang=RU style='font-size:12.0pt'>; </span><span style='font-size:12.0pt'>а
+ввімкнівши перемикач <u>Конструктор</u>, маємо змогу вносити зміни в структуру
+таблиці.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>Щоб закрити базу даних потрібно навести курсор миші на
+значок таблиці і вибрати команду <u>Закрить</u>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>Для того щоб переглянути всі бази даних, що містяться
+в поточному каталозі, потрібно виконати команду <u>Файл</u></span><u><span
+lang=RU style='font-size:12.0pt'>/</span></u><u><span style='font-size:12.0pt'>Открить</span></u><span
+style='font-size:12.0pt'>. Тоді вибрати потрібну базу даних і натиснути кнопку <u>Открить</u>.
+В результаті одержуємо вікно, яке містить назви всіх таблиць вибраної бази
+даних.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:42.55pt'><span
+style='font-size:12.0pt'>Для виходу з </span><span lang=EN-US style='font-size:
+12.0pt'>Access</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>слід виконати команду <u>Файл</u></span><u><span
+lang=RU style='font-size:12.0pt'>/</span></u><u><span style='font-size:12.0pt'>Виход</span></u><span
+style='font-size:12.0pt'>.</span></p>
+
+</div>
+
+</body>
+
+</html>

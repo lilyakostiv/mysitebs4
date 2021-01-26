@@ -1,0 +1,1186 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Процедури</title>
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+p.MsoBodyTextIndent, li.MsoBodyTextIndent, div.MsoBodyTextIndent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:1.0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:42.5pt 42.5pt 42.5pt 70.85pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=UK style="padding-left: 60px; padding-right: 60px; background-color: #e5f5f3; ">
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:14.0pt'>10. </span></b><b><span style='font-size:14.0pt'>Процедури</span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>1. Процедури без
+параметрів</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Є ситуації, коли в різних місцях програми потрібно
+виконувати один і той самий алгоритм:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>max</span><span lang=EN-GB style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=EN-GB style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-GB style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=EN-GB style='font-size:12.0pt'>) ---&gt; </span><span
+lang=EN-US style='font-size:12.0pt'>max</span><span lang=EN-GB
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=EN-GB style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=EN-GB style='font-size:12.0pt'>)-&gt;</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=EN-GB style='font-size:
+12.0pt'> + </span><span lang=EN-US style='font-size:12.0pt'>max</span><span
+lang=EN-GB style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>d</span><span lang=EN-GB style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>c)</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Для забезпечення компактності та наглядності програми
+Паскаль дозволяє виділити будь-який частковий алгоритм із основного тексту
+програми і записати його</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>тільки один раз, представивши цей частковий алгоритм в
+якості самостійного програмного об’єкта, що називається <b><i>процедурою</i></b>
+(або підпрограмою).</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Процедура вводиться у використання (визначається) за
+допомогою опису процедури в розділі процедур і функцій програми:&lt;заголовок
+процедури&gt;;&lt;блок&gt;;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Заголовок процедури починається із службового слова </span><i><span
+lang=EN-US style='font-size:12.0pt'>6_6_pascal_procedure</span></i><i><span
+style='font-size:12.0pt'>, </span></i><span style='font-size:12.0pt'>містить
+ім’я процедури.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Для активізації процедури (тобто для виконання
+фрагменту програми, оголошеного процедурою) в потрібному місці програми служить
+оператор процедури</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span lang=RU
+style='font-size:12.0pt'>&lt;</span><span style='font-size:12.0pt'>ім</span><span
+lang=RU style='font-size:12.0pt'>'</span><span style='font-size:12.0pt'>я
+процедури</span><span lang=RU style='font-size:12.0pt'>&gt;;</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Різні особливості опису процедур і способи їх
+використання будемо розглядати на прикладі такої задачі</span><span lang=RU
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><b><i><span
+style='font-size:12.0pt'>Задача</span></i></b><b><i><span lang=RU
+style='font-size:12.0pt'>: </span></i></b><i><span style='font-size:12.0pt'>по
+заданих дійсних значеннях </span></i><i><span lang=EN-US style='font-size:12.0pt'>x</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'>і</span></i><i><span
+style='font-size:12.0pt'> </span></i><i><span lang=EN-US style='font-size:12.0pt'>y</span></i><i><span
+lang=EN-US style='font-size:12.0pt'> </span></i><i><span style='font-size:12.0pt'>обчислити
+</span></i><i><span lang=EN-US style='font-size:12.0pt'>u</span></i><i><span
+lang=RU style='font-size:12.0pt'>=</span></i><i><span lang=EN-US
+style='font-size:12.0pt'>max</span></i><i><span lang=RU style='font-size:12.0pt'>(</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>x</span></i><i><span lang=RU
+style='font-size:12.0pt'>+</span></i><i><span lang=EN-US style='font-size:12.0pt'>y</span></i><i><span
+lang=RU style='font-size:12.0pt'>,</span></i><i><span lang=EN-US
+style='font-size:12.0pt'>x</span></i><i><span lang=RU style='font-size:12.0pt'>*</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>y</span></i><i><span lang=RU
+style='font-size:12.0pt'>), </span></i><i><span lang=EN-US style='font-size:
+12.0pt'>v</span></i><i><span lang=RU style='font-size:12.0pt'>=</span></i><i><span
+lang=EN-US style='font-size:12.0pt'>max</span></i><i><span lang=RU
+style='font-size:12.0pt'>(0.5,</span></i><i><span lang=EN-US style='font-size:
+12.0pt'>u</span></i><i><span lang=RU style='font-size:12.0pt'>).</span></i></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:27.0pt'><span
+style='font-size:12.0pt'>Програму розв</span><span lang=RU style='font-size:
+12.0pt'>'</span><span style='font-size:12.0pt'>язку цієї задачі без
+використання процедур можна записати у вигляді</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>program</span></u><span
+lang=EN-US style='font-size:12.0pt'> <b>MAX1</b>;</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>var</span></u><span lang=EN-US style='font-size:12.0pt'>
+x, y, u, v: real;</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>begin</span></u><span lang=EN-US style='font-size:
+12.0pt'> read (x, y);</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>if x+y &gt;x*y then u:=x+y else u:=x*y;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>if 0.5 &gt; u then v: = 0.5 else v: = u;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>writeln (‘u=’, u, ‘v=’, v)</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>end</span></u><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><span style='font-size:12.0pt'>Тут
+два рази повторюєтья один і той самий алгоритм</span><span lang=RU
+style='font-size:12.0pt'>: </span><span style='font-size:12.0pt'>знаходження
+більшого з двох заданих дійсних значень і присвоєння деякій змінній одержаного
+результату.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Щоб підкреслити подібність цих двох умовних
+операторів, запишемо цю програму в такому вигляді</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>program</span></u><span
+lang=EN-US style='font-size:12.0pt'> <b>MAX2</b>;</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>var</span></u><span lang=EN-US style='font-size:12.0pt'>
+x, y, u, v, a, b, s: real;</span></p>
+
+<p class=MsoNormal style='text-indent:9.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>begin</span></u><span lang=EN-US style='font-size:
+12.0pt'> read (x, y);</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>a: = x + y; b: = x*y; </span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>if a &gt; b then s: = a else s: = b;</span></u></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>u: = s;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>a: = 0.5; b: = u;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>if a &gt; b then s: = a else s: = b;</span></u></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>v: = s;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>writeln (‘u=’, u, ‘v=’, v)</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>end</span></u><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-indent:1.0cm'><span style='font-size:12.0pt'>Тут 
+два умовні оператори співпадають. Щоб не записувати цей оператор два рази,
+оголосимо його процедурою з ім’ям </span><span lang=EN-US style='font-size:
+12.0pt'>MAXPR</span><span style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>program</span></u><span
+lang=EN-US style='font-size:12.0pt'> <b>MAX3</b>;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>var</span></u><span
+lang=EN-US style='font-size:12.0pt'> x, y, u, v, a, b, s: real;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>6_6_pascal_procedure</span></u><span
+lang=EN-US style='font-size:12.0pt'> MAXPR;</span></p>
+
+<p class=MsoNormal style='text-indent:18.0pt'><u><span lang=EN-US
+style='font-size:12.0pt'>begin </span></u><span lang=EN-US style='font-size:
+12.0pt'>if a &gt; b then s: = a else s: = b <u>end</u>;</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>begin</span></u><span
+lang=EN-US style='font-size:12.0pt'> read (x, y);</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>a: = x + y; b: = x*y; </span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>MAXPR;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>u: = s;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>a: = 0.5; b: = u;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>MAXPR;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>v: = s;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span lang=EN-US
+style='font-size:12.0pt'>writeln (‘u=’, u, ‘v=’, v)</span></p>
+
+<p class=MsoNormal><u><span lang=EN-US style='font-size:12.0pt'>end</span></u><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><i><span lang=RU>Приклад.</span></i></b><span
+lang=RU> Скласти програму з використанням процедури: порахувати суму елементів
+кожного рядка матриці розміру3</span><span lang=EN-US style='font-family:Symbol'>´</span><span
+lang=RU>4, що містить дійсні елементи.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><u><span lang=EN-US>program</span></u><span
+lang=EN-US> PR2;</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US>const</span></u><span
+lang=EN-US> m =3; n = 4;</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US>var</span></u><span lang=EN-US>
+s, i, j: integer;</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US>6_6_pascal_procedure</span></u><span
+lang=EN-US> SUM;</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US> begin</span></u><span
+lang=EN-US> s: =0;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>           <u>for</u> j: = 1 to n
+do s: = s + a[i, j];</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US> <u>end</u></span><u><span lang=RU>;</span></u></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>begin</span><span lang=RU> {ввести
+елементи матриці}</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>  </span><span lang=EN-US>for i: = 1
+to m do</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>    begin</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>      SUM;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>      writeln (‘s=’, s);</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>    end</span><span
+lang=RU>;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>end</span><span lang=RU>.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><i><span lang=RU>Приклад.</span></i></b><span
+lang=RU> Порахувати суму елементів матриці 6</span><span lang=EN-US
+style='font-family:Symbol'>´</span><span lang=RU>3 у 2, 3, 6 рядках.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>program PR3;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>var s, i, j: integer;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>6_6_pascal_procedure SUM;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>  begin s: = 0; </span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>          for j: = 1 to n do  s: =
+s + a[i, j];</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>  end</span><span lang=RU>;</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>begin</span><span
+lang=RU> {ввести елементи матриці}</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>i: = 2;
+SUM; writeln (‘s=’, s);</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>i: = 3;
+SUM; writeln (‘s=’, s);</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>i: = 6;
+SUM; writeln (‘s=’, s);</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>end</span><span lang=RU>.</span></p>
+
+<p class=MsoNormal><span lang=RU style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:9.0pt'><b><span lang=RU
+style='font-size:14.0pt'>2. Процедури з параметрами. Параметри-значення</span></b></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>6_6_pascal_procedure MAXPR (r1, r2: real);</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>  begin </span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:35.4pt'><span lang=EN-US>if r1
+&gt; r2 then s: = r1 else s: = r2</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>  end</span><span lang=RU>;</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>r</span><span lang=RU>1, </span><span
+lang=EN-US>r</span><span lang=RU>2 – формальні параметри процедури, бо вони
+представляють не якісь конкретні значення, а значення “взагалі”. При кожному
+зверненні до процедури її формальні параметри конкретизуються.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Оскільки формальні параметри мають тип
+</span><span lang=EN-US>real</span><span lang=RU>, то фактичним параметром може
+бути будь-який арифметичний вираз.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Встановлюється відповідність між
+формальними і фактичними параметрами.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:9.0pt'><span lang=RU>Тоді
+програму запишемо так:</span></p>
+
+<p class=MsoBodyTextIndent><span lang=EN-US>program</span><span lang=EN-US> </span><span
+lang=EN-US>MAXD</span><span lang=RU>;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>var x, y, u, v, s: real;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>6_6_pascal_procedure MAXPR (r1, r2:
+real);</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>  begin if r1 &gt; r2 then s:
+= r1 else s: = r2 end;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>begin read (x, y);</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:12.0pt'>MAXPR
+(x + y, x*y); u: = s; </span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:12.0pt'>MAXPR
+(0.5</span><span lang=EN-US style='font-size:12.0pt'>,</span><span
+style='font-size:12.0pt'>u); v: = s;</span></p>
+
+<p class=MsoNormal style='text-indent:36.0pt'><span style='font-size:12.0pt'>writeln
+(‘u=’, u, ‘</span><span lang=EN-US style='font-size:12.0pt'>     </span><span
+style='font-size:12.0pt'>v=’, v)</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>end.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Виконання процедури </span><span
+lang=EN-US>MAXPR</span><span lang=RU> (</span><span lang=EN-US>x</span><span
+lang=RU> + </span><span lang=EN-US>y</span><span lang=RU>, </span><span
+lang=EN-US>x</span><span lang=RU>*</span><span lang=EN-US>y</span><span
+lang=RU>) рівносильне виконанню еквівалентного йому блоку:</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US>var</span></u><span lang=EN-US>
+r1, r2: real;</span></p>
+
+<p class=MsoBodyTextIndent><u><span lang=EN-US>begin</span></u><span
+lang=EN-US> r1: = x + y; r2: = x*y;</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><span lang=EN-US>          <u>if</u>
+r1 &gt; r2 <u>then</u> s: = r1 <u>else</u> s: = r2 </span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><u><span lang=EN-US>end</span></u><span
+lang=RU>.</span></p>
+
+<p class=MsoBodyTextIndent><span lang=RU>Розглянуті тут формальні параметри
+процедури називаються <b><i>параметрами-значеннями</i></b>, оскільки кожний з
+них у тілі процедури набуває значення, яке йому задають під час звертання за
+допомогою відповідного фактичного параметра.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:9.0pt'><span lang=RU>&nbsp;</span></p>
+
+<p class=MsoNormal><b><span style='font-size:14.0pt'>3. Процедури з
+параметрами. Параметри-змінні </span></b></p>
+
+<p class=MsoNormal style='margin-left:14.2pt'><b><span style='font-size:14.0pt'>Глобальні
+та локальні ідентифікатори</span></b></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>У попередній процедурі знайдений результат завжди
+присвоюється змінній </span><span lang=EN-US style='font-size:12.0pt'>s</span><span
+lang=RU style='font-size:12.0pt'>, а</span><span style='font-size:12.0pt'>
+потрібно </span><span lang=EN-US style='font-size:12.0pt'>u</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>і</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>v</span><span
+lang=RU style='font-size:12.0pt'>.</span><span style='font-size:12.0pt'> </span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Формальний параметр </span><span lang=EN-US
+style='font-size:12.0pt'>res</span><span style='font-size:12.0pt'>
+відрізняється від </span><span lang=EN-US style='font-size:12.0pt'>r</span><span
+lang=RU style='font-size:12.0pt'>1, </span><span lang=EN-US style='font-size:
+12.0pt'>r</span><span lang=RU style='font-size:12.0pt'>2. Ц</span><span
+style='font-size:12.0pt'>е не значення, а змінна.</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Щоб відрізнити параметр-змінну від параметра-значення,
+перед ним в списку формальних параметрів записується службове слово </span><span
+lang=EN-US style='font-size:12.0pt'>var</span><span lang=RU style='font-size:
+12.0pt'>. Д</span><span style='font-size:12.0pt'>ля параметра-змінної фактичним
+параметром може бути тільки змінна!</span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:1.0cm'><span
+style='font-size:12.0pt'>Програму запишемо так</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Program Max3;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var x,y,u,v:real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>6_6_pascal_procedure Max(r1,r2:real;var res:real);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> If r1&gt;r2 then res:=r1 else res:=r2</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> Read(x,y);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> Max(x+y,x*y,u);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> Max(0.5,u,v);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> Writeln(u,v)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span lang=EN-US
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Принцип локалізації</span></i></b><b><i><span lang=EN-US
+style='font-size:12.0pt'>: </span></i></b><i><span style='font-size:12.0pt'>імена,
+що вводяться в будь-якій процедурі, мають силу тільки в цій процедурі.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Формальні параметри. </span></i></b><i><span style='font-size:12.0pt'>Ці
+змінні існують тільки на час виконання тіла процедури, а після виходу з
+процедури вони припиняють своє існування.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Глобальні ідентифікатори </span></i></b><i><span style='font-size:12.0pt'>в
+тілі процедури мають той самий зміст, що і до моменту входу в процедуру.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Локальні ідентифікатори. </span></i></b><i><span style='font-size:12.0pt'>Це
+ідентифікатори, що не є формальними парметрами, але описані в тілі процедури і
+діють тільки в процедурі.</span></i></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Приклад.</span></i></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=RU style='font-size:12.0pt'>Ввести вектори </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'> дійсних
+елементів. </span></p>
+
+<p class=MsoNormal style='text-align:justify'>
+
+<table cellpadding=0 cellspacing=0>
+ <tr>
+  <td width=5 height=0></td>
+ </tr>
+ <tr>
+  <td></td>
+  <td><img width=232 height=24 src="6_pascal_procedure_files/image001.gif"></td>
+ </tr>
+</table>
+
+<br clear=ALL>
+<span style='font-size:12.0pt'>Знайти максимальний елемент вектора </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'> і</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>максимальний
+елемент вектора </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Program R1;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Const n=20;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Type vekt=array[1..n] of real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var u,v:real;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>       i:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>       x,y:vekt;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>6_6_pascal_procedure MAXPR(A:vekt;var s:real);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> S:=A[1];</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> For i:=2 to n do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  If A[i]&gt;s then s:=A[i]</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'> {</span><span style='font-size:12.0pt'>Ввести вектори </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>MAXPR(x,u);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> MAXPR(y,v);</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'> Writeln(u,v)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><i><span style='font-size:
+12.0pt'>Приклад.</span></i></b><i><span style='font-size:12.0pt'> </span></i><span
+lang=RU style='font-size:12.0pt'>Ввести вектори </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>з </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'> дійсних
+елементів.</span><span lang=RU style='font-size:12.0pt'> (</span><span
+style='font-size:12.0pt'>Або матриці </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>розмірністю </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=RU style='font-size:
+12.0pt'>×</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'> Всі від</span><span lang=RU
+style='font-size:12.0pt'>'</span><span style='font-size:12.0pt'>ємні елементи
+цих векторів замінити на -1 і вивести новоутворені вектори</span><span lang=RU
+style='font-size:12.0pt'>. </span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>6_6_pascal_procedure</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>Van</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>var</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>A</span><span lang=RU style='font-size:
+12.0pt'>:</span><span lang=EN-US style='font-size:12.0pt'>vekt</span><span
+lang=RU style='font-size:12.0pt'>);     {</span><span style='font-size:12.0pt'>Тут
+вектори </span><span lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>- це
+результати, тому пишемо </span><span lang=EN-US style='font-size:12.0pt'>var</span><span
+lang=RU style='font-size:12.0pt'>}</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Var i:integer;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>Begin</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>  For i:=1 to n do</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>   If A[i]&lt;0 then A[i]:=1</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>End</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=RU
+style='font-size:12.0pt'>Завдання для закріплення матеріалу</span></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень </span></i></b><b><i><span
+lang=RU style='font-size:12.0pt'>А (завдання простого рівня)</span></i></b></p>
+
+<p class=MsoNormal style='margin-left:63.8pt;text-align:justify;text-indent:
+-63.8pt'><b><span style='font-size:12.0pt'>10.1.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести ціле число </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>.</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>Обчислити </span><span
+lang=EN-US style='font-size:12.0pt'>u</span><span lang=RU style='font-size:
+12.0pt'> = </span><span lang=EN-US style='font-size:12.0pt'>min</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><sup><span lang=RU
+style='font-size:12.0pt'>2</span></sup><span lang=RU style='font-size:12.0pt'>),
+</span><span lang=EN-US style='font-size:12.0pt'>v</span><span lang=RU
+style='font-size:12.0pt'> = </span><span lang=EN-US style='font-size:12.0pt'>min</span><span
+lang=RU style='font-size:12.0pt'>(0.2,</span><span lang=EN-US style='font-size:
+12.0pt'>u</span><span lang=RU style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt'>10.2.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести три цілі числа </span><span lang=EN-US
+style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>.
+Знайти найбільше з них.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.3.</span></b><span
+lang=RU> Ввести дійсне </span><span lang=EN-US>x</span><span lang=RU>.
+Обчислити величину </span><i><span lang=EN-US>y</span></i><span lang=RU> = </span><span
+lang=EN-US>cos</span><span lang=EN-US> </span><i><span lang=EN-US>x</span></i><span
+lang=EN-US> </span><span lang=RU style='font-family:Symbol'>×</span><span
+lang=RU> </span><span lang=EN-US>tg</span><span lang=RU> (</span><i><span
+lang=EN-US>x</span></i><span lang=RU>+1) – </span><span lang=EN-US>tg</span><span
+lang=RU> (</span><i><span lang=EN-US>x</span></i><span lang=RU>–1), використовуючи
+процедуру для обчислення tg.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.4.<i> </i></span></b><span
+lang=RU>Ввести ціле <i>х</i>. Знайти </span><span lang=EN-US>y</span><span
+lang=RU> = </span><sub><span lang=EN-US style='font-size:10.0pt'><img width=96
+height=44 src="6_pascal_procedure_files/image002.gif"></span></sub><span lang=RU> , де  </span><span
+lang=EN-US>ch</span><span lang=EN-US> </span><i><span lang=EN-US>x</span></i><span
+lang=RU> = </span><sub><span lang=EN-US style='font-size:10.0pt'><img width=59
+height=44 src="6_pascal_procedure_files/image003.gif"></span></sub><span lang=RU>, використовуючи
+процедури для обчислення tg і ch.</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-63.0pt'><b><span
+lang=RU style='font-size:12.0pt'>10.5</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Порахувати суму елементів кожного з векторів </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>, які складаються з п'</span><span style='font-size:12.0pt'>яти цілих
+елементів.</span><span lang=RU style='font-size:12.0pt'> ( </span><span
+style='font-size:12.0pt'>Або </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>матриці розмірності 3×4)</span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-indent:-63.0pt'><b><span
+lang=RU style='font-size:12.0pt'>10.6</span></b><b><span style='font-size:12.0pt'>.</span></b><span
+style='font-size:12.0pt'> Порахувати суму (добуток) суму квадратів елементів
+кожного з векторів </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+style='font-size:12.0pt'>, які складаються з </span><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>еми дійсних
+елементів. </span></p>
+
+<p class=MsoNormal style='margin-left:63.0pt;text-align:justify;text-indent:
+-63.0pt'><b><span style='font-size:12.0pt'>10.7.<i> </i></span></b><span
+style='font-size:12.0pt'>Порахувати суму і кількість додатних елементів кожного
+з векторів </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+style='font-size:12.0pt'>, які складаються з </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'> дійсних
+елементів. ( Або </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>матриці
+розмірності </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>×</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.8.<i>
+</i></span></b><span style='font-size:12.0pt'>Знайти середнє арифметичне для
+кожного з векторів </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+style='font-size:12.0pt'>, що містять по 8 дійсних елементів.  (Або матриць
+розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>×</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>)</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.9.</span></b><span
+lang=RU> Ввести вектори </span><span lang=EN-US>a</span><span lang=RU>,</span><span
+lang=EN-US>b</span><span lang=RU>,</span><span lang=EN-US>c</span><span
+lang=RU> з 5 цілих елементів. Знайти максимальний елемент кожного з векторів. (
+Або </span><span lang=EN-US>a</span><span lang=RU>, </span><span lang=EN-US>b</span><span
+lang=RU>, </span><span lang=EN-US>c</span><span lang=RU> матриці розмірності
+3×4)</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.10.</span></b><span
+lang=RU> Ввести вектори </span><span lang=EN-US>a</span><span lang=RU>, </span><span
+lang=EN-US>b</span><span lang=RU>, </span><span lang=EN-US>c</span><span
+lang=RU> з 6 дійсних елементів. Порахувати суму і кількість елементів, що
+належать проміжку[1,6]. ( Або </span><span lang=EN-US>a</span><span lang=RU>, </span><span
+lang=EN-US>b</span><span lang=RU>, </span><span lang=EN-US>c</span><span
+lang=RU> матриці розмірності </span><span lang=EN-US>n</span><span lang=RU>×</span><span
+lang=EN-US>m</span><span lang=RU> – на проміжку  (-1,1))</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span lang=RU
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень В</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання середнього рівня)</span></span></i></b></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.11.</span></b><span
+lang=RU> Ввести дійсне <i>х</i>. Обчислити величину  </span><i><span
+lang=EN-US>y</span></i><span lang=RU> = </span><span lang=EN-US>tg</span><span
+lang=RU> (</span><i><span lang=EN-US>x</span></i><span lang=RU> + </span><span
+lang=EN-US>cos</span><span lang=RU> (</span><i><span lang=EN-US>x</span></i><span
+lang=RU>+1)) + </span><span lang=EN-US>tg</span><span lang=RU> (</span><i><span
+lang=EN-US>x</span></i><span lang=RU>+1), використовуючи процедуру для
+обчислення tg.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.12.</span></b><span
+lang=RU> Ввести дійсне </span><span lang=EN-US>x</span><span lang=RU>.
+Обчислити величину  </span><i><span lang=EN-US>y</span></i><span lang=RU> = </span><span
+lang=EN-US>sh</span><span lang=RU> (</span><i><span lang=EN-US>x</span></i><span
+lang=RU>) ×</span><span lang=RU style='font-family:Symbol'>×</span><span
+lang=RU> </span><span lang=EN-US>tg</span><span lang=RU> (</span><i><span
+lang=EN-US>x</span></i><span lang=RU>+1) – </span><span lang=EN-US>tg</span><span
+lang=RU> (2+sh(</span><i><span lang=EN-US>x</span></i><span lang=RU> – 1),
+використовуючи процедури для обчислення tg і sh, де </span><span lang=EN-US>tg</span><span
+lang=EN-US> </span><i><span lang=EN-US>x</span></i><span lang=RU> = </span><sub><span
+lang=EN-US style='font-size:10.0pt'><img width=39 height=41
+src="6_pascal_procedure_files/image004.gif"></span></sub><span lang=RU>; </span><span
+lang=EN-US>sh</span><span lang=EN-US> </span><i><span lang=EN-US>x</span></i><span
+lang=RU> = </span><sub><span lang=EN-US style='font-size:10.0pt'><img width=59
+height=44 src="6_pascal_procedure_files/image005.gif"></span></sub><span lang=RU>.</span></p>
+
+<p class=MsoBodyTextIndent style='text-indent:0cm'><b><span lang=RU>10.13.</span></b><span
+lang=RU> Ввести ціле </span><i><span lang=EN-US>y</span></i><span lang=RU>.
+Порахувати </span><i><span lang=EN-US>z</span></i><span lang=RU> = </span><span
+lang=EN-US>tg</span><span lang=RU>(</span><i><span lang=EN-US>y</span></i><i><span
+lang=RU>)</span></i><span lang=RU style='font-family:Symbol'>×</span><span
+lang=RU> </span><span lang=EN-US>ch</span><span lang=RU> (</span><i><span
+lang=EN-US>y</span></i><span lang=RU> + 1) + </span><span lang=EN-US>tg</span><span
+lang=RU> (</span><span lang=EN-US>ch</span><span lang=RU> (</span><i><span
+lang=EN-US>y</span></i><span lang=RU>) + 1), використовуючи процедури для
+обчислення tg і сh, де  </span><span lang=EN-US>ch</span><span lang=EN-US> </span><i><span
+lang=EN-US>x</span></i><span lang=RU> = </span><sub><span lang=EN-US
+style='font-size:10.0pt'><img width=59 height=44
+src="6_pascal_procedure_files/image003.gif"></span></sub><span lang=RU>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.14</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>
+дійсних елементів. </span><span lang=RU style='font-size:12.0pt'>(</span><span
+style='font-size:12.0pt'>Або матриці </span><span lang=EN-US style='font-size:
+12.0pt'>x</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>розмірністю </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span lang=RU style='font-size:
+12.0pt'>×</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>  Всі додатні елементи цих
+векторів замінити на максимальний елемент відповідного вектора і вивести
+новоутворені вектори</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.15</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span lang=RU style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>
+дійсних елементів. (Або матриці </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+</span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt'>×</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>)
+Всі від'ємні елементи цих векторів замінити на середнє арифметичне значення
+всіх від’ємних елементів відповідного вектора і вивести новоутворені вектори.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.16</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+матрицю </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>×</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>цілих елементів.  Знайти</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>а)
+Слід матриці (суму діагональних елементів).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>б)
+Якщо слід матриці А більший ніж слід матриці </span><span lang=EN-US
+style='font-size:12.0pt'>B</span><span style='font-size:12.0pt'>, то всі
+додатні елементи матриці </span><span lang=EN-US style='font-size:12.0pt'>A</span><span
+style='font-size:12.0pt'> замінити на її слід, інакше всі додатні елементи
+матриці </span><span lang=EN-US style='font-size:12.0pt'>B</span><span
+style='font-size:12.0pt'> замінити на слід матриці </span><span lang=EN-US
+style='font-size:12.0pt'>B</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.17</span></b><b><span style='font-size:12.0pt'>.</span></b><b><i><span
+style='font-size:12.0pt'> </span></i></b><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з 5 цілих елементів. (Або матриці розмірністю </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>×</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'>)
+Описати процедуру сум(</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+style='font-size:12.0pt'>), яка присвоює вектору </span><span lang=EN-US
+style='font-size:12.0pt'>z</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>суму векторів </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>i</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>. Сформувати вектори </span><span lang=EN-US
+style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>1=</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>+</span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>2=</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>+</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>3=</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span style='font-size:12.0pt'>+</span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>+</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=12 height=23
+src="6_pascal_procedure_files/image006.gif"><br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>10.18</span></b><b><span
+style='font-size:12.0pt'>.<i> </i></span></b><span style='font-size:12.0pt'>Ввести
+матриці </span><span lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span style='font-size:12.0pt'> розмірністю </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt;
+font-family:Symbol'>´</span><span lang=EN-US style='font-size:12.0pt'>m</span><span
+style='font-size:12.0pt'> з цілих елементів. Якщо</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='position:relative;
+z-index:6;left:-5px;top:0px;width:64px;height:48px'><img width=64 height=48
+src="6_pascal_procedure_files/image007.gif"></span><br clear=ALL>
+<span style='font-size:12.0pt'>то сформувати матрицю </span><span lang=EN-US
+style='font-size:12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>2=</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU style='font-size:
+12.0pt'>+</span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=RU style='font-size:12.0pt'>, інакше сформувати матрицю </span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span lang=RU style='font-size:
+12.0pt'>2=</span><span lang=EN-US style='font-size:12.0pt'>f</span><span
+lang=RU style='font-size:12.0pt'>+</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.19</span></b><b><span style='font-size:12.0pt'>.</span></b><i><span
+style='font-size:12.0pt'> </span></i><span style='font-size:12.0pt'>Ввести
+вектори </span><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>з 6 дійсних елементів. </span><span lang=RU
+style='font-size:12.0pt'>(</span><span style='font-size:12.0pt'>Або матриці
+розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+lang=RU style='font-size:12.0pt'>×</span><span lang=EN-US style='font-size:
+12.0pt'>m</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'> Всі
+елементи, які </span><span lang=RU style='font-size:12.0pt'>&gt;5 </span><span
+style='font-size:12.0pt'>замінити на 1</span><span lang=RU style='font-size:
+12.0pt'>;</span><span style='font-size:12.0pt'> всі,</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>які </span><span
+lang=RU style='font-size:12.0pt'>&lt;5</span><span style='font-size:12.0pt'>
+замінити на -1</span><span lang=RU style='font-size:12.0pt'>;</span><span
+style='font-size:12.0pt'> решту - на 0.</span><span style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>Вивести новоутворений вектор.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.20</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести матриці </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>розмірністю
+4</span><span style='font-size:12.0pt;font-family:Symbol'>´</span><span
+style='font-size:12.0pt'>4 з цілих елементів. Обчислити</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=101 height=45
+src="6_pascal_procedure_files/image008.gif"><br clear=ALL>
+<span style='font-size:12.0pt'> і для кожної матриці знайти різницю між сумою
+її додатніх та від'ємних елементів.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.21</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Ввести вектори </span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>з 
+4  цілих елементів. </span><span lang=RU style='font-size:12.0pt'>(</span><span
+style='font-size:12.0pt'>Або матриці розмірністю </span><span lang=EN-US
+style='font-size:12.0pt'>n</span><span lang=RU style='font-size:12.0pt'>×</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span lang=RU style='font-size:
+12.0pt'>)</span></p>
+
+<p class=MsoNormal style='margin-left:18.0pt;text-align:justify;text-indent:
+-18.0pt'><span lang=RU style='font-size:12.0pt'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:12.0pt'>Перевірити, чи всі елементи
+векторів додатні.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>) </span><span
+style='font-size:12.0pt'>Якщо всі елементи вектора додатні, то вивести
+максимальний елемент вектора, інакше вивести мінімальний елемент вектора.</span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><i><span
+style='font-size:12.0pt'>&nbsp;</span></i></b></p>
+
+<p class=MsoNormal><b><i><span style='font-size:12.0pt'>Рівень С</span></i></b><b><i><span
+style='font-size:12.0pt'> <span lang=RU>(завдання високого рівня)</span></span></i></b></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>2</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Описати процедуру </span><span
+lang=EN-US style='font-size:12.0pt'>skoroch</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=RU style='font-size:
+12.0pt'>) </span><span style='font-size:12.0pt'>від цілих параметрів (</span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span lang=RU style='font-size:
+12.0pt'>≠0)</span><span style='font-size:12.0pt'>, яка</span><span
+style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>переводить дріб</span><span
+style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>/</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>до нескорочуваного дробу </span><span lang=EN-US
+style='font-size:12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>/</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.2</span></b><b><span
+lang=RU style='font-size:12.0pt'>3</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Описати процедуру махмі</span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>, яка
+присвоює параметру </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'> більше з дійсних чисел </span><span lang=EN-US
+style='font-size:12.0pt'>x</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>і</span><span style='font-size:12.0pt'> </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>, а
+параметру </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'> – менше. Використати цю процедуру для
+перерозподілення значень дійсних змінних </span><span lang=EN-US
+style='font-size:12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>так,
+щоб стало </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=RU style='font-size:12.0pt'>≥</span><span lang=EN-US style='font-size:
+12.0pt'>b</span><span lang=RU style='font-size:12.0pt'>≥</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=203 height=28
+src="6_pascal_procedure_files/image009.gif"><br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>10.24</span></b><b><span
+style='font-size:12.0pt'>.<i> </i></span></b><span style='font-size:12.0pt'>Ввести
+матриці </span><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>c</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>розмірністю </span><span
+lang=RU style='font-size:12.0pt'>3</span><span style='font-size:12.0pt;
+font-family:Symbol'>´</span><span lang=RU style='font-size:12.0pt'>3</span><span
+style='font-size:12.0pt'> з цілих елементів. Сформувати матриці </span><span
+lang=EN-US style='font-size:12.0pt'>g</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span lang=EN-US style='font-size:12.0pt'>i</span><span
+lang=RU style='font-size:12.0pt'>  </span><span lang=EN-US style='font-size:
+12.0pt'>h</span><span lang=EN-US style='font-size:12.0pt'> </span><span
+style='font-size:12.0pt'>таким чином</span><span lang=RU style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=121 height=45
+src="6_pascal_procedure_files/image010.gif"><br clear=ALL>
+<span style='font-size:12.0pt'>Якщо</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>то
+обчислити </span><span lang=EN-US style='font-size:12.0pt'>max</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>g</span><span
+style='font-size:12.0pt'>)+</span><span lang=EN-US style='font-size:12.0pt'>max</span><span
+style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>h</span><span
+style='font-size:12.0pt'>), інакше – </span><span lang=EN-US style='font-size:
+12.0pt'>min</span><span style='font-size:12.0pt'>(</span><span lang=EN-US
+style='font-size:12.0pt'>g</span><span style='font-size:12.0pt'>)+</span><span
+lang=EN-US style='font-size:12.0pt'>min</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>h</span><span style='font-size:12.0pt'>).</span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=12 height=23
+src="6_pascal_procedure_files/image006.gif"><br clear=ALL>
+<b><span lang=RU style='font-size:12.0pt'>10.25</span></b><b><span
+style='font-size:12.0pt'>.<i> </i></span></b><span style='font-size:12.0pt'>Ввести
+матриці </span><span lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+style='font-size:12.0pt'> розмірністю 3</span><span style='font-size:12.0pt;
+font-family:Symbol'>´</span><span style='font-size:12.0pt'>3 з цілих елементів.
+Якщо всі елементи матриці </span><span lang=EN-US style='font-size:12.0pt'>a</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>і
+матриці </span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span style='font-size:12.0pt'>додатні,
+то змінній </span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=112 height=45
+src="6_pascal_procedure_files/image011.gif"><br clear=ALL>
+<span style='font-size:12.0pt'>інакше </span></p>
+
+<p class=MsoNormal style='text-align:justify'><img width=12 height=23
+src="6_pascal_procedure_files/image006.gif"><br clear=ALL>
+<b><span style='font-size:12.0pt'>10.26.<i> </i></span></b><span
+style='font-size:12.0pt'>Ввести матриці </span><span lang=EN-US
+style='font-size:12.0pt'>c</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>d</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span style='font-size:12.0pt'>
+розмірністю </span><span lang=EN-US style='font-size:12.0pt'>n</span><span
+style='font-size:12.0pt;font-family:Symbol'>´</span><span lang=EN-US
+style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'> з цілих
+елементів. Якщо</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>то
+сформувати матрицю </span><span lang=EN-US style='font-size:12.0pt'>d</span><span
+lang=RU style='font-size:12.0pt'>2=</span><span lang=EN-US style='font-size:
+12.0pt'>d</span><span lang=RU style='font-size:12.0pt'>+</span><span
+lang=EN-US style='font-size:12.0pt'>c</span><span lang=RU style='font-size:
+12.0pt'>, інакше сформувати матрицю </span><span lang=EN-US style='font-size:
+12.0pt'>f</span><span lang=RU style='font-size:12.0pt'>2=</span><span
+lang=EN-US style='font-size:12.0pt'>f</span><span lang=RU style='font-size:
+12.0pt'>+</span><span lang=EN-US style='font-size:12.0pt'>c</span><span
+lang=RU style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.27</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Якщо найбільший елемент вектора </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>
+рівний 10 і знаходиться в першій половині цього вектора і якщо у векторі </span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>
+немає додатніх елементів, тоді всі елементи вектора </span><span lang=EN-US
+style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>, що
+знаходяться перед його найбільшим елементом, замінити на їх куби. (Вважати, що
+в кожному векторі найбільший елемент один.) </span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.28</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Задано</span><span lang=RU
+style='font-size:12.0pt'>: </span><span lang=EN-US style='font-size:12.0pt'>type</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>zsuv</span><span lang=RU style='font-size:12.0pt'>=1..19;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=RU style='font-size:
+12.0pt'>                                            </span><span lang=EN-US
+style='font-size:12.0pt'>shkala</span><span lang=RU style='font-size:12.0pt'>=</span><span
+lang=EN-US style='font-size:12.0pt'>array</span><span lang=RU style='font-size:
+12.0pt'>[1..20] </span><span lang=EN-US style='font-size:12.0pt'>of</span><span
+lang=EN-US style='font-size:12.0pt'> </span><span lang=EN-US style='font-size:
+12.0pt'>boolean</span><span lang=RU style='font-size:12.0pt'>;</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span style='font-size:12.0pt'>Описати
+процедуру </span><span lang=EN-US style='font-size:12.0pt'>zsuvanna</span><span
+lang=RU style='font-size:12.0pt'>(</span><span lang=EN-US style='font-size:
+12.0pt'>s</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>k</span><span lang=RU style='font-size:
+12.0pt'>)</span><span style='font-size:12.0pt'>, яка перетворює шкалу </span><span
+lang=EN-US style='font-size:12.0pt'>s</span><span style='font-size:12.0pt'>,
+циклічно зсуваючи її елементи на </span><span lang=EN-US style='font-size:12.0pt'>k</span><span
+style='font-size:12.0pt'> позицій вліво, де </span><span lang=EN-US
+style='font-size:12.0pt'>k</span><span style='font-size:12.0pt'> – параметр
+типу </span><span lang=EN-US style='font-size:12.0pt'>zsuv</span><span
+style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span lang=RU
+style='font-size:12.0pt'>10.29</span></b><b><span style='font-size:12.0pt'>.<i>
+</i></span></b><span style='font-size:12.0pt'>Нехай задано вектори </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span lang=RU style='font-size:
+12.0pt'>, </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+lang=RU style='font-size:12.0pt'>, </span><span lang=EN-US style='font-size:
+12.0pt'>a</span><span lang=RU style='font-size:12.0pt'>, </span><span
+lang=EN-US style='font-size:12.0pt'>b</span><span style='font-size:12.0pt'>,
+кожен з яких містить 20 символів. Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>Peretvorenna</span><span lang=RU style='font-size:
+12.0pt'>(</span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+lang=RU style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:
+12.0pt'>y</span><span lang=RU style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>a</span><span lang=RU style='font-size:
+12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>b</span><span
+lang=RU style='font-size:12.0pt'>)</span><span style='font-size:12.0pt'>, яка
+перетворить вектори </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'> і </span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'> дотакого вигляду</span><span lang=RU
+style='font-size:12.0pt'>:</span></p>
+
+<p class=MsoNormal style='text-align:justify'><span lang=EN-US
+style='font-size:12.0pt'><sub><img width=273 height=48
+src="6_pascal_procedure_files/image012.gif"></sub></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.</span></b><b><span
+lang=EN-US style='font-size:12.0pt'>30</span></b><b><span style='font-size:
+12.0pt'>.</span></b><b><i><span style='font-size:12.0pt'> </span></i></b><span
+style='font-size:12.0pt'>Описати процедуру </span><span lang=EN-US
+style='font-size:12.0pt'>shange(A,B)</span><span style='font-size:12.0pt'>, яка
+міняє місцями максимальні елементи матриць </span><span lang=EN-US
+style='font-size:12.0pt'>A </span><span style='font-size:12.0pt'>і</span><span
+lang=EN-US style='font-size:12.0pt'> B</span><span style='font-size:12.0pt'>.
+(Вважати, що в кожній матриці тільки один максимальний елемент.)</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.31.<i>
+</i></span></b><span style='font-size:12.0pt'>Описати процедуру </span><span
+lang=EN-US style='font-size:12.0pt'>Change</span><span style='font-size:12.0pt'>(</span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>,</span><span
+lang=EN-US style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>),
+яка в тому з векторів </span><span lang=EN-US style='font-size:12.0pt'>x</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>y</span><span
+style='font-size:12.0pt'>,</span><span lang=EN-US style='font-size:12.0pt'>z</span><span
+style='font-size:12.0pt'>, де найбільше від’ємних елементів (вважати, що такий
+вектор один), всі його додатні елементи заміняє на їх куби – якщо це вектор </span><span
+lang=EN-US style='font-size:12.0pt'>x</span><span lang=EN-US style='font-size:
+12.0pt'> </span><span style='font-size:12.0pt'>або вектор </span><span
+lang=EN-US style='font-size:12.0pt'>z</span><span style='font-size:12.0pt'>, і
+на їх обернені величини – якщо це вектор </span><span lang=EN-US
+style='font-size:12.0pt'>y</span><span style='font-size:12.0pt'>.</span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt'>10.32.<i>
+</i></span></b><span style='font-size:12.0pt'>Дано три цілі матриці розміром </span><span
+lang=EN-US style='font-size:12.0pt'>n</span><span style='font-size:12.0pt'>×</span><span
+lang=EN-US style='font-size:12.0pt'>m</span><span style='font-size:12.0pt'>.
+Надрукувати ту з них, в якій найбільша кількість нульових рядків. (Якщо таких
+матриць кілька, то надрукувати їх всіх.)</span></p>
+
+</div>
+
+</body>
+
+</html>
