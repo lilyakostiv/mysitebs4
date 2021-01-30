@@ -1,34 +1,56 @@
 (function() {
-    let mainForm = document.forms['formTest'];
+    let error = document.querySelector("#closeError");
+    error.addEventListener("click", (event) => {
+        let lastNameError = document.querySelector("#errorLastName");
+        lastNameError.style.display = "none";
+    })         
 
+    let mainForm = document.forms['formTest'];  
     mainForm.addEventListener("submit", (event) => {
         event.preventDefault();    //затримати сервер
         let lastNameElement = document.getElementById("InputLastName");
         let firstNameElement = document.getElementById("InputFirstName");
 
         let lastName = lastNameElement.value; 
-        let firstName = firstNameElement.value; //аналогічно зробити для імені код нижче
-        
-        let trueLastName=true; 
-        let doubleName=false;
-        if (lastName[lastName.length-1]=="-" || ('A'<=lastName[lastName.length-1] && lastName[lastName.length-1]<='Z')) trueLastName=false;
-        for (let i = 0; i<lastName.length; i++) {
-            if (i == 0)  {
-                if (lastName[i]<'A' || 'Z'<lastName[i])
-                    trueLastName=false;
-            } else {
-                if ((lastName[i]<'a' || 'z'<lastName[i]) && (lastName[i]!="-") && !doubleName)
-                    trueLastName=false;
-                if ((lastName[i]=="-") && ('A'<=lastName[i+1] && lastName[i+1]<='Z')) 
-                        doubleName=true;
-                if ((lastName[i]=="-") && ('a'<=lastName[i+1] && lastName[i+1]<='z')) 
-                        trueLastName=false;
-                
-            }   
-        }
-        if (!trueLastName) alert("Неправильно введене прізвище");
-        else event.target.submit();    //запустити сервер
+        let firstName = firstNameElement.value; 
+
+        let trueLastName = isTrueName(lastName);
+        let trueFirstName = isTrueName(firstName);
+
+
+        if (!trueLastName) {
+            let lastNameError = document.querySelector("#errorLastName");
+            lastNameError.style.display = "block";
+            let textError = document.querySelector("#errorText");
+            textError.innerText="Неправильно введене прізвище !";
+            
+        } else if (!trueFirstName) {
+            let lastNameError = document.querySelector("#errorLastName");
+            lastNameError.style.display = "block";
+            let textError = document.querySelector("#errorText");
+            textError.innerText="Неправильно введене ім'я !";
+        }   
+        else event.target.submit();    //відправити на сервер
     })
 
 }) ()
 
+function isTrueName(name) {
+    let trueName=true; 
+    
+    let names = name.split('-');
+    for (let i=0; i<names.length; i++) {
+       if (names[i][0]<'A' || 'Z'<names[i][0]) {
+           trueName = false;      
+        }
+        if (trueName) {
+            for (let j=1; j<names[i].length; j++) {
+                if (names[i][j]<'a' || 'z'<names[i][j]) {
+                    trueName = false;
+                }
+                if (!trueName) break;
+            }
+       }
+    }
+    return trueName;
+}

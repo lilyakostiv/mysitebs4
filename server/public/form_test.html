@@ -51,17 +51,25 @@
     </header>
 
     <main class="container">
+            
         <div class="row main-p-top">
             <div class="p-2 col-md-10 offset-md-1 col-lg-6 offset-lg-2">
+                <div class="text-center" id="errorLastName">
+                    <p><span id="errorText">Неправильно введене прізвище !</span>
+                    <button type="button" id="closeError" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </p>
+                </div>
                 <h5 >Форма</h5>
                 <div class="text-center">
                     <form method="POST" action="/test" class="form-signin form-box" name="formTest">
                         <h6>Введіть дані для тестування</h6>
                         <div class="form-group">  
-                            <input type="text" class="form-control link-none" id="InputLastName" placeholder="Введіть прізвище ЛАТИНКОЮ" required="" name="lastName">
+                            <input type="text" class="form-control link-none" id="InputLastName" placeholder="Введіть прізвище латинкою" required="" name="lastName">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control link-none" id="InputFirstName" placeholder="Введіть ім'я" required="" name="firstName">
+                            <input type="text" class="form-control link-none" id="InputFirstName" placeholder="Введіть ім'я латинкою" required="" name="firstName">
                         </div>
                         <div class="form-group input-group">
                             <select class="custom-select link-none" id="inputGroupSelect2" aria-label="Example select with button addon" name="number">

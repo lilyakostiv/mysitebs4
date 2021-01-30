@@ -13,8 +13,13 @@
     aside div a {
         height:60px;
     }
+    .height-accord-li li { /*  17,21,22- for click po li*/
+        padding-right:0;
+    }
     .height-accord-li li a{
         padding-left: 10px;
+        display:block;
+        width:100%;
     }
     .accord-card-padding {
         padding: 0;
@@ -64,3 +69,16 @@
         padding-bottom: 30px;
         margin-top: 20px;
     }
+
+    #parNews {
+        height:80px; 
+        overflow:hidden;
+    }
+    #errorLastName {
+        display: none; 
+        color:red;
+        background: rgb(230, 179, 179);
+        height:30px;
+        border-radius: .25rem; 
+    }
+    
