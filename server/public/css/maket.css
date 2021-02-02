@@ -81,4 +81,9 @@
         height:30px;
         border-radius: .25rem; 
     }
-    
+    .control-task {
+        padding-left: 40px;
+    } 
+    #resultTesting {
+        padding-top: 30px;
+    }

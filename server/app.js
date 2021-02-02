@@ -63,8 +63,8 @@ app.post("/resultTest1", (req,res) => {
     res.send("Ваша оцінка за виконаний тест - "+countCorrectAnswers);
 })
 
-app.post("/resultTest2", (req,res) => {
-    let parameters=req.body;
+app.get("/resultTest2", (req,res) => {
+    let parameters = url.parse(req.url, true).query;
  
     let countCorrectAnswers = 0;
     if (parameters.question1 == "1") countCorrectAnswers += 2; 
