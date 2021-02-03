@@ -1,4 +1,4 @@
-(function() {
+function travel_future() {
     const galleryDb = {
         currentImageIndex: 0,
         selectors: {
@@ -54,7 +54,7 @@
             }
     })
                              
-}) ()
+}
 
     
 function createNewObject(objectProps, event){

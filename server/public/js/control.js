@@ -1,4 +1,4 @@
-(function() {
+function control() {
     let mainForm = document.forms['formControl'];  
     mainForm.addEventListener("submit", (event) => {
         event.preventDefault();   //відміна надсилання даних форми браузером  
@@ -22,7 +22,7 @@
         targetSelector.appendChild(newTask);           
     }
 
-}) ()
+}
 
 function createNewObject(objectProps){
     const newElement = document.createElement(objectProps.tagName);

@@ -1,4 +1,4 @@
-(function() {
+function plan() {
     const plansClasses = [
         {
             title1: "8 клас: 1 семестр",
@@ -38,7 +38,7 @@
         displayPlanningSelectedClass(plansClasses[intDatasetValue], planningArea);
     })
 
-}) ()
+};
 
     
 function createNewObject(objectProps, event){

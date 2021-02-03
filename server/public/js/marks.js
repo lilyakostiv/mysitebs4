@@ -1,4 +1,4 @@
-(function() {
+function marks() {
     const marksClasses = [
         {   
             title: "8-А клас",
@@ -78,7 +78,7 @@
         displayMarksSelectedClass(marksClasses[intDatasetValue], marksArea);
     })
 
-}) ()
+}
 
     
 function createNewObject(objectProps, event){

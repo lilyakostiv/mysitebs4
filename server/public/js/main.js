@@ -1,4 +1,4 @@
-(function() {
+function main() {
     let btnNews = document.querySelector("#news");
     btnNews.addEventListener("click", (event) => {
         let paragraph = document.querySelector("#parNews");
@@ -11,5 +11,5 @@
         }
     })
 
-}) ()
+}
 

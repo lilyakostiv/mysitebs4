@@ -1,4 +1,4 @@
-(function() {
+function form_test() {
     let error = document.querySelector("#closeError");
     error.addEventListener("click", (event) => {
         let lastNameError = document.querySelector("#errorLastName");
@@ -33,7 +33,7 @@
         else event.target.submit();    //відправити на сервер
     })
 
-}) ()
+}
 
 function isTrueName(name) {
     let trueName=true; 

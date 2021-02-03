@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Матеріали до курсу шкільної інформатики у Львівському фізико-математичному ліцеї вчителя Костів Л.І.">
-    <meta name="keywords" content="шкільна інформатика, інформатика, ЛФМЛ, Львів, львівський фізико-математичний ліцей, середня школа, лекції з інформатики, завдання з інформатики, pascal, delphi, excel">
+    <meta name="keywords" content="шкільна інформатика, інформатика, ЛФМЛ, Львів, львівський фізико-математичний ліцей, середня школа, лекції з інформатики, завдання з інформатики, pascal, delphi, word, excel, access">
     <title>Інформатика для учнів</title>
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -20,17 +20,17 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link header-link" href="#">Головна<span class="sr-only">(current)</span></a>
+                        <a class="nav-link header-link" href="#" id="main">Головна<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown navbar-level2">
                         <a class="nav-link dropdown-toggle header-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Навчання
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="plan.html">Планування тем</a>
-                            <a class="dropdown-item" href="marks.html">Оцінки</a>
-                            <a class="dropdown-item" href="travel.html">Подорожі</a>
-                            <a class="dropdown-item" href="travel_future.html">Майбутні подорожі</a>
+                            <a class="dropdown-item" href="#" id="plan">Планування тем</a>
+                            <a class="dropdown-item" href="#" id="marks">Оцінки</a>
+                            <a class="dropdown-item" href="#" id="travel">Подорожі</a>
+                            <a class="dropdown-item" href="#" id="travel_future">Майбутні подорожі</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown navbar-level2">
@@ -38,9 +38,9 @@
                             Завдання
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownTwo">
-                            <a class="dropdown-item" href="control.html">Контрольна робота</a>
-                            <a class="dropdown-item" href="form_test.html">Тестування</a>
-                            <a class="dropdown-item" href="homework.html">Домашнє завдання</a>
+                            <a class="dropdown-item" href="#" id="control">Контрольна робота</a>
+                            <a class="dropdown-item" href="#" id="form_test">Тестування</a>
+                            <a class="dropdown-item" href="#" id="homework">Домашнє завдання</a>
                         </div>
                     </li>
                 </ul>
@@ -52,173 +52,10 @@
         </nav>
     </header>
 
-    <main class="container">
-        <div class="row main-p-top">
-            <nav class="p-2 col-md-12 col-lg-3">
-                <div>
-                    <h5>Лекції і завдання</h5>
-                    <div class="accordion" id="accordion">
-                        <div class="card">
-                            <div class="card-header accord-card-padding" id="headingOne">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                   Мова програмування Pascal
-                                </button>
-                                </h2>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="card-body p-0">
-                                    <ul class="list-group height-accord-li">
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/1_pascal_introduction.htm" target="_blank" class="link-none">Вступ у Pascal</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/2_pascal_branching.htm" target="_blank" class="link-none">Рзгалуження</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/3_pascal_circle.htm" target="_blank" class="link-none">Цикли</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/4_pascal_vector.htm" target="_blank" class="link-none">Одновимірні масиви</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/5_pascal_matrix.htm" target="_blank" class="link-none">Двовимірні масиви</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/pascal/6_pascal_procedure.htm" target="_blank" class="link-none">Процедури</a></li>
-                                    </ul>           
-                                </div>
-                            </div>
-                        </div>
-                    
-                        <div class="card">
-                            <div class="card-header accord-card-padding" id="headingTwo">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Текстовий редактор Word
-                                </button>
-                                </h2>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="card-body p-0">
-                                    <ul class="list-group height-accord-li">
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/word/1_word_format.htm" target="_blank" class="link-none">Редагування і форматування</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/word/2_word_painting.htm" target="_blank" class="link-none">Малювання у Word</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/word/3_word_table.htm" target="_blank" class="link-none">Робота з таблицями</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/word/4_word_additional.htm" target="_blank" class="link-none">Додаткові можливості</a></li>
-                                    </ul>           
-                                </div>
-                            </div>
-                        </div>
+    <main>
 
-                        <div class="card">
-                            <div class="card-header accord-card-padding" id="headingThree">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Табличний процесор Excel
-                                </button>
-                                </h2>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="card-body p-0">
-                                    <ul class="list-group height-accord-li">
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/1_excel_introduction.htm" target="_blank" class="link-none">Вступ в Excel</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/2_excel_formula.htm" target="_blank" class="link-none">Використання формул</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/3_excel_diagram.htm" target="_blank" class="link-none">Побудова діаграм</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/4_excel_function.htm" target="_blank" class="link-none">Використання функцій</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/5_excel_data.htm" target="_blank" class="link-none">Робота з даними</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/excel/6_excel_macros.htm" target="_blank" class="link-none">Створення макросів</a></li>
-                                    </ul>           
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header accord-card-padding" id="headingFour">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    СКБД Access
-                                </button>
-                                </h2>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFout" data-parent="#accordion">
-                                <div class="card-body p-0">
-                                    <ul class="list-group height-accord-li">
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/access/1_access_database.htm" target="_blank" class="link-none">Вступ у бази даних</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/access/2_access_table.htm" target="_blank" class="link-none">Робота з таблицями</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/access/3_access_query.htm" target="_blank" class="link-none">Запити. SQL</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/access/4_access_form.htm" target="_blank" class="link-none">Форми</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/access/5_access_report.htm" target="_blank" class="link-none">Звіти</a></li>
-                                    </ul>           
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header accord-card-padding" id="headingFive">
-                                <h2 class="mb-0">
-                                <button class="btn btn-link btn-block text-left collapsed link-none" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Web-розробка
-                                </button>
-                                </h2>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-                                <div class="card-body p-0">
-                                    <ul class="list-group height-accord-li">
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/web/1_web_text.htm" target="_blank" class="link-none">Робота з текстом у HTML</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/web/2_web_list_table.htm" target="_blank" class="link-none">Списки і таблиці</a></li>
-                                        <li class="list-group-item btn-link link-none"><a href="lectures/web/3_web_graphics_link.htm" target="_blank" class="link-none">Графіка та гіперпосилання</a></li>
-                                    </ul>           
-                                </div>
-                            </div>
-                        </div>
-                    </div>           
-                </div>
-            </nav>
-
-            <div class="p-2 col-md-6 col-lg-7">
-                <h5>Новини</h5>
-                <br>
-                <h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                    </svg> 
-                    6.10.2021р.</h6>
-                Веселих свят!
-                <hr>
-                <h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                    </svg> 
-                    3.10.2021р.</h6>
-                Всім гарного відпочинку на зимових канікулах!
-                <hr>
-                <h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                    </svg>  
-                    1.10.2021р.</h6>
-                Вітаю з Новим 2021 роком. 
-                <hr>
-                <div id="parNews">
-                <h6>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                        <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                    </svg> 
-                    13.11.2020р.</h6>
-                <b>Конкурс "Бобер"</b><br>
-                Щоб отримати пакет завдань та пароль потрібно: <br>зайти на вказаний сайт, вибрати закладку (вгорі) Інформація для учнів, вибрати Логін "Бобер"" зі списку, задати пароль , натиснути кнопку справа "Ввійти"". З'явиться випадаюче вікно з пакетом завдань та паролем. Якщо їх немає, то потрібно дозволити показ випадаючих вікон (Popup).
-                Якщо в Explorer вгорі з'явився рядок, що не відкривається випливаюче вікно, то на цьому рядку викликати контексне меню і вибрати команду - дозволити відкривати випливаюче вікно. Тоді ще раз задати логін та пароль.
-                Якщо в Chrome в правому верхньому куті з'явився червоний знак перетину двох ліній, то клікнути на ньому мишкою і вибрати перемикач Always pop-up...Тоді з'явиться випликаюче вікно із завданнями.
-                Якщо в Opera в нижньму лівому кутку з'явилось вікно з повідомленням, то клікнути на ньому. Тоді з'явиться випликаюче вікно із завданнями.
-                </div>
-            <button class="btn link-none btn-all" id="news">Показати більше</button>
-            </div>
-            <aside class="p-2 col-md-6 col-lg-2">  
-                <div>
-                    <h5>Корисні блоги</h5>
-                    <br>
-                    <a class="btn btn-primary w-100 link-none" href="http://interestingquotesua.blogspot.com/" target='_blank' role="button">Цікава <br>інформація</a>  
-                    <br><br>
-                    <a class="btn btn-primary w-100 link-none" href="http://tasklpml.blogspot.com" target='_blank' role="button">Програми<br> на Паскалі</a>       
-                </div>
-            </aside>
-        </div>
     </main>
-    
+        
     <footer class="pt-4 pt-md-5 border-top">
         <div class="container">
             <div class="row">
@@ -232,31 +69,31 @@
                 <div class="col-6 col-md">
                     <h6>Головна</h6>
                     <ul class="list-unstyled text-small footer-color">
-                        <li><a href="index.html">Новини</a></li>
-                        <li><a href="index.html">Лекції і завдання</a></li>
-                        <li><a href="index.html">Корисні блоги</a></li>
+                        <li><a href="#" data-page-footer="main">Новини</a></li>
+                        <li><a href="#" data-page-footer="main">Лекції і завдання</a></li>
+                        <li><a href="#" data-page-footer="main">Корисні блоги</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h6>Навчання</h6>
                     <ul class="list-unstyled text-small footer-color">
-                        <li><a href="plan.html">Планування тем</a></li>
-                        <li><a href="plan.html">Навчальні програми</a></li>
-                        <li><a href="marks.html">Оцінки</a></li>
-                        <li><a href="marks.html">Корисні посилання</a></li>
-                        <li><a href="travel.html">Подорожі</a></li>
-                        <li><a href="travel_future.html">Майбутні подорожі</a></li>
+                        <li><a href="#" data-page-footer="plan">Планування тем</a></li>
+                        <li><a href="#" data-page-footer="plan">Навчальні програми</a></li>
+                        <li><a href="#" data-page-footer="marks">Оцінки</a></li>
+                        <li><a href="#" data-page-footer="marks">Корисні посилання</a></li>
+                        <li><a href="#" data-page-footer="travel">Подорожі</a></li>
+                        <li><a href="#" data-page-footer="travel_future">Майбутні подорожі</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md">
                     <h6>Завдання</h6>
                     <ul class="list-unstyled text-small footer-color">
-                        <li><a href="control.html">Контрольна робота</a></li>
-                        <li><a href="control.html">Спеціальні підручники</a></li>
-                        <li><a href="form_test.html">Тестування</a></li>
-                        <li><a href="form_test.html">Контроль знань</a></li>
-                        <li><a href="homework.html">Домашнє завдання</a></li>
-                        <li><a href="homework.html">Підручники</a></li>
+                        <li><a href="#" data-page-footer="control">Контрольна робота</a></li>
+                        <li><a href="#" data-page-footer="control">Спеціальні підручники</a></li>
+                        <li><a href="#" data-page-footer="form_test">Тестування</a></li>
+                        <li><a href="#" data-page-footer="form_test">Контроль знань</a></li>
+                        <li><a href="#" data-page-footer="homework">Домашнє завдання</a></li>
+                        <li><a href="#" data-page-footer="homework">Підручники</a></li>
                     </ul>
                 </div>
             </div>
@@ -264,5 +101,12 @@
     </footer>
 <script src="bootstrap\jquery-3.5.1.slim.min.js"></script>
 <script src="bootstrap\bootstrap.bundle.min.js"></script>
-<script src="js/index.js"></script>
+<script src="js/constructor_site.js"></script>
+<script src="js/main.js"></script> 
+<script src="js/plan.js"></script>
+<script src="js/marks.js"></script>
+<script src="js/travel.js"></script>
+<script src="js/travel_future.js"></script>
+<script src="js/control.js"></script>
+<script src="js/form_test.js"></script> 
 </body>

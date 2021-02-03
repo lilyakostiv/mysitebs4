@@ -1,4 +1,4 @@
-(function() {
+function travel() {
     const  galleryImages = [
         {
             added: false,
@@ -46,8 +46,12 @@
                 break
         }
     })
+
+    $('.carousel').carousel({
+        interval: 1000
+    })
                              
-}) ()
+}
 
         
 function createNewObject(Props){
