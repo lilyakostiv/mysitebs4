@@ -69,8 +69,12 @@ header {
 .header-link:active {
     color: var(--navbar-item-color-active) !important;
 }
-.active a {
+li.nav-item.active a {
     color: var(--navbar-item-color-active) !important;
+}
+li.nav-item.active  {
+    background: var(--vertical-menu-bg-active) !important;
+    border-radius: .25rem;
 }
 
 .navbar-form-nowrap {
@@ -90,9 +94,11 @@ header {
 }
 .navbar-level2 div a:hover {
     background-color: var(--navbar-item-level2-bg-hover);
+    color: var(--navbar-item-level2-color);
 }
 .navbar-level2 div a:active {
     background-color: var(--navbar-item-level2-bg-active);
+    color: var(--navbar-item-level2-color);
 }
 
 #btn-search {
