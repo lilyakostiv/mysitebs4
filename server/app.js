@@ -33,47 +33,50 @@ app.get("/variant", (req,res) => {
 })
 
 
-app.post("/test", (req,res) => {
-    let parameters=req.body;
+app.get("/test", (req,res) => {
+    let parameters=url.parse(req.url, true).query;
 
     let lastNamePupil = parameters.lastName;
     let firstNamePupil = parameters.firstName;
    
     let linkTest = '';
     if (parameters.number == "1" && parameters.passwordtest == "first") {
-        linkTest =path.join(__dirname+'/private/testNumber1.html');
+        linkTest =path.join(__dirname+'/private/testNumber1.json');
+        res.setHeader("Content-Type","application/json");
     } else if (parameters.number == "2" && parameters.passwordtest == "second") {
-                linkTest =path.join(__dirname+'/private/testNumber2.html');
+                linkTest =path.join(__dirname+'/private/testNumber2.json');
+                res.setHeader("Content-Type","application/json");
             } else {
-                    linkTest =path.join(__dirname+'/private/Error.htm');
+                   res.status(401);
                     } 
+    
     res.sendFile(linkTest);   
 })
 
-app.post("/resultTest1", (req,res) => {
-    let parameters=req.body;
- 
-    let countCorrectAnswers = 0;
-    if (parameters.question1 == "2") countCorrectAnswers += 2; 
-    if (parameters.question2 == "1") countCorrectAnswers += 2;
-    if (parameters.question3 == "1") countCorrectAnswers += 2; 
-    if (parameters.question4 == "3") countCorrectAnswers += 3; 
-    if (parameters.question5 == "3") countCorrectAnswers += 3; 
-    res.statusCode = 200;
-    res.send("Ваша оцінка за виконаний тест - "+countCorrectAnswers);
-})
-
-app.get("/resultTest2", (req,res) => {
+app.get("/resultTest", (req,res) => {
     let parameters = url.parse(req.url, true).query;
- 
-    let countCorrectAnswers = 0;
-    if (parameters.question1 == "1") countCorrectAnswers += 2; 
-    if (parameters.question2 == "3") countCorrectAnswers += 2;
-    if (parameters.question3 == "3") countCorrectAnswers += 2; 
-    if (parameters.question4 == "1") countCorrectAnswers += 3; 
-    if (parameters.question5 == "3") countCorrectAnswers += 3; 
-    res.statusCode = 200;
-    res.send("Ваша оцінка за виконаний тест - "+countCorrectAnswers);
+    
+    if (parameters.TEST_NUMBER ==1) {
+        let countCorrectAnswers = 0;
+        if (parameters.question1 == "2") countCorrectAnswers += 2; 
+        if (parameters.question2 == "1") countCorrectAnswers += 2;
+        if (parameters.question3 == "1") countCorrectAnswers += 2; 
+        if (parameters.question4 == "3") countCorrectAnswers += 3; 
+        if (parameters.question5 == "3") countCorrectAnswers += 3; 
+        res.statusCode = 200;
+        res.send("Ваша оцінка за виконаний тест -  "+countCorrectAnswers);
+    }
+    else if (parameters.TEST_NUMBER ==2) {
+        let countCorrectAnswers = 0;
+        if (parameters.question1 == "1") countCorrectAnswers += 2; 
+        if (parameters.question2 == "3") countCorrectAnswers += 2;
+        if (parameters.question3 == "3") countCorrectAnswers += 2; 
+        if (parameters.question4 == "1") countCorrectAnswers += 3; 
+        if (parameters.question5 == "3") countCorrectAnswers += 3; 
+        res.statusCode = 200;
+        res.send("Ваша оцінка за виконаний тест -  "+countCorrectAnswers);
+    }
+    
 })
 
 app.listen(process.env.PORT,() => {

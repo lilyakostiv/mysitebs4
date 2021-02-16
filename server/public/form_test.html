@@ -7,9 +7,9 @@
             </button>
             </p>
         </div>
-        <h5 >Форма</h5>
+        <h5><span id="testNumberForma">Форма</span> </h5>
         <div class="text-center">
-            <form method="POST" action="/test" class="form-signin form-box" name="formTest">
+            <form method="GET" action="/test" class="form-signin form-box" name="formTest" id="formTest_">
                 <h6>Введіть дані для тестування</h6>
                 <div class="form-group">  
                     <input type="text" class="form-control link-none" id="InputLastName" placeholder="Введіть прізвище латинкою" required="" name="lastName">
@@ -29,6 +29,54 @@
                 </div>
                 <button type="submit" class="btn link-none btn-all">Почати тестування</button>
             </form>
+
+            <form method="GET" action="/result" class="form-signin form-box" name="testing" id="formTesting_">
+                <h6>Вкажіть правильні відповіді</h6>
+                <div class="form-group input-group">
+                    <select class="custom-select link-none" aria-label="Example select with button addon" name="question1">
+                        <option value="0" selected data-answer1="0"></option>
+                        <option value="1" data-answer1="1"></option>
+                        <option value="2" data-answer1="2"></option>
+                        <option value="3" data-answer1="3"></option>
+                    </select>
+                </div>
+                <div class="form-group input-group">
+                        <select class="custom-select link-none" aria-label="Example select with button addon" name="question2">
+                            <option value="0" selected data-answer2="0"></option>
+                            <option value="1"data-answer2="1"></option>
+                            <option value="2"data-answer2="2"></option>
+                            <option value="3"data-answer2="3"></option>
+                        </select>
+                    </div>
+                    <div class="form-group input-group">
+                            <select class="custom-select link-none" aria-label="Example select with button addon" name="question3">
+                                <option value="0" selected data-answer3="0"></option>
+                                <option value="1" data-answer3="1"></option>
+                                <option value="2" data-answer3="2"></option>
+                                <option value="3" data-answer3="3"></option>
+                            </select>
+                        </div>
+                        <div class="form-group input-group">
+                                <select class="custom-select link-none" aria-label="Example select with button addon" name="question4">
+                                    <option value="0" selected data-answer4="0"></option>
+                                    <option value="1" data-answer4="1"></option>
+                                    <option value="2" data-answer4="2"></option>
+                                    <option value="3" data-answer4="3"></option>
+                                </select>
+                            </div>
+                            <div class="form-group input-group">
+                                    <select class="custom-select link-none" aria-label="Example select with button addon" name="question5">
+                                        <option value="0" selected data-answer5="0"></option>
+                                        <option value="1" data-answer5="1"></option>
+                                        <option value="2" data-answer5="2"></option>
+                                        <option value="3" data-answer5="3"></option>
+                                    </select>
+                                </div>
+                <button type="submit" class="btn link-none btn-all">Закінчити тестування</button>
+            </form>
+            <div id="resultTesting">
+                
+            </div>
         </div>            
     </div>                     
     <aside class="p-2 col-md-10 offset-md-1 col-lg-2">  
